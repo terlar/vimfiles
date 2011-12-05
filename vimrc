@@ -1,3 +1,6 @@
+" Bundles
+silent! runtime bundles.vim
+
 " General
 set nocompatible
 set nomodeline
@@ -5,10 +8,8 @@ set lazyredraw
 set ttyfast
 set noequalalways
 
-" Bundles
-silent! runtime bundles.vim
-
-set shortmess+=I " No intro message
+set title " Set terminal title
+set shortmess=atI " Less interruptive prompts
 set vb t_vb= " No beep or flash
 set t_Co=256 " 256 colors
 set clipboard=unnamed " Use system clipboard
@@ -57,6 +58,7 @@ set noswapfile
 
 " Tags
 set tags=tags;
+set complete=.,w,b,u,t,i
 
 " Remember last location in file
 augroup RestoreCursorPos
@@ -135,6 +137,14 @@ let mapleader=','
   nnoremap <Space> <C-]>
   nnoremap <S-Space> <C-T>
 
+  " Folding
+  nnoremap <Leader>z <Esc>:set foldlevel=10000<CR>
+  nnoremap <Leader>Z <Esc>:set foldlevel=-10000<CR>
+
+  " Marks
+  nnoremap ' `
+  nnoremap ` '
+
   " Inserts the path of the currently edited file into a command
   cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
@@ -170,8 +180,8 @@ let mapleader=','
   nnoremap <Leader>u :GundoToggle<CR>
 
   " Ack
-  nnoremap <Leader>a :Ack
-  nnoremap <Leader>af :AckFile
+  nnoremap <silent> <Leader>a :Ack
+  nnoremap <silent> <Leader>af :AckFile
 
   " SuperTab
   let g:SuperTabDefaultCompletionType='context'
@@ -179,22 +189,23 @@ let mapleader=','
 
   " LustyExplorer
   let g:LustyExplorerSuppressRubyWarning=1
-  nnoremap <Leader>r :LustyFilesystemExplorerFromHere<CR>
-  nnoremap <Leader>g :LustyBufferGrep<CR>
-  nnoremap <Leader>b :LustyBufferExplorer<CR>
+  nnoremap <silent> <Leader><Tab> :LustyBufferExplorer<CR>
+  nnoremap <silent> <Leader>e :LustyFilesystemExplorer<CR>
+  nnoremap <silent> <Leader>E :LustyFilesystemExplorerFromHere<CR>
+  nnoremap <silent> <Leader>g :LustyBufferGrep<CR>
 
   " NERDTree
   let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
   let NERDTreeMinimalUI=1
   let NERDTreeDirArrows=1
-  map <Leader>n :NERDTreeToggle<CR>
+  map <silent> <Leader>n :NERDTreeToggle<CR>
 
   " Syntastic
   let g:syntastic_enable_signs=1
   let g:syntastic_quiet_warnings=1
 
   " ZoomWin
-  map <Leader><CR> :ZoomWin<CR>
+  map <silent> <Leader><CR> :ZoomWin<CR>
 
   " ConqueTerm
   let g:ConqueTerm_FastMode=1
@@ -203,14 +214,12 @@ let mapleader=','
   let g:ConqueTerm_ReadUnfocused=1
   let g:ConqueTerm_CWInsert=1
   let g:ConqueTerm_CloseOnEnd=1
-  au FileType conque_term
-    \ setlocal nolist nobuflisted
+  au FileType conque_term setlocal nolist nobuflisted
 
-  map <Leader>e :<C-u>call conque_term#send_selected(visualmode())<CR><CR>
-  command Shell :ConqueTermSplit zsh
-  command RailsShell :ConqueTermSplit rails console
-  map <Leader>s  :Shell<CR>
-  map <Leader>rs :RailsShell<CR>
+  map <silent> <Leader>s  :ConqueTermSplit zsh<CR>
+  map <silent> <Leader>rs :ConqueTermSplit rails console<CR>
+  map <silent> <Leader>sv  :ConqueTermVSplit zsh<CR>
+  map <silent> <Leader>rsv :ConqueTermVSplit rails console<CR>
 " }
 
 " Project Tree
