@@ -43,7 +43,7 @@ set wildmode=list:longest
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " Status line
-set statusline=%<%f\ %=\:\b%n%y%m%r%w\ %l,%c%V\ %P
+set statusline=%f\ %m%r%w%{fugitive#statusline()}%=%y[%vC]\ %P\ of\ %L
 set laststatus=2
 
 " File
@@ -92,8 +92,8 @@ let mapleader=','
   nmap N Nzz
 
   " Go to beginning / end of line
-  imap <C-h> <Esc>I
-  imap <C-l> <Esc>A
+  imap <C-h> <C-o>^
+  imap <C-l> <C-o>$
 
   " Auto format
   map === mmgg=G`m^zz
