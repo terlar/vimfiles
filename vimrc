@@ -5,10 +5,14 @@ set lazyredraw
 set ttyfast
 set noequalalways
 
+" Bundles
+silent! runtime bundles.vim
+
 set shortmess+=I " No intro message
 set vb t_vb= " No beep or flash
 set t_Co=256 " 256 colors
 set clipboard=unnamed " Use system clipboard
+color molokai
 
 " Window
 syntax on
@@ -53,10 +57,6 @@ set noswapfile
 
 " Tags
 set tags=tags;
-
-" Bundles
-silent! runtime bundles.vim
-color molokai
 
 " Remember last location in file
 augroup RestoreCursorPos
