@@ -1,3 +1,5 @@
+set nocompatible
+
 if !isdirectory(expand("~/.vim/bundle/vundle/.git"))
   !git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 endif
@@ -29,7 +31,5 @@ Bundle 'mattn/gist-vim'
 
 Bundle 'LustyExplorer'
 Bundle 'ZoomWin'
-
-Helptags
 
 runtime macros/matchit.vim
