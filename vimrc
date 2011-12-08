@@ -44,7 +44,12 @@ set wildmode=list:longest
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " Status line
-set statusline=%f\ %m%r%w%{fugitive#statusline()}%=%y[%vC]\ %P\ of\ %L
+set statusline=%f
+set statusline+=\ %m%r%w
+set statusline+=%{fugitive#statusline()}
+set statusline+=%=
+set statusline+=%y[%vC]
+set statusline+=\ %P\ of\ %L
 set laststatus=2
 
 " File
@@ -203,6 +208,7 @@ let mapleader=','
   " Syntastic
   let g:syntastic_enable_signs=1
   let g:syntastic_quiet_warnings=1
+  let g:syntastic_auto_loc_list=1
 
   " ZoomWin
   map <silent> <Leader><CR> :ZoomWin<CR>
@@ -423,7 +429,7 @@ function! s:Kwbd(kwbdStage)
   endif
 endfunction
 command! Kwbd call <SID>Kwbd(1)
-nnoremap <silent> <Plug>Kwbd :<C-u>Kwbd<CR>
+nnoremap <silent> <Plug>Kwbd :<C-u>Kwbd<CR><Esc>
 
 if has('gui_running')
   autocmd VimResized * wincmd =
