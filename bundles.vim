@@ -30,5 +30,6 @@ Bundle 'mattn/gist-vim'
 
 Bundle 'LustyExplorer'
 Bundle 'ZoomWin'
+Bundle 'bufkill.vim'
 
 runtime macros/matchit.vim
