@@ -80,7 +80,7 @@ augroup end
 
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 au BufRead,BufNewFile *.json set ft=javascript
-au BufRead,BufNewFile *.{txt,md,markdown,mdown,mkd,mkdn} call s:SetupWrapping()
+au BufRead,BufNewFile *.{txt,md,markdown,mdown,mkd,mkdn} call SetupWrapping()
 au BufRead,BufNewFile *.{css,scss} set fdm=marker fmr={,}
 filetype plugin indent on
 
