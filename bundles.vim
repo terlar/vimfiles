@@ -27,9 +27,11 @@ Bundle 'tpope/vim-haml'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
 Bundle 'mattn/gist-vim'
+Bundle 'Townk/vim-autoclose'
 
 Bundle 'LustyExplorer'
 Bundle 'ZoomWin'
 Bundle 'bufkill.vim'
+Bundle 'YankRing.vim'
 
 runtime macros/matchit.vim

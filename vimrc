@@ -11,9 +11,10 @@ set noequalalways
 set title " Set terminal title
 set shortmess=atI " Less interruptive prompts
 set vb t_vb= " No beep or flash
-set t_Co=256 " 256 colors
+set fillchars= " No separator chars
 set clipboard=unnamed " Use system clipboard
-set fillchars = "" " No separator chars
+set timeoutlen=300 " Faster mappings
+set t_Co=256 " 256 colors
 color molokai
 
 " Window
@@ -69,6 +70,20 @@ set tags=tags;
 set complete=.,w,b,t
 set showfulltag
 
+if has('gui_running')
+  autocmd VimResized * wincmd =
+
+  set guifont=Menlo:h12
+  set guioptions=aemg
+  set guitablabel=%t
+  set mousehide
+
+  if has('mac')
+    let macvim_skip_cmd_opt_movement = 1
+    let macvim_hig_shift_movement = 1
+  endif
+endif
+
 " Functions
 silent! runtime functions.vim
 
@@ -85,9 +100,12 @@ au BufRead,BufNewFile *.{css,scss} set fdm=marker fmr={,}
 filetype plugin indent on
 
 let mapleader=','
+
 " Yank to the end of the line
 nnoremap Y y$
 
+" Clear search results
+nnoremap <Leader><Space> :noh<CR>
 " Center screen when scrolling search results
 nmap n nzz
 nmap N Nzz
@@ -148,8 +166,6 @@ nnoremap ` '
 " Inserts the path of the currently edited file into a command
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
-" Clear search results
-nnoremap <Leader><Space> :noh<CR>
 " Select pasted text
 nnoremap <Leader>v V`]
 
@@ -168,8 +184,19 @@ au BufRead,BufNewFile *.{css,scss} nnoremap <buffer> <Leader>S ?{<CR>jV/\v^\s*\}
 let g:netrw_special_syntax=1
 let g:netrw_list_hide='^\.[^\.]'
 
-" Tagbar
-nnoremap <silent> <Leader>t :TagbarToggle<CR>
+" NERDTree
+let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+let NERDTreeMinimalUI=1
+let NERDTreeDirArrows=1
+map <silent> <Leader>n :NERDTreeToggle<CR>
+au VimEnter * :call InitProjectTree()
+
+" LustyExplorer
+let g:LustyExplorerSuppressRubyWarning=1
+nnoremap <silent> <Leader><Tab> :LustyBufferExplorer<CR>
+nnoremap <silent> <Leader>e :LustyFilesystemExplorer<CR>
+nnoremap <silent> <Leader>E :LustyFilesystemExplorerFromHere<CR>
+nnoremap <silent> <Leader>g :LustyBufferGrep<CR>
 
 " Gundo
 let g:gundo_preview_bottom=1
@@ -185,31 +212,15 @@ nnoremap <Leader>af :AckFile
 let g:SuperTabDefaultCompletionType='context'
 let g:SuperTabLongestEnhanced=1
 
-" LustyExplorer
-let g:LustyExplorerSuppressRubyWarning=1
-nnoremap <silent> <Leader><Tab> :LustyBufferExplorer<CR>
-nnoremap <silent> <Leader>e :LustyFilesystemExplorer<CR>
-nnoremap <silent> <Leader>E :LustyFilesystemExplorerFromHere<CR>
-nnoremap <silent> <Leader>g :LustyBufferGrep<CR>
-
-" NERDTree
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-let NERDTreeMinimalUI=1
-let NERDTreeDirArrows=1
-map <silent> <Leader>n :NERDTreeToggle<CR>
-
-" Syntastic
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
-let g:syntastic_auto_loc_list=1
-
 " Surround
 let g:surround_40 = '(\r)'
 let g:surround_91 = '[\r]'
 let g:surround_60 = '<\r>'
 
-" ZoomWin
-map <silent> <Leader><CR> :ZoomWin<CR>
+" Syntastic
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_warnings=1
+let g:syntastic_auto_loc_list=1
 
 " ConqueTerm
 let g:ConqueTerm_FastMode=1
@@ -225,19 +236,8 @@ map <silent> <Leader>rs :ConqueTermSplit rails console<CR>
 map <silent> <Leader>sv  :ConqueTermVSplit zsh<CR>
 map <silent> <Leader>rsv :ConqueTermVSplit rails console<CR>
 
-" Project Tree
-au VimEnter * :call InitProjectTree()
+" ZoomWin
+map <silent> <Leader><CR> :ZoomWin<CR>
 
-if has('gui_running')
-  autocmd VimResized * wincmd =
-
-  set guifont=Menlo:h12
-  set guioptions=aemg
-  set guitablabel=%t
-  set mousehide
-
-  if has('mac')
-    let macvim_skip_cmd_opt_movement = 1
-    let macvim_hig_shift_movement = 1
-  endif
-endif
+" Tagbar
+nnoremap <silent> <Leader>t :TagbarToggle<CR>
