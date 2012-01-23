@@ -15,6 +15,7 @@ set fillchars= " No separator chars
 set clipboard=unnamed " Use system clipboard
 set timeoutlen=300 " Faster mappings
 set t_Co=256 " 256 colors
+set laststatus=2 " Always show statusline
 color molokai
 
 " Window
