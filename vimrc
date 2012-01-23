@@ -21,7 +21,7 @@ color molokai
 syntax on
 set number
 set nowrap
-set list listchars=tab:▸\ ,trail:•
+set list listchars=tab:→\ ,trail:•
 set matchpairs+=<:>
 set foldlevel=10000
 
@@ -45,16 +45,6 @@ set history=1000
 set wildmenu
 set wildmode=list:longest
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
-
-" Status line
-set statusline=%f%y
-set statusline+=\ %m%r%w
-set statusline+=%{fugitive#statusline()}
-set statusline+=%=
-set statusline+=Line:\ %l/%L[%p%%]
-set statusline+=\ Col:\ %v
-set statusline+=\ Buf:\ #%n
-set laststatus=2
 
 " File
 set hidden
@@ -100,9 +90,6 @@ au BufRead,BufNewFile *.{css,scss} set fdm=marker fmr={,}
 filetype plugin indent on
 
 let mapleader=','
-
-" Yank to the end of the line
-nnoremap Y y$
 
 " Clear search results
 nnoremap <Leader><Space> :noh<CR>
@@ -180,14 +167,10 @@ cmap w!! w !sudo tee % >/dev/null
 " Sort CSS properties
 au BufRead,BufNewFile *.{css,scss} nnoremap <buffer> <Leader>S ?{<CR>jV/\v^\s*\}?$<CR>k:sort<CR>:noh<CR>
 
-" Netrw
-let g:netrw_special_syntax=1
-let g:netrw_list_hide='^\.[^\.]'
-
 " NERDTree
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-let NERDTreeMinimalUI=1
-let NERDTreeDirArrows=1
+let g:NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+let g:NERDTreeMinimalUI=1
+let g:NERDTreeDirArrows=1
 map <silent> <Leader>n :NERDTreeToggle<CR>
 au VimEnter * :call InitProjectTree()
 
@@ -241,3 +224,6 @@ map <silent> <Leader><CR> :ZoomWin<CR>
 
 " Tagbar
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
+
+" Powerline
+let g:Powerline_symbols = 'fancy'

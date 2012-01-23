@@ -28,6 +28,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
 Bundle 'mattn/gist-vim'
 Bundle 'Townk/vim-autoclose'
+Bundle 'Lokaltog/vim-powerline'
 
 Bundle 'LustyExplorer'
 Bundle 'ZoomWin'
