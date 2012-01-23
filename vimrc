@@ -124,6 +124,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <Leader>w <C-w>v<C-w>l
 nnoremap <Leader>ws <C-w>s<C-w>j
+nnoremap <Leader>wc <C-w>c
 map <Leader>= <C-w>=
 nmap <silent> <Leader>- :execute ":resize " . line('$')<cr>
 
