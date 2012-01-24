@@ -216,10 +216,10 @@ let g:ConqueTerm_CWInsert=1
 let g:ConqueTerm_CloseOnEnd=1
 au FileType conque_term setlocal nolist nobuflisted
 
-map <silent> <Leader>s  :ConqueTermSplit zsh<CR>
-map <silent> <Leader>rs :ConqueTermSplit rails console<CR>
-map <silent> <Leader>sv  :ConqueTermVSplit zsh<CR>
-map <silent> <Leader>rsv :ConqueTermVSplit rails console<CR>
+map <silent> <Leader>s  :ConqueTermVSplit zsh<CR>
+map <silent> <Leader>rs :ConqueTermVSplit rails console<CR>
+map <silent> <Leader>sv  :ConqueTermSplit zsh<CR>
+map <silent> <Leader>rsv :ConqueTermSplit rails console<CR>
 
 " ZoomWin
 map <silent> <Leader><CR> :ZoomWin<CR>
