@@ -208,8 +208,6 @@ let g:syntastic_quiet_warnings=1
 let g:syntastic_auto_loc_list=1
 
 " ConqueTerm
-let g:ConqueTerm_FastMode=1
-let g:ConqueTerm_Syntax=''
 let g:ConqueTerm_InsertOnEnter=1
 let g:ConqueTerm_ReadUnfocused=1
 let g:ConqueTerm_CWInsert=1
