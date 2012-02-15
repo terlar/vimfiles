@@ -16,6 +16,7 @@ set clipboard=unnamed " Use system clipboard
 set timeoutlen=300 " Faster mappings
 set t_Co=256 " 256 colors
 set laststatus=2 " Always show statusline
+set mouse=a " Enable mouse support
 color molokai
 
 " Window
