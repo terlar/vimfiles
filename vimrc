@@ -127,13 +127,13 @@ nnoremap <Leader>w <C-w>v<C-w>l
 nnoremap <Leader>ws <C-w>s<C-w>j
 nnoremap <Leader>wc <C-w>c
 map <Leader>= <C-w>=
-nmap <silent> <Leader>- :execute ":resize " . line('$')<cr>
+nmap <Silent> <Leader>- :execute ":resize " . line('$')<cr>
 
 " Buffers
 noremap <Tab> :bn<CR>
 noremap <S-Tab> :bp<CR>
 nmap <Leader>d :BD<CR>
-nmap <Leader>du :BUNDO<CR>
+nmap <Silent> <Leader>du :BUNDO<CR>
 " Close all buffers
 nmap <Leader>D :bufdo :BD<CR>
 " Switch between last two buffers
@@ -141,7 +141,6 @@ nnoremap <Leader><Leader> <C-^>
 
 " Tags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-map <C-\> :tnext<CR>
 nnoremap <Space> <C-]>
 nnoremap <S-Space> <C-T>
 
@@ -157,10 +156,10 @@ nnoremap ` '
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Select pasted text
-nnoremap <Leader>v V`]
+nnoremap <Leader>v `[v`]
 
 " Toggle paste
-nnoremap <Leader>P :setlocal paste!<CR>
+nnoremap <Leader>p :setlocal paste!<CR>
 " Toggle numbers
 nnoremap <Leader># :set number!<CR>
 
