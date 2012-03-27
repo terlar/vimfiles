@@ -34,6 +34,5 @@ Bundle 'nono/vim-handlebars'
 Bundle 'LustyExplorer'
 Bundle 'ZoomWin'
 Bundle 'bufkill.vim'
-Bundle 'YankRing.vim'
 
 runtime macros/matchit.vim
