@@ -10,7 +10,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'cschlueter/vim-molokai'
+Bundle 'tomasr/molokai'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
