@@ -140,9 +140,9 @@ nmap <Leader>D :bufdo :BD<CR>
 nnoremap <Leader><Leader> <C-^>
 
 " Tags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-nnoremap <Space> <C-]>
-nnoremap <S-Space> <C-T>
+map <Leader>rt :!ctags -R *<CR><CR>
+nnoremap <Space> <C-]>zz
+nnoremap <S-Space> <C-T>zz
 
 " Folding
 nnoremap <Leader>z <Esc>:set foldlevel=10000<CR>
