@@ -227,3 +227,10 @@ nnoremap <silent> <Leader>t :TagbarToggle<CR>
 
 " Powerline
 let g:Powerline_symbols = 'fancy'
+
+" Nexus
+map <CR> <Plug>NexusRunTestLine
+map <Leader>z <Plug>NexusRunTestFile
+map <Leader>xx <Plug>NexusSendBuffer
+map <Leader>x <Plug>NexusSendSelection
+call Pl#Theme#InsertSegment('nexus:status', 'after', 'scrollpercent')

@@ -30,6 +30,7 @@ Bundle 'mattn/gist-vim'
 Bundle 'Townk/vim-autoclose'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'nono/vim-handlebars'
+Bundle 'skanev/vim-nexus'
 
 Bundle 'LustyExplorer'
 Bundle 'ZoomWin'
