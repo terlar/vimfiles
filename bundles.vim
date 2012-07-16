@@ -11,6 +11,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'tomasr/molokai'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
@@ -30,7 +31,8 @@ Bundle 'mattn/gist-vim'
 Bundle 'Townk/vim-autoclose'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'nono/vim-handlebars'
-Bundle 'skanev/vim-nexus'
+Bundle 'benmills/vimux'
+Bundle 'pgr0ss/vimux-ruby-test'
 
 Bundle 'LustyExplorer'
 Bundle 'ZoomWin'

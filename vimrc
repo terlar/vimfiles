@@ -228,9 +228,11 @@ nnoremap <silent> <Leader>t :TagbarToggle<CR>
 " Powerline
 let g:Powerline_symbols = 'fancy'
 
-" Nexus
-map <CR> <Plug>NexusRunTestLine
-map <Leader>z <Plug>NexusRunTestFile
-map <Leader>xx <Plug>NexusSendBuffer
-map <Leader>x <Plug>NexusSendSelection
-call Pl#Theme#InsertSegment('nexus:status', 'after', 'scrollpercent')
+" Vimux
+let g:VimuxHeight = "40"
+let g:VimuxOrientation = "h"
+let g:VimuxUseNearestPane = 1
+if exists('$TMUX')
+  autocmd FileType ruby map <buffer> <CR> :RunRubyFocusedTest<CR>
+  autocmd FileType ruby map <buffer> <Leader><CR> :RunAllRubyTests<CR>
+endif
