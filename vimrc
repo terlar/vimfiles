@@ -207,18 +207,6 @@ let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
 let g:syntastic_auto_loc_list=1
 
-" ConqueTerm
-let g:ConqueTerm_InsertOnEnter=1
-let g:ConqueTerm_ReadUnfocused=1
-let g:ConqueTerm_CWInsert=1
-let g:ConqueTerm_CloseOnEnd=1
-au FileType conque_term setlocal nolist nobuflisted
-
-map <silent> <Leader>s  :ConqueTermVSplit zsh<CR>
-map <silent> <Leader>rs :ConqueTermVSplit rails console<CR>
-map <silent> <Leader>ss  :ConqueTermSplit zsh<CR>
-map <silent> <Leader>rss :ConqueTermSplit rails console<CR>
-
 " ZoomWin
 map <silent> <Leader><CR> :ZoomWin<CR>
 
