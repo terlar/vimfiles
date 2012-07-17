@@ -232,7 +232,9 @@ let g:Powerline_symbols = 'fancy'
 let g:VimuxHeight = "40"
 let g:VimuxOrientation = "h"
 let g:VimuxUseNearestPane = 1
-if exists('$TMUX')
-  autocmd FileType ruby map <buffer> <CR> :RunRubyFocusedTest<CR>
-  autocmd FileType ruby map <buffer> <Leader><CR> :RunAllRubyTests<CR>
-endif
+map <Leader>> :VimuxPromptCommand<CR>
+map <Leader>>> :VimuxRunLastCommand<CR>
+" Send selected text to tmux
+vmap <C-C><C-C> "vy:call VimuxRunCommand(@v, 0)<CR>
+" Send current paragraph to tmux
+nmap <C-C><C-C> vip<C-C><C-C><CR>
