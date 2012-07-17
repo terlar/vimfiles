@@ -32,7 +32,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'nono/vim-handlebars'
 Bundle 'benmills/vimux'
-Bundle 'pgr0ss/vimux-ruby-test'
+Bundle 'jgdavey/vim-turbux'
 
 Bundle 'LustyExplorer'
 Bundle 'ZoomWin'

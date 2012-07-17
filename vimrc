@@ -238,3 +238,10 @@ map <Leader>>> :VimuxRunLastCommand<CR>
 vmap <C-C><C-C> "vy:call VimuxRunCommand(@v, 0)<CR>
 " Send current paragraph to tmux
 nmap <C-C><C-C> vip<C-C><C-C><CR>
+
+" Turbux
+let g:no_turbux_mappings = 1
+if exists('$TMUX')
+  autocmd FileType ruby map <buffer> <CR> <Plug>SendFocusedTestToTmux
+  autocmd FileType ruby map <buffer> <Leader><CR> <Plug>SendTestToTmux
+endif
