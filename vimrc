@@ -34,6 +34,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set backspace=indent,eol,start
+set complete=.,b,u,t
 
 " Searching
 set hlsearch
@@ -45,7 +46,7 @@ set gdefault
 " Command line
 set history=1000
 set wildmenu
-set wildmode=list:longest
+set wildmode=longest,list:longest
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " File
@@ -59,7 +60,6 @@ set noswapfile
 
 " Tags
 set tags=tags;
-set complete=.,w,b,t
 set showfulltag
 
 if has('gui_running')
