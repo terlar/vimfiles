@@ -187,7 +187,7 @@ nnoremap <silent> <Leader>g :LustyBufferGrep<CR>
 let g:gundo_preview_bottom=1
 let g:gundo_preview_height=10
 let g:gundo_width=30
-nnoremap <Leader>u :GundoToggle<CR>
+nnoremap <Leader>u :silent GundoToggle<CR>
 
 " Ack
 nnoremap <Leader>a :Ack
