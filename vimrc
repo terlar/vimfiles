@@ -77,12 +77,6 @@ endif
 " Functions
 silent! runtime functions.vim
 
-" Remember last location in file
-augroup RestoreCursorPos
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal g`\"" | endif
-augroup end
-
 " Filetype config
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 au BufRead,BufNewFile *.json set ft=javascript
@@ -158,9 +152,6 @@ nnoremap <Leader>v `[v`]
 
 " Toggle numbers
 nnoremap <Leader># :set number!<CR>
-
-" Write as sudo
-cmap w!! w !sudo tee % >/dev/null
 
 " Sort CSS properties
 au BufRead,BufNewFile *.{css,scss} nnoremap <buffer> <Leader>S ?{<CR>jV/\v^\s*\}?$<CR>k:sort<CR>:noh<CR>

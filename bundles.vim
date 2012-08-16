@@ -21,24 +21,32 @@ Bundle 'jgdavey/vim-turbux'
 " Git
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
+Bundle 'gregsexton/gitv'
 Bundle 'mattn/gist-vim'
 
-" Utility
+" Edit
+Bundle 'lastpos.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'Townk/vim-autoclose'
 Bundle 'ervandew/supertab'
+Bundle 'Align'
+Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
+
+" Utility
 Bundle 'bufkill.vim'
 Bundle 'ZoomWin'
 Bundle 'tpope/vim-rails'
-Bundle 'bingaman/vim-sparkup'
 
 " Filesystem
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
 Bundle 'LustyExplorer'
 Bundle 'majutsushi/tagbar'
+Bundle 'file-line'
+Bundle 'gmarik/sudo-gui.vim'
 
 " Syntax
 Bundle 'scrooloose/syntastic'
