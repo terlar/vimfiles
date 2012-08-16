@@ -12,11 +12,14 @@ set title " Set terminal title
 set shortmess=atI " Less interruptive prompts
 set vb t_vb= " No beep or flash
 set fillchars= " No separator chars
-set clipboard=unnamed " Use system clipboard
-set timeoutlen=300 " Faster mappings
+set clipboard+=unnamed " Use system clipboard
+set pastetoggle=<C-p> " Toggle paste mode
+set timeoutlen=250 " Faster mappings
 set t_Co=256 " 256 colors
 set laststatus=2 " Always show statusline
 set mouse=a " Enable mouse support
+set mousehide " Hide mouse on input
+let g:is_posix=1 " Use POSIX
 color molokai
 
 " Window
@@ -59,21 +62,16 @@ set nowritebackup
 set noswapfile
 
 " Tags
-set tags=tags;
+set tags=./tags;$HOME
 set showfulltag
 
+if has('mac')
+  set macmeta
+endif
 if has('gui_running')
   autocmd VimResized * wincmd =
-
   set guifont=Menlo:h12
   set guioptions=aemg
-  set guitablabel=%t
-  set mousehide
-
-  if has('mac')
-    let macvim_skip_cmd_opt_movement = 1
-    let macvim_hig_shift_movement = 1
-  endif
 endif
 
 " Functions
@@ -85,16 +83,42 @@ augroup RestoreCursorPos
     \| exe "normal g`\"" | endif
 augroup end
 
+" Filetype config
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 au BufRead,BufNewFile *.json set ft=javascript
 au BufRead,BufNewFile *.{txt,md,markdown,mdown,mkd,mkdn} call SetupWrapping()
 au BufRead,BufNewFile *.{css,scss} set fdm=marker fmr={,}
 filetype plugin indent on
 
+" Mappings
 let mapleader=','
 
+" Window
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <Leader>% <C-w>v<C-w>l
+nnoremap <Leader>" <C-w>s<C-w>j
+nnoremap <Leader>x <C-w>c
+nnoremap + <C-w>+
+nnoremap - <C-w>-
+nnoremap <Leader>- :<C-u>exe ":resize ".line("$")<CR>
+
+" Buffers
+noremap <Tab> :bn<CR>
+noremap <S-Tab> :bp<CR>
+nnoremap <Leader>d :silent! BD<CR>
+nnoremap <Leader>d! :BD!<CR>
+nnoremap <Leader>du :silent! BUNDO<CR>
+" Close all buffers
+nnoremap <Leader>D :bufdo :BD<CR>
+" Switch between last two buffers
+nnoremap <Leader><Leader> <C-^>
+
 " Clear search results
-nnoremap <Leader><Space> :noh<CR>
+nnoremap <Leader>/ :noh<CR>
+nnoremap <Leader>? :noh<CR>
 " Center screen when scrolling search results
 nmap n nzz
 nmap N Nzz
@@ -103,41 +127,19 @@ nmap N Nzz
 imap <C-h> <C-o>^
 imap <C-l> <C-o>$
 
+" Split line(opposite to S-J joining line)
+nnoremap <C-J> gEa<CR><Esc>ew
+
+" Marks
+nnoremap ' `
+nnoremap ` '
+
 " Auto format
 map === mmgg=G`m^zz
 " Remove trailing whitespace
 nnoremap <Leader>W :%s/\s\+$//<CR>:let @/=''<CR>
 " Retab
 nnoremap <Leader>R :ret!<CR>
-
-" Move lines
-nnoremap <D-j> :m+<CR>==
-nnoremap <D-k> :m-2<CR>==
-inoremap <D-j> <Esc>:m+<CR>==gi
-inoremap <D-k> <Esc>:m-2<CR>==gi
-vnoremap <D-j> :m'>+<CR>gv=gv
-vnoremap <D-k> :m-2<CR>gv=gv
-
-" Window
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-nnoremap <Leader>w <C-w>v<C-w>l
-nnoremap <Leader>ws <C-w>s<C-w>j
-nnoremap <Leader>wc <C-w>c
-map <Leader>= <C-w>=
-nmap <Silent> <Leader>- :execute ":resize " . line('$')<cr>
-
-" Buffers
-noremap <Tab> :bn<CR>
-noremap <S-Tab> :bp<CR>
-nmap <Leader>d :BD<CR>
-nmap <Silent> <Leader>du :BUNDO<CR>
-" Close all buffers
-nmap <Leader>D :bufdo :BD<CR>
-" Switch between last two buffers
-nnoremap <Leader><Leader> <C-^>
 
 " Tags
 map <Leader>rt :!ctags -R *<CR><CR>
@@ -148,18 +150,12 @@ nnoremap <S-Space> <C-T>zz
 nnoremap <Leader>z <Esc>:set foldlevel=10000<CR>
 nnoremap <Leader>Z <Esc>:set foldlevel=-10000<CR>
 
-" Marks
-nnoremap ' `
-nnoremap ` '
-
 " Inserts the path of the currently edited file into a command
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Select pasted text
 nnoremap <Leader>v `[v`]
 
-" Toggle paste
-nnoremap <Leader>p :setlocal paste!<CR>
 " Toggle numbers
 nnoremap <Leader># :set number!<CR>
 
@@ -208,7 +204,9 @@ let g:syntastic_quiet_warnings=1
 let g:syntastic_auto_loc_list=1
 
 " ZoomWin
-map <silent> <Leader><CR> :ZoomWin<CR>
+nnoremap <C-_> :ZoomWin<CR>
+vnoremap <C-_> <C-C>:ZoomWin<CR>gv
+inoremap <C-_> <C-o>:ZoomWin<CR>
 
 " Tagbar
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
