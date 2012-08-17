@@ -3,11 +3,11 @@ vim_path="$HOME/.vim"
 
 # Remove and backup old files
 if [ -e "$HOME/.vimrc" ]; then
-  cp "$HOME/.vimrc" "$HOME/.vimrc.old"
+  cp "$HOME/.vimrc" "$HOME/.vimrc.bak"
   rm -f "$HOME/.vimrc"
 fi
 if [ -e $vim_path ]; then
-  cp -r $vim_path "$vim_path.old"
+  cp -r $vim_path "$vim_path.bak"
   rm -rf $vim_path
 fi
 
