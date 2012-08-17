@@ -4,6 +4,28 @@ function! SetupWrapping()
   set textwidth=72
 endfunction
 
+
+" Utility functions to create file commands
+function! s:CommandCabbr(abbreviation, expansion)
+  execute 'cabbrev ' . a:abbreviation . ' <c-r>=getcmdpos() == 1 && getcmdtype() == ":" ? "' . a:expansion . '" : "' . a:abbreviation . '"<CR>'
+endfunction
+
+function! s:FileCommand(name, ...)
+  if exists("a:1")
+    let funcname = a:1
+  else
+    let funcname = a:name
+  endif
+
+  execute 'command -nargs=1 -complete=file ' . a:name . ' :call ' . funcname . '(<f-args>)'
+endfunction
+
+function! DefineCommand(name, destination)
+  call s:FileCommand(a:destination)
+  call s:CommandCabbr(a:name, a:destination)
+endfunction
+
+
 function! InitProjectTree()
   if exists(":NERDTree")
     autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
@@ -46,7 +68,7 @@ function! s:CdIfDirectory(directory)
   endif
 endfunction
 
-" NERDTree utility function
+" Update NERDTree
 function! s:UpdateNERDTree(...)
   let stay = 0
 
@@ -66,27 +88,6 @@ function! s:UpdateNERDTree(...)
   endif
 endfunction
 
-" Utility functions to create file commands
-function! s:CommandCabbr(abbreviation, expansion)
-  execute 'cabbrev ' . a:abbreviation . ' <c-r>=getcmdpos() == 1 && getcmdtype() == ":" ? "' . a:expansion . '" : "' . a:abbreviation . '"<CR>'
-endfunction
-
-function! s:FileCommand(name, ...)
-  if exists("a:1")
-    let funcname = a:1
-  else
-    let funcname = a:name
-  endif
-
-  execute 'command -nargs=1 -complete=file ' . a:name . ' :call ' . funcname . '(<f-args>)'
-endfunction
-
-function! DefineCommand(name, destination)
-  call s:FileCommand(a:destination)
-  call s:CommandCabbr(a:name, a:destination)
-endfunction
-
-" Public NERDTree-aware versions of builtin functions
 function! ChangeDirectory(dir, ...)
   execute "cd " . fnameescape(a:dir)
   let stay = exists("a:1") ? a:1 : 1

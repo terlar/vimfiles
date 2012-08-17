@@ -4,7 +4,7 @@ endif
 
 set nocompatible
 filetype off
-set runtimepath+=~/.vim/bundle/vundle/
+set runtimepath+=~/.vim/bundle/vundle
 
 call vundle#rc()
 

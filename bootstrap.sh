@@ -1,5 +1,21 @@
 #!/bin/sh
-cp -r ~/.vim ~/.vim.old 2>/dev/null
-rm -fr ~/.vim 2>/dev/null
-rm -f ~/.vimrc 2>/dev/null
-git clone https://github.com/terlar/vimfiles ~/.vim && cd ~/.vim && vim -c BundleInstall! -c q -c q -u bundles.vim && ln -s ~/.vim/vimrc ~/.vimrc && mkdir -p ~/.vimundo
+
+# Remove and backup old files
+if [ -e $HOME/.vim ]; then
+  cp -r $HOME/.vim $HOME/.vim.old
+  rm -rf $HOME/.vim
+fi
+if [ -e $HOME/.vimrc ]; then
+  cp $HOME/.vimrc $HOME/.vimrc.old
+  rm -f $HOME/.vimrc
+fi
+
+# Steup new vim config
+git clone https://github.com/terlar/vimfiles $HOME/.vim
+ln -s $HOME/.vim/vimrc $HOME/.vimrc
+
+# Install bundles
+vim -c BundleInstall! -c qa -u $HOME/.vim/config/bundles.vim
+
+# Create dir for undo history
+mkdir -p $HOME/.vimundo
