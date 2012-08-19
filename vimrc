@@ -1,3 +1,7 @@
-for src in split(glob('config/**/*.vim'), "\n")
-  exe "runtime ".src
-endfor
+" Functions
+runtime functions/*.vim
+
+runtime config/bundles.vim
+runtime config/settings.vim
+runtime config/filetypes.vim
+runtime config/mappings.vim
