@@ -51,6 +51,7 @@ set hidden
 set autoread autowriteall
 set nowritebackup noswapfile
 if has('persistent_undo')
+  silent !mkdir ~/.vimundo > /dev/null 2>&1
   set undodir=~/.vimundo
   set undofile
 end

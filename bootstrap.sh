@@ -17,6 +17,3 @@ ln -s "$vim_path/vimrc" "$HOME/.vimrc"
 
 # Install bundles
 vim -c BundleInstall! -c qa -u $vim_path/config/bundles.vim
-
-# Create dir for undo history
-mkdir -p "$HOME/.vimundo"
