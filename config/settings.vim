@@ -67,9 +67,6 @@ set vb t_vb=
 set mouse=a
 set mousehide
 
-if has('mac')
-  set macmeta
-endif
 if has('gui_running')
   autocmd VimResized * wincmd =
   set guifont=Menlo:h12
