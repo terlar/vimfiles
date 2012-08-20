@@ -69,6 +69,10 @@ if exists('$TMUX')
   au FileType ruby nnoremap <buffer> <Leader><CR> <Plug>SendTestToTmux
 endif
 
+" Align
+nnoremap <Leader>= :Align 
+vnoremap <Leader>= :Align 
+
 " Switch
 nnoremap <Space> :Switch<CR>
 
