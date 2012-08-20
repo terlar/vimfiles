@@ -40,8 +40,8 @@ nnoremap ` '
 
 " Tags
 nnoremap <Leader>] :!ctags -R *<CR><CR>
-nnoremap <Space> <C-]>zz
-nnoremap <S-Space> <C-T>zz
+"nnoremap <Space> <C-]>zz
+"nnoremap <S-Space> <C-T>zz
 
 " Folding
 nnoremap <Leader>z :set foldlevel=10000<CR>

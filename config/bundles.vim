@@ -33,6 +33,8 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'ervandew/supertab'
 Bundle 'Align'
 Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
+Bundle 'AndrewRadev/splitjoin.vim'
+Bundle 'AndrewRadev/switch.vim'
 
 " Utility
 Bundle 'bufkill.vim'
