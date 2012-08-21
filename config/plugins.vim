@@ -46,6 +46,13 @@ nnoremap <BS> :SplitjoinJoin<CR>
 " SuperTab
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabLongestEnhanced = 1
+au FileType * call ChainSuperTab()
+function ChainSuperTab()
+  if &omnifunc != ''
+    call SuperTabChain(&omnifunc, '<C-P>')
+    call SuperTabSetDefaultCompletionType('context')
+  endif
+endfunction
 
 " Surround
 let g:surround_40 = '(\r)'

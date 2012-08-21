@@ -32,7 +32,7 @@ set backspace=indent,eol,start
 set expandtab
 set tabstop=2 softtabstop=2 shiftwidth=2
 set nojoinspaces
-set pastetoggle=<C-p>
+set pastetoggle=<Leader>p
 
 " Searching
 set hlsearch incsearch
@@ -43,7 +43,7 @@ set gdefault
 set history=1000
 set wildmenu
 set wildmode=longest,list:longest
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/bundle/*,tmp/*
 
 " Files
 set encoding=utf-8
