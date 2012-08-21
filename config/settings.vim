@@ -27,7 +27,8 @@ set matchpairs+=<:>
 set foldlevel=10000
 
 " Editing
-set complete=.,b,u,t
+set complete=.,w,b,u,t
+set pumheight=10
 set backspace=indent,eol,start
 set expandtab
 set tabstop=2 softtabstop=2 shiftwidth=2
