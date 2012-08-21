@@ -35,6 +35,7 @@ Bundle 'Align'
 Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'AndrewRadev/switch.vim'
+Bundle 'rubycomplete.vim'
 
 " Utility
 Bundle 'bufkill.vim'
@@ -56,5 +57,6 @@ Bundle 'tpope/vim-haml'
 Bundle 'pangloss/vim-javascript'
 Bundle 'jQuery'
 Bundle 'nono/vim-handlebars'
+Bundle 'kchmck/vim-coffee-script'
 
 runtime macros/matchit.vim
