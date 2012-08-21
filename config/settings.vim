@@ -44,7 +44,9 @@ set gdefault
 set history=1000
 set wildmenu
 set wildmode=longest,list:longest
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/bundle/*,tmp/*
+set wildignore+=.git,.svn
+set wildignore+=.DS_Store
+set wildignore+=*/vendor/bundle/*,*/tmp/*,.*-cache
 
 " Files
 set encoding=utf-8
