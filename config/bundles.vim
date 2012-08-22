@@ -35,7 +35,6 @@ Bundle 'Align'
 Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'AndrewRadev/switch.vim'
-Bundle 'rubycomplete.vim'
 
 " Utility
 Bundle 'bufkill.vim'
