@@ -10,6 +10,11 @@ nnoremap <Leader>* :exe ":Ack ".expand("<cword>")<CR>
 nnoremap <Leader>= :Align 
 vnoremap <Leader>= :Align 
 
+" CtrlP
+nnoremap <Leader><Tab> :CtrlPBuffer<CR>
+nnoremap <Leader>e :CtrlP<CR>
+nnoremap <Leader>E :CtrlP %:p:h<CR>
+
 " Gundo
 let g:gundo_right = 1
 let g:gundo_width = 30
@@ -19,9 +24,6 @@ let g:gundo_preview_height = 10
 nnoremap <Leader>u :silent GundoToggle<CR>
 
 " LustyExplorer
-nnoremap <silent> <Leader><Tab> :LustyBufferExplorer<CR>
-nnoremap <silent> <Leader>e :LustyFilesystemExplorer<CR>
-nnoremap <silent> <Leader>E :LustyFilesystemExplorerFromHere<CR>
 nnoremap <silent> <Leader>g :LustyBufferGrep<CR>
 
 " NERDTree
