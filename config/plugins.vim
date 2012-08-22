@@ -40,12 +40,13 @@ let g:Powerline_symbols = 'fancy'
 let g:splitjoin_normalize_whitespace = 1
 let g:splitjoin_align = 1
 
-nnoremap <CR> :SplitjoinSplit<CR>
 nnoremap <BS> :SplitjoinJoin<CR>
+nnoremap <Leader><BS> :SplitjoinSplit<CR>
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabLongestEnhanced = 1
+
 au FileType * call ChainSuperTab()
 function ChainSuperTab()
   if &omnifunc != ''
@@ -73,8 +74,8 @@ nnoremap <silent> <Leader>t :TagbarToggle<CR>
 " Turbux
 let g:no_turbux_mappings = 1
 if exists('$TMUX')
-  au FileType ruby nnoremap <buffer> <CR> <Plug>SendFocusedTestToTmux
-  au FileType ruby nnoremap <buffer> <Leader><CR> <Plug>SendTestToTmux
+  au FileType ruby map <buffer> <CR> <Plug>SendFocusedTestToTmux
+  au FileType ruby map <buffer> <Leader><CR> <Plug>SendTestToTmux
 endif
 
 " Vimux
@@ -92,4 +93,4 @@ nnoremap <C-C><C-C> vip<C-C><C-C><CR>
 " ZoomWin
 nnoremap <C-_> :ZoomWin<CR>
 vnoremap <C-_> <C-C>:ZoomWin<CR>gv
-inoremap <C-_> <C-o>:ZoomWin<CR>
+inoremap <C-_> <C-O>:ZoomWin<CR>
