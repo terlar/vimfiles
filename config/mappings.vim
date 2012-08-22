@@ -34,15 +34,6 @@ nnoremap <Leader>? :noh<CR>
 nnoremap n nzz
 nnoremap N Nzz
 
-" Marks
-nnoremap ' `
-nnoremap ` '
-
-" Tags
-nnoremap <Leader>] :!ctags -R *<CR><CR>
-"nnoremap <Space> <C-]>zz
-"nnoremap <S-Space> <C-T>zz
-
 " Folding
 nnoremap <Leader>z :set foldlevel=10000<CR>
 nnoremap <Leader>Z :set foldlevel=-10000<CR>
