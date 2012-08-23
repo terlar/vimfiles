@@ -27,13 +27,11 @@ let g:gundo_preview_height = 10
 nnoremap <Leader>u :silent GundoToggle<CR>
 
 " NERDTree
-let g:NERDTreeIgnore = ['\.pyc$', '\.rbc$', '\~$']
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeDirArrows = 1
 
-au VimEnter * :call InitProjectTree()
+au VimEnter * call InitProjectTree()
 
-nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>n :NERDTreeToggle<CR>
 
 " Powerline
 let g:Powerline_symbols = 'fancy'
