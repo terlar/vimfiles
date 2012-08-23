@@ -14,6 +14,9 @@ vnoremap <Leader>= :Align
 nnoremap <Leader><Tab> :CtrlPBuffer<CR>
 nnoremap <Leader>e :CtrlP<CR>
 nnoremap <Leader>E :CtrlP %:p:h<CR>
+nnoremap <Leader>g :CtrlPLine<CR>
+nnoremap <Leader>' :CtrlPChange<CR>
+nnoremap <Leader>r :CtrlPRTS<CR>
 
 " Gundo
 let g:gundo_right = 1
@@ -22,9 +25,6 @@ let g:gundo_preview_bottom = 1
 let g:gundo_preview_height = 10
 
 nnoremap <Leader>u :silent GundoToggle<CR>
-
-" LustyExplorer
-nnoremap <silent> <Leader>g :LustyBufferGrep<CR>
 
 " NERDTree
 let g:NERDTreeIgnore = ['\.pyc$', '\.rbc$', '\~$']
