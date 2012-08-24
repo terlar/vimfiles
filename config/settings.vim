@@ -50,6 +50,7 @@ set wildignore+=*/vendor/bundle/*,*/tmp/*,.*-cache
 
 " Files
 set encoding=utf-8
+set switchbuf=useopen
 set hidden
 set autoread autowriteall
 set nowritebackup noswapfile
