@@ -49,7 +49,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'file-line'
 Bundle 'gmarik/sudo-gui.vim'
 
-" Syntax
+" Filetypes
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-haml'
 Bundle 'pangloss/vim-javascript'
