@@ -24,7 +24,6 @@ set number
 set nowrap
 set list listchars=tab:→\ ,trail:•
 set matchpairs+=<:>
-set foldlevel=10000
 
 " Editing
 set complete=.,w,b,u,t
@@ -59,6 +58,10 @@ if has('persistent_undo')
   set undodir=~/.vimundo
   set undofile
 end
+
+" Folding
+set foldlevel=10000
+set foldtext=FoldText()
 
 " Tags
 set tags=./tags;$HOME
