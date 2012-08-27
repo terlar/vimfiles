@@ -75,7 +75,7 @@ set mouse=a
 set mousehide
 
 if has('gui_running')
-  autocmd VimResized * wincmd =
+  au VimResized * wincmd =
   set guifont=Menlo:h12
   set guioptions=aemg
 endif
