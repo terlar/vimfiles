@@ -9,9 +9,11 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>% <C-w>v<C-w>l
 nnoremap <Leader>" <C-w>s<C-w>j
 nnoremap <Leader>x <C-w>c
-nnoremap + <C-w>+
-nnoremap - <C-w>-
-nnoremap _ :<C-u>exe ":resize ".line("$")<CR>
+nnoremap <Up> <C-w>+
+nnoremap <Down> <C-w>-
+nnoremap <Left> <C-w><
+nnoremap <Right> <C-w>>
+nnoremap <Leader><Down> :<C-u>exe ":resize ".line("$")<CR>
 
 " Buffers
 noremap <Tab> :bn<CR>
