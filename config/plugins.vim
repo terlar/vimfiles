@@ -11,12 +11,12 @@ nnoremap <Leader>= :Align
 vnoremap <Leader>= :Align 
 
 " CtrlP
-nnoremap <Leader><Tab> :CtrlPBuffer<CR>
-nnoremap <Leader>e :CtrlP<CR>
-nnoremap <Leader>E :CtrlP %:p:h<CR>
-nnoremap <Leader>g :CtrlPLine<CR>
-nnoremap <Leader>' :CtrlPChange<CR>
-nnoremap <Leader>r :CtrlPRTS<CR>
+nnoremap <silent> <Leader><Tab> :CtrlPBuffer<CR>
+nnoremap <silent> <Leader>e :CtrlP<CR>
+nnoremap <silent> <Leader>E :CtrlP %:p:h<CR>
+nnoremap <silent> <Leader>g :CtrlPLine<CR>
+nnoremap <silent> <Leader>' :CtrlPChange<CR>
+nnoremap <silent> <Leader>r :CtrlPRTS<CR>
 
 " Gundo
 let g:gundo_right = 1
@@ -24,14 +24,14 @@ let g:gundo_width = 30
 let g:gundo_preview_bottom = 1
 let g:gundo_preview_height = 10
 
-nnoremap <Leader>u :silent GundoToggle<CR>
+nnoremap <silent> <Leader>u :silent GundoToggle<CR>
 
 " NERDTree
 let g:NERDTreeMinimalUI = 1
 
 au VimEnter * call InitProjectTree()
 
-nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
 
 " Powerline
 let g:Powerline_symbols = 'fancy'
@@ -40,8 +40,8 @@ let g:Powerline_symbols = 'fancy'
 let g:splitjoin_normalize_whitespace = 1
 let g:splitjoin_align = 1
 
-nnoremap <BS> :SplitjoinJoin<CR>
-nnoremap <Leader><BS> :SplitjoinSplit<CR>
+nnoremap <silent> <BS> :SplitjoinJoin<CR>
+nnoremap <silent> <Leader><BS> :SplitjoinSplit<CR>
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = 'context'
@@ -61,7 +61,7 @@ let g:surround_91 = '[\r]'
 let g:surround_60 = '<\r>'
 
 " Switch
-nnoremap <Space> :Switch<CR>
+nnoremap <silent> <Space> :Switch<CR>
 
 " Syntastic
 let g:syntastic_enable_signs = 1
@@ -96,7 +96,7 @@ vnoremap <C-_> <C-C>:ZoomWin<CR>gv
 inoremap <C-_> <C-O>:ZoomWin<CR>
 
 " Scratch
-nnoremap <Leader>s :Sscratch<CR>
+nnoremap <silent> <Leader>s :Sscratch<CR>
 
 au BufNewFile __Scratch__ call s:ScratchInit()
 function s:ScratchInit()
