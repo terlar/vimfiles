@@ -86,9 +86,9 @@ let g:VimuxUseNearestPane = 1
 nnoremap <Leader>> :VimuxPromptCommand<CR>
 nnoremap <Leader>>> :VimuxRunLastCommand<CR>
 " Send selected text to tmux
-vnoremap <C-C><C-C> "vy:call VimuxRunCommand(@v, 0)<CR>
+vmap <C-C><C-C> "vy:call VimuxRunCommand(@v, 0)<CR>
 " Send current paragraph to tmux
-nnoremap <C-C><C-C> vip<C-C><C-C><CR>
+nmap <C-C><C-C> vip<C-C><C-C><CR>
 
 " ZoomWin
 nnoremap <C-_> :ZoomWin<CR>
