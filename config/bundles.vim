@@ -40,6 +40,7 @@ Bundle 'AndrewRadev/switch.vim'
 Bundle 'bufkill.vim'
 Bundle 'ZoomWin'
 Bundle 'tpope/vim-rails'
+Bundle 'scratch.vim'
 
 " Filesystem
 Bundle 'mileszs/ack.vim'

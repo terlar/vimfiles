@@ -47,8 +47,8 @@ nnoremap <Leader><BS> :SplitjoinSplit<CR>
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabLongestEnhanced = 1
 
-au FileType * call ChainSuperTab()
-function ChainSuperTab()
+au FileType * call s:ChainSuperTab()
+function s:ChainSuperTab()
   if &omnifunc != ''
     call SuperTabChain(&omnifunc, '<C-P>')
     call SuperTabSetDefaultCompletionType('context')
@@ -94,3 +94,12 @@ nmap <C-C><C-C> vip<C-C><C-C><CR>
 nnoremap <C-_> :ZoomWin<CR>
 vnoremap <C-_> <C-C>:ZoomWin<CR>gv
 inoremap <C-_> <C-O>:ZoomWin<CR>
+
+" Scratch
+nnoremap <Leader>s :Sscratch<CR>
+
+au BufNewFile __Scratch__ call s:ScratchInit()
+function s:ScratchInit()
+  map <buffer> <CR> V<C-C><C-C>
+  map <buffer> <Leader><CR> ggVG<C-C><C-C>
+endfunction
