@@ -2,8 +2,8 @@
 let ruby_operators = 1
 
 " Ack
-nnoremap <Leader>a :Ack
-nnoremap <Leader>af :AckFile
+nnoremap <Leader>a :Ack 
+nnoremap <Leader>af :AckFile 
 nnoremap <Leader>* :exe ":Ack ".expand("<cword>")<CR>
 
 " Align
