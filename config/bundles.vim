@@ -29,7 +29,7 @@ Bundle 'lastpos.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
-Bundle 'Townk/vim-autoclose'
+Bundle 'kana/vim-smartinput'
 Bundle 'ervandew/supertab'
 Bundle 'Align'
 Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
