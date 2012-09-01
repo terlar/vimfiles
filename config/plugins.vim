@@ -2,13 +2,13 @@
 let ruby_operators = 1
 
 " Ack
-nnoremap <Leader>a :Ack 
-nnoremap <Leader>af :AckFile 
+nnoremap <Leader>a :Ack<space>
+nnoremap <Leader>af :AckFile<space>
 nnoremap <Leader>* :exe ":Ack ".expand("<cword>")<CR>
 
 " Align
-nnoremap <Leader>= :Align 
-vnoremap <Leader>= :Align 
+nnoremap <Leader>= :Align<space>
+vnoremap <Leader>= :Align<space>
 
 " CtrlP
 nnoremap <silent> <Leader><Tab> :CtrlPBuffer<CR>
@@ -35,6 +35,15 @@ nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
 
 " Powerline
 let g:Powerline_symbols = 'fancy'
+
+" Scratch
+nnoremap <silent> <Leader>s :Sscratch<CR>
+
+au BufNewFile __Scratch__ call s:ScratchInit()
+function s:ScratchInit()
+  map <buffer> <CR> V<C-C><C-C>
+  map <buffer> <Leader><CR> ggVG<C-C><C-C>
+endfunction
 
 " Splitjoin
 let g:splitjoin_normalize_whitespace = 1
@@ -94,12 +103,3 @@ nmap <C-C><C-C> vip<C-C><C-C><CR>
 nnoremap <C-_> :ZoomWin<CR>
 vnoremap <C-_> <C-C>:ZoomWin<CR>gv
 inoremap <C-_> <C-O>:ZoomWin<CR>
-
-" Scratch
-nnoremap <silent> <Leader>s :Sscratch<CR>
-
-au BufNewFile __Scratch__ call s:ScratchInit()
-function s:ScratchInit()
-  map <buffer> <CR> V<C-C><C-C>
-  map <buffer> <Leader><CR> ggVG<C-C><C-C>
-endfunction
