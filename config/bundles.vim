@@ -49,6 +49,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'file-line'
 Bundle 'gmarik/sudo-gui.vim'
+Bundle 'sjl/vitality.vim'
 
 " Filetypes
 Bundle 'scrooloose/syntastic'
