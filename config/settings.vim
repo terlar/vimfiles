@@ -16,7 +16,7 @@ syntax on
 
 " Theme
 set t_Co=256
-color molokai
+set background=dark
 
 " Window
 set noequalalways

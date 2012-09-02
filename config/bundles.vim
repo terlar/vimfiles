@@ -42,6 +42,8 @@ Bundle 'bufkill.vim'
 Bundle 'ZoomWin'
 Bundle 'tpope/vim-rails'
 Bundle 'scratch.vim'
+Bundle 'sjl/clam.vim'
+Bundle 'YankRing.vim'
 
 " Filesystem
 Bundle 'mileszs/ack.vim'

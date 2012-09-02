@@ -1,6 +1,8 @@
 " Default
 let ruby_operators = 1
 
+color molokai
+
 " Ack
 nnoremap <Leader>a :Ack<space>
 nnoremap <Leader>af :AckFile<space>
@@ -98,6 +100,10 @@ nnoremap <Leader>>> :VimuxRunLastCommand<CR>
 vmap <C-C><C-C> "vy:call VimuxRunCommand(@v, 0)<CR>
 " Send current paragraph to tmux
 nmap <C-C><C-C> vip<C-C><C-C><CR>
+
+" YankRing
+nnoremap <Leader>y :YRShow<CR>
+nnoremap <Leader>yy :YRSearch<CR>
 
 " ZoomWin
 nnoremap <C-_> :ZoomWin<CR>
