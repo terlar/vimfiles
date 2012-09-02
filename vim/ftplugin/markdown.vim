@@ -16,3 +16,4 @@ syn region mkdListFold
 
 syn sync fromstart
 setlocal foldmethod=syntax
+setlocal spell
