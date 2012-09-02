@@ -6,7 +6,7 @@ color molokai
 " Ack
 nnoremap <Leader>a :Ack<space>
 nnoremap <Leader>af :AckFile<space>
-nnoremap <Leader>* :exe ":Ack ".expand("<cword>")<CR>
+nnoremap <Leader>* :exe ':Ack '.expand('<cword>')<CR>
 
 " Align
 nnoremap <Leader>= :Align<space>
@@ -91,8 +91,8 @@ if exists('$TMUX')
 endif
 
 " Vimux
-let g:VimuxHeight = "40"
-let g:VimuxOrientation = "h"
+let g:VimuxHeight = '40'
+let g:VimuxOrientation = 'h'
 let g:VimuxUseNearestPane = 1
 
 nnoremap <Leader>> :VimuxPromptCommand<CR>
@@ -103,6 +103,8 @@ vmap <C-C><C-C> "vy:call VimuxRunCommand(@v, 0)<CR>
 nmap <C-C><C-C> vip<C-C><C-C><CR>
 
 " YankRing
+let g:yankring_history_file = '.yankring_history'
+
 nnoremap <Leader>y :YRShow<CR>
 nnoremap <Leader>yy :YRSearch<CR>
 
