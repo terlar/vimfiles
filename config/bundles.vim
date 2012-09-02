@@ -1,11 +1,10 @@
-if !isdirectory(expand("~/.vim/bundle/vundle/.git"))
+if !isdirectory(expand("~/.vim/bundle/vundle"))
   !git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+  let fresh_vundle=1
 endif
 
-set nocompatible
 filetype off
 set runtimepath+=~/.vim/bundle/vundle
-
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
@@ -63,3 +62,9 @@ Bundle 'nono/vim-handlebars'
 Bundle 'kchmck/vim-coffee-script'
 
 runtime macros/matchit.vim
+
+if exists("fresh_vundle")
+  BundleInstall
+  unlet fresh_vundle
+  wincmd c
+end
