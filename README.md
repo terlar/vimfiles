@@ -1,4 +1,4 @@
-This is included in the more complete dotfile solution:
+This is included in my complete dotfile solution:
 https://github.com/terlar/dotfiles
 
 ## Installation
