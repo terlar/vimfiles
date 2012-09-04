@@ -13,7 +13,7 @@ nnoremap <Leader>= :Align<space>
 vnoremap <Leader>= :Align<space>
 
 " CtrlP
-let g:ctrlp_extensions = ['register']
+let g:ctrlp_extensions = ['register', 'funky']
 
 nnoremap <silent> <Leader><Tab> :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>e :CtrlP<CR>
@@ -22,6 +22,7 @@ nnoremap <silent> <Leader>g :CtrlPLine<CR>
 nnoremap <silent> <Leader>' :CtrlPChange<CR>
 nnoremap <silent> <Leader>r :CtrlPRegister<CR>
 nnoremap <silent> <Leader>v :CtrlPRTS<CR>
+nnoremap <silent> <Leader>f :CtrlPFunky<CR>
 
 " Gundo
 let g:gundo_right = 1
