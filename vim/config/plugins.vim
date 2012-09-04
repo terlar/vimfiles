@@ -46,9 +46,12 @@ let g:Powerline_symbols = 'fancy'
 nnoremap <silent> <Leader>s :Sscratch<CR>
 
 au BufNewFile __Scratch__ call s:ScratchInit()
-function s:ScratchInit()
-  map <buffer> <CR> V<C-C><C-C>
-  map <buffer> <Leader><CR> ggVG<C-C><C-C>
+function! s:ScratchInit()
+  nmap <buffer> <CR> V<C-C><C-C>
+  vmap <buffer> <CR> <C-C><C-C>
+  nmap <buffer> <Leader><CR> ggVG<C-C><C-C>
+
+  map <buffer> <silent> <Leader>s :wincmd c<CR>
 endfunction
 
 " Splitjoin
@@ -63,7 +66,7 @@ let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabLongestEnhanced = 1
 
 au FileType * call s:ChainSuperTab()
-function s:ChainSuperTab()
+function! s:ChainSuperTab()
   if &omnifunc != ''
     call SuperTabChain(&omnifunc, '<C-P>')
     call SuperTabSetDefaultCompletionType('context')
@@ -89,9 +92,17 @@ nnoremap <silent> <Leader>t :TagbarToggle<CR>
 
 " Turbux
 let g:no_turbux_mappings = 1
+
 if exists('$TMUX')
-  au FileType ruby map <buffer> <CR> <Plug>SendFocusedTestToTmux
-  au FileType ruby map <buffer> <Leader><CR> <Plug>SendTestToTmux
+  au FileType ruby call s:MapSendTestToTmux()
+  function! s:MapSendTestToTmux()
+    if &buftype == 'nofile'
+      return
+    endif
+
+    map <buffer> <CR> <Plug>SendFocusedTestToTmux
+    map <buffer> <Leader><CR> <Plug>SendTestToTmux
+  endfunction
 endif
 
 " Vimux
@@ -102,9 +113,9 @@ let g:VimuxUseNearestPane = 1
 nnoremap <Leader>> :VimuxPromptCommand<CR>
 nnoremap <Leader>>> :VimuxRunLastCommand<CR>
 " Send selected text to tmux
-vmap <C-C><C-C> "vy:call VimuxRunCommand(@v, 0)<CR>
+vmap <silent> <C-C><C-C> "vy:call VimuxRunCommand(@v, 0)<CR>
 " Send current paragraph to tmux
-nmap <C-C><C-C> vip<C-C><C-C><CR>
+nmap <silent> <C-C><C-C> vip<C-C><C-C><CR>
 
 " ZoomWin
 nnoremap <C-_> :ZoomWin<CR>
