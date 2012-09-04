@@ -46,17 +46,14 @@ Bundle 'mattn/gist-vim'
 
 " Edit
 Bundle 'ervandew/supertab'
-Bundle 'kana/vim-smartinput'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'AndrewRadev/switch.vim'
-Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
 
 " Tools
 Bundle 'sjl/gundo.vim'
 Bundle 'Align'
-Bundle 'sickill/vim-pasta'
 Bundle 'sjl/clam.vim'
 
 " Filetypes
