@@ -13,12 +13,15 @@ nnoremap <Leader>= :Align<space>
 vnoremap <Leader>= :Align<space>
 
 " CtrlP
+let g:ctrlp_extensions = ['register']
+
 nnoremap <silent> <Leader><Tab> :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>e :CtrlP<CR>
 nnoremap <silent> <Leader>E :CtrlP %:p:h<CR>
 nnoremap <silent> <Leader>g :CtrlPLine<CR>
 nnoremap <silent> <Leader>' :CtrlPChange<CR>
-nnoremap <silent> <Leader>r :CtrlPRTS<CR>
+nnoremap <silent> <Leader>r :CtrlPRegister<CR>
+nnoremap <silent> <Leader>v :CtrlPRTS<CR>
 
 " Gundo
 let g:gundo_right = 1
@@ -101,12 +104,6 @@ nnoremap <Leader>>> :VimuxRunLastCommand<CR>
 vmap <C-C><C-C> "vy:call VimuxRunCommand(@v, 0)<CR>
 " Send current paragraph to tmux
 nmap <C-C><C-C> vip<C-C><C-C><CR>
-
-" YankRing
-let g:yankring_history_file = '.yankring_history'
-
-nnoremap <Leader>y :YRShow<CR>
-nnoremap <Leader>yy :YRSearch<CR>
 
 " ZoomWin
 nnoremap <C-_> :ZoomWin<CR>

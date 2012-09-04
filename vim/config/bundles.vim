@@ -42,12 +42,10 @@ Bundle 'ZoomWin'
 Bundle 'tpope/vim-rails'
 Bundle 'scratch.vim'
 Bundle 'sjl/clam.vim'
-Bundle 'YankRing.vim'
 
 " Filesystem
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'file-line'
 Bundle 'gmarik/sudo-gui.vim'
@@ -60,6 +58,10 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'jQuery'
 Bundle 'nono/vim-handlebars'
 Bundle 'kchmck/vim-coffee-script'
+
+" Search
+Bundle 'kien/ctrlp.vim'
+Bundle 'mattn/ctrlp-register'
 
 runtime macros/matchit.vim
 
