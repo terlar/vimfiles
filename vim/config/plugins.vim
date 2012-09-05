@@ -21,7 +21,7 @@ nnoremap <silent> <Leader>E :CtrlP %:p:h<CR>
 nnoremap <silent> <Leader>g :CtrlPLine<CR>
 nnoremap <silent> <Leader>' :CtrlPChange<CR>
 nnoremap <silent> <Leader>r :CtrlPRegister<CR>
-nnoremap <silent> <Leader>v :CtrlPRTS<CR>
+nnoremap <silent> <Leader>. :CtrlPRTS<CR>
 nnoremap <silent> <Leader>f :CtrlPFunky<CR>
 
 " Gundo
@@ -83,9 +83,12 @@ let g:surround_60 = '<\r>'
 nnoremap <silent> <Space> :Switch<CR>
 
 " Syntastic
-let g:syntastic_enable_signs = 1
-let g:syntastic_quiet_warnings = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '!'
+ " Auto-close when errors are fixed
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_auto_jump = 1
 
 " Tagbar
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
