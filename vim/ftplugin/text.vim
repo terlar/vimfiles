@@ -1,2 +1,3 @@
 call SetupWrapping()
+
 setlocal spell
