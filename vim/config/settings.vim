@@ -1,63 +1,63 @@
 " General
 set nocompatible
-set nomodeline
-set lazyredraw
-set ttyfast
-set timeoutlen=250 " Faster mappings
+set pastetoggle=<Leader>p
+set vb t_vb=
 set shortmess=atI " Less interruptive prompts
-set fillchars= " No separator chars
-set laststatus=2 " Always show statusline
-
-let g:is_posix=1 " Use POSIX
-let mapleader=','
-let maplocalleader=';'
-
-syntax on
+set timeoutlen=250 " Faster mappings
 
 " Theme
 set t_Co=256
 set background=dark
 
-" Window
+" Windows
+set laststatus=2 " Always show statusline
 set noequalalways
-set number
-set nowrap
-set list listchars=tab:→\ ,trail:•
-set matchpairs+=<:>
+set hidden
+set switchbuf=useopen
 
-" Editing
+" Searching and patterns
+set ignorecase smartcase
+set incsearch
+set hlsearch
+set gdefault
+let g:is_posix=1 " Use POSIX
+
+" Displaying text
+set nowrap
+set fillchars= " No separator chars
+set lazyredraw
+set list listchars=tab:→\ ,trail:•
+set number
+
+" Editing text
+set backspace=indent,eol,start
 set complete=.,w,b,u,t
 set pumheight=10
-set backspace=indent,eol,start
-set expandtab
-set tabstop=2 softtabstop=2 shiftwidth=2
+set matchpairs+=<:>
 set nojoinspaces
-set pastetoggle=<Leader>p
 
-" Searching
-set hlsearch incsearch
-set ignorecase smartcase
-set gdefault
-
-" Command-Line
-set history=1000
-set wildmenu
-set wildmode=longest,list:longest
-set wildignore+=.git,.svn
-set wildignore+=.DS_Store
-set wildignore+=*/vendor/bundle/*,*/tmp/*,.*-cache
+" Tabs and indenting
+set tabstop=2 softtabstop=2 shiftwidth=2
+set shiftround
+set expandtab
 
 " Files
 set encoding=utf-8
-set switchbuf=useopen
-set hidden
-set autoread autowriteall
+set nomodeline
 set nowritebackup noswapfile
+set autowriteall autoread
 if has('persistent_undo')
+  set undofile
   silent !mkdir ~/.vimundo > /dev/null 2>&1
   set undodir=~/.vimundo
-  set undofile
 end
+
+" Command-Line
+set history=1000
+set wildmenu wildmode=longest,list:longest
+set wildignore+=.git,.svn
+set wildignore+=.DS_Store
+set wildignore+=*/vendor/bundle/*,*/tmp/*,.*-cache
 
 " Folding
 set foldlevel=10000
@@ -68,14 +68,20 @@ set tags=./tags;$HOME
 set showfulltag
 
 " System
+set ttyfast
 set title
 set clipboard=unnamed
-set vb t_vb=
+
+" GUI
 set mouse=a
 set mousehide
-
 if has('gui_running')
   au VimResized * wincmd =
   set guifont=Menlo:h12
   set guioptions=aemg
 endif
+
+syntax on
+
+let mapleader=','
+let maplocalleader=';'
