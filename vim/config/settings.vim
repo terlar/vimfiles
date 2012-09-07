@@ -5,10 +5,6 @@ set vb t_vb=
 set shortmess=atI " Less interruptive prompts
 set timeoutlen=250 " Faster mappings
 
-" Theme
-set t_Co=256
-set background=dark
-
 " Windows
 set laststatus=2 " Always show statusline
 set noequalalways
@@ -71,6 +67,10 @@ set showfulltag
 set ttyfast
 set title
 set clipboard=unnamed
+
+" Theme
+set t_Co=256
+set background=dark
 
 " GUI
 set mouse=a
