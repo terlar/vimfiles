@@ -24,6 +24,21 @@ nnoremap <silent> <Leader>r :CtrlPRegister<CR>
 nnoremap <silent> <Leader>. :CtrlPRTS<CR>
 nnoremap <silent> <Leader>f :CtrlPFunky<CR>
 
+" Rails project jumping
+nnoremap <Leader>jm :CtrlP app/models<CR>
+nnoremap <Leader>jc :CtrlP app/controllers<CR>
+nnoremap <Leader>jv :CtrlP app/views<CR>
+nnoremap <Leader>jh :CtrlP app/helpers<CR>
+nnoremap <Leader>jl :CtrlP lib<CR>
+nnoremap <Leader>jp :CtrlP public<CR>
+nnoremap <Leader>js :CtrlP spec<CR>
+nnoremap <Leader>jf :CtrlP fast_spec<CR>
+nnoremap <Leader>jd :CtrlP db<CR>
+nnoremap <Leader>jC :CtrlP config<CR>
+nnoremap <Leader>jV :CtrlP vendor<CR>
+nnoremap <Leader>jF :CtrlP factories<CR>
+nnoremap <Leader>jT :CtrlP test<CR>
+
 " Gundo
 let g:gundo_right = 1
 let g:gundo_width = 30
