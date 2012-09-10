@@ -1,6 +1,4 @@
-" Default
-let ruby_operators = 1
-
+" Molokai
 color molokai
 
 " Ack
