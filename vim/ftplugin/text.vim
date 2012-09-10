@@ -1,3 +1,1 @@
 call SetupWrapping()
-
-setlocal spell
