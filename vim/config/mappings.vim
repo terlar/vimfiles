@@ -47,8 +47,8 @@ inoremap <C-l> <C-o>$
 " Select pasted text
 nnoremap <Leader>v `[v`]
 
-" Remove trailing whitespace
-nnoremap <Leader>W :%s/\s\+$//<CR>:let @/=''<CR>
+" Clean trailing whitespace
+nnoremap <Leader>W :call CleanTrailingSpace()<CR>
 " Retab
 nnoremap <Leader>R :ret!<CR>
 " Auto format
