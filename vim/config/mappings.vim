@@ -6,9 +6,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <C-x> <C-w>c
 nnoremap <Leader>% <C-w>v<C-w>l
 nnoremap <Leader>" <C-w>s<C-w>j
-nnoremap <Leader>x <C-w>c
 nnoremap <Up> <C-w>+
 nnoremap <Down> <C-w>-
 nnoremap <Left> <C-w><
