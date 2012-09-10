@@ -36,7 +36,11 @@ nnoremap <Leader>? :noh<CR>
 nnoremap n nzz
 nnoremap N Nzz
 
-" Folding
+" Quickfix
+nnoremap <Leader>qo :lw<CR>
+nnoremap <Leader>qc :lw<CR>:wincmd c<CR>
+
+" Fold/Unfold all
 nnoremap <Leader>z :set foldlevel=10000<CR>
 nnoremap <Leader>Z :set foldlevel=-10000<CR>
 

@@ -3,7 +3,6 @@ color molokai
 
 " Ack
 nnoremap <Leader>a :Ack<space>
-nnoremap <Leader>af :AckFile<space>
 nnoremap <Leader>* :exe ':Ack '.expand('<cword>')<CR>
 
 " Align

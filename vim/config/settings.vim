@@ -48,7 +48,7 @@ if has('persistent_undo')
   set undodir=~/.vimundo
 end
 
-" Command-Line
+" Command-line
 set history=1000
 set wildmenu wildmode=longest,list:longest
 set wildignore+=.git,.svn
