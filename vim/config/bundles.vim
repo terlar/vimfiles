@@ -45,7 +45,7 @@ Bundle 'gregsexton/gitv'
 Bundle 'mattn/gist-vim'
 
 " Edit
-Bundle 'ervandew/supertab'
+Bundle 'Shougo/neocomplcache'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'AndrewRadev/splitjoin.vim'

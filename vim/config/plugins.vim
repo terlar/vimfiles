@@ -2,12 +2,12 @@
 color molokai
 
 " Ack
-nnoremap <Leader>a :Ack<space>
+nnoremap <Leader>a :Ack<Space>
 nnoremap <Leader>* :exe ':Ack '.expand('<cword>')<CR>
 
 " Align
-nnoremap <Leader>= :Align<space>
-vnoremap <Leader>= :Align<space>
+nnoremap <Leader>= :Align<Space>
+vnoremap <Leader>= :Align<Space>
 
 " CtrlP
 let g:ctrlp_map = '<Leader>e'
@@ -44,6 +44,17 @@ let g:gundo_preview_height = 10
 
 nnoremap <silent> <Leader>u :silent GundoToggle<CR>
 
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+
+inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+inoremap <expr><Tab>  pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplcache#close_popup()
+inoremap <expr><C-e>  neocomplcache#cancel_popup()
+
 " NERDTree
 let g:NERDTreeMinimalUI = 1
 
@@ -71,19 +82,7 @@ let g:splitjoin_normalize_whitespace = 1
 let g:splitjoin_align = 1
 
 nnoremap <silent> <BS> :SplitjoinJoin<CR>
-nnoremap <silent> <DEL> :SplitjoinSplit<CR>
-
-" SuperTab
-let g:SuperTabDefaultCompletionType = 'context'
-let g:SuperTabLongestEnhanced = 1
-
-au FileType * call s:ChainSuperTab()
-function! s:ChainSuperTab()
-  if &omnifunc != ''
-    call SuperTabChain(&omnifunc, '<C-P>')
-    call SuperTabSetDefaultCompletionType('context')
-  endif
-endfunction
+nnoremap <silent> <Del> :SplitjoinSplit<CR>
 
 " Surround
 let g:surround_35  = '#{\r}'
