@@ -1,6 +1,5 @@
 " General
 set nocompatible
-set pastetoggle=<Leader>p
 set vb t_vb=
 set shortmess=atI " Less interruptive prompts
 set timeoutlen=250 " Faster mappings

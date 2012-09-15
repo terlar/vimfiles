@@ -10,10 +10,10 @@ nnoremap <Leader>= :Align<space>
 vnoremap <Leader>= :Align<space>
 
 " CtrlP
+let g:ctrlp_map = '<Leader>e'
 let g:ctrlp_extensions = ['register', 'funky']
 
 nnoremap <silent> <Leader><Tab> :CtrlPBuffer<CR>
-nnoremap <silent> <Leader>e :CtrlP<CR>
 nnoremap <silent> <Leader>E :CtrlP %:p:h<CR>
 nnoremap <silent> <Leader>g :CtrlPLine<CR>
 nnoremap <silent> <Leader>' :CtrlPChange<CR>
@@ -71,7 +71,7 @@ let g:splitjoin_normalize_whitespace = 1
 let g:splitjoin_align = 1
 
 nnoremap <silent> <BS> :SplitjoinJoin<CR>
-nnoremap <silent> <Leader><BS> :SplitjoinSplit<CR>
+nnoremap <silent> <DEL> :SplitjoinSplit<CR>
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = 'context'

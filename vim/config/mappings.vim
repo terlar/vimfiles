@@ -1,3 +1,6 @@
+" Toggle paste mode
+set pastetoggle=<C-p>
+
 " Disabled mappings
 nnoremap Q <Nop>
 
