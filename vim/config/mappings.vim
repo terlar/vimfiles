@@ -3,6 +3,7 @@ set pastetoggle=<Leader>p
 
 " Disabled mappings
 nnoremap Q <Nop>
+inoremap <Del> <BS>
 
 " Window
 nnoremap <C-h> <C-w>h
