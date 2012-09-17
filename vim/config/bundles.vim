@@ -50,6 +50,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'AndrewRadev/switch.vim'
+Bundle 'tpope/vim-endwise'
 
 " Tools
 Bundle 'sjl/gundo.vim'
