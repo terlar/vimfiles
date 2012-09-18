@@ -12,7 +12,6 @@ Bundle 'gmarik/vundle'
 " General
 Bundle 'file-line'
 Bundle 'lastpos.vim'
-Bundle 'sjl/vitality.vim'
 Bundle 'gmarik/sudo-gui.vim'
 
 " Theme
