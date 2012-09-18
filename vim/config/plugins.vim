@@ -1,4 +1,4 @@
-" Molokai
+" Theme
 color molokai
 
 " Ack
