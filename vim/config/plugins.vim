@@ -10,31 +10,36 @@ nnoremap <Leader>= :Align<Space>
 vnoremap <Leader>= :Align<Space>
 
 " CtrlP
-let g:ctrlp_map = '<Leader>e'
 let g:ctrlp_extensions = ['register', 'funky']
+let g:ctrlp_prompt_mappings = { 'AcceptSelection("e")': ['<CR>', '<Tab>', '<2-LeftMouse>'] }
 
-nnoremap <silent> <Leader><Tab> :CtrlPBuffer<CR>
-nnoremap <silent> <Leader>E :CtrlP %:p:h<CR>
-nnoremap <silent> <Leader>g :CtrlPLine<CR>
-nnoremap <silent> <Leader>' :CtrlPChange<CR>
-nnoremap <silent> <Leader>r :CtrlPRegister<CR>
-nnoremap <silent> <Leader>. :CtrlPRTS<CR>
-nnoremap <silent> <Leader>f :CtrlPFunky<CR>
+nnoremap <Tab><Tab> :CtrlPBuffer<CR>
+nnoremap Q :CtrlPQuickfix<CR>
+nnoremap <Leader>p :CtrlPRegister<CR>
 
-" Rails project jumping
+" Find
+nnoremap <Leader>fl :CtrlPLine<CR>
+nnoremap <Leader>fc :CtrlPChange<CR>
+nnoremap <Leader>ff :CtrlPFunky<CR>
+
+" Jump
+nnoremap <Leader>j :CtrlP<CR>
+nnoremap <Leader>J :CtrlPCurFile<CR>
+nnoremap <Leader>jr :CtrlPRTS<CR>
+" Rails project
 nnoremap <Leader>jm :CtrlP app/models<CR>
-nnoremap <Leader>jc :CtrlP app/controllers<CR>
 nnoremap <Leader>jv :CtrlP app/views<CR>
+nnoremap <Leader>jc :CtrlP app/controllers<CR>
 nnoremap <Leader>jh :CtrlP app/helpers<CR>
+nnoremap <Leader>ja :CtrlP app/assets<CR>
+nnoremap <Leader>jaj :CtrlP app/assets/javascripts<CR>
+nnoremap <Leader>jas :CtrlP app/assets/stylesheets<CR>
 nnoremap <Leader>jl :CtrlP lib<CR>
 nnoremap <Leader>jp :CtrlP public<CR>
 nnoremap <Leader>js :CtrlP spec<CR>
-nnoremap <Leader>jf :CtrlP fast_spec<CR>
 nnoremap <Leader>jd :CtrlP db<CR>
 nnoremap <Leader>jC :CtrlP config<CR>
 nnoremap <Leader>jV :CtrlP vendor<CR>
-nnoremap <Leader>jF :CtrlP factories<CR>
-nnoremap <Leader>jT :CtrlP test<CR>
 
 " Gundo
 let g:gundo_right = 1

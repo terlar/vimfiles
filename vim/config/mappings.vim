@@ -1,9 +1,9 @@
 " Toggle paste mode
-set pastetoggle=<Leader>p
+set pastetoggle=<Leader>P
 
 " Disabled mappings
 nnoremap Q <Nop>
-inoremap <Del> <BS>
+inoremap <Del> <Nop>
 
 " Window
 nnoremap <C-h> <C-w>h
