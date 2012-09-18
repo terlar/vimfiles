@@ -27,6 +27,7 @@ Bundle 'scratch.vim'
 " Navigation
 Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
+Bundle 'milkypostman/vim-togglelist'
 
 " Search
 Bundle 'mileszs/ack.vim'
