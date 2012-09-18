@@ -50,9 +50,9 @@ end
 " Command-line
 set history=1000
 set wildmenu wildmode=longest,list:longest
-set wildignore+=.git,.svn
+set wildignore+=*/.git/*,*/.svn/*
 set wildignore+=.DS_Store
-set wildignore+=*/vendor/bundle/*,*/tmp/*,.*-cache
+set wildignore+=*/vendor/bundle/*,*/tmp/*,*/.*-cache/*
 
 " Folding
 set foldlevel=10000
