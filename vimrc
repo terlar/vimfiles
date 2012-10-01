@@ -1,3 +1,7 @@
+if $SHELL =~ 'fish'
+  set shell=/bin/zsh
+endif
+
 " Load Functions
 runtime! functions/*.vim
 
