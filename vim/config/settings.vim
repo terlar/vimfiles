@@ -20,7 +20,6 @@ let g:is_posix=1 " Use POSIX
 " Displaying text
 set nowrap
 set fillchars= " No separator chars
-set lazyredraw
 set list listchars=tab:→\ ,trail:•
 set number
 
@@ -62,8 +61,13 @@ set foldtext=FoldText()
 set tags=./tags;$HOME
 set showfulltag
 
-" System
+" Speed-up
+set synmaxcol=300
 set ttyfast
+set ttyscroll=3
+set lazyredraw
+
+" System
 set title
 set clipboard=unnamed
 
