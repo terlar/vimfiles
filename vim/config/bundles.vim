@@ -65,6 +65,7 @@ Bundle 'jQuery'
 Bundle 'nono/vim-handlebars'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-rails'
+Bundle 'aliva/vim-fish'
 
 runtime macros/matchit.vim
 
