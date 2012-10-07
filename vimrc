@@ -1,5 +1,5 @@
 if $SHELL =~ 'fish'
-  set shell=/bin/zsh
+  set shell=/bin/sh
 endif
 
 " Load Functions
