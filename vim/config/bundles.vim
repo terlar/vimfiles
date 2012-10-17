@@ -22,7 +22,7 @@ Bundle 'gmarik/vundle'
   let g:Powerline_symbols = 'fancy'
 
 " Buffer
-  Bundle 'bufkill.vim'
+  Bundle 'Soares/butane.vim'
   Bundle 'ZoomWin'
   Bundle 'scratch.vim'
 

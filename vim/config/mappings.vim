@@ -22,11 +22,10 @@
 " Buffers
   noremap <Tab> :bn<CR>
   noremap <S-Tab> :bp<CR>
-  nnoremap <Leader>d :silent! BD<CR>
-  nnoremap <Leader>d! :BD!<CR>
-  nnoremap <Leader>du :silent! BUNDO<CR>
+  nnoremap <Leader>d :Bclose<CR>
+  nnoremap <Leader>d! :Bclose!<CR>
   " Close all buffers
-  nnoremap <Leader>D :bufdo :BD<CR>
+  nnoremap <Leader>D :bufdo :Bclose<CR>
   " Switch between last two buffers
   nnoremap <Leader><Leader> <C-^>
 
