@@ -34,7 +34,7 @@ Bundle 'gmarik/vundle'
   Bundle 'milkypostman/vim-togglelist'
 
 " Search
-  Bundle 'mileszs/ack.vim'
+  Bundle 'Soares/ack.vim'
 
   Bundle 'kien/ctrlp.vim'
   Bundle 'mattn/ctrlp-register'
