@@ -111,7 +111,6 @@
   inoremap <expr><C-e> neocomplcache#cancel_popup()
 
 " NERDTree
-  au VimEnter * call InitProjectTree()
   nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
 
 " Scratch
