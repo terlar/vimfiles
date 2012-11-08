@@ -12,7 +12,7 @@ Bundle 'gmarik/vundle'
 " General
   Bundle 'file-line'
   Bundle 'lastpos.vim'
-  Bundle 'gmarik/sudo-gui.vim'
+  Bundle 'tpope/vim-eunuch'
 
 " Theme
   Bundle 'tomasr/molokai'
