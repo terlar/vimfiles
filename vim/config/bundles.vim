@@ -16,7 +16,8 @@ Bundle 'gmarik/vundle'
 
 " Theme
   Bundle 'tomasr/molokai'
-  color molokai
+  Bundle 'chriskempson/base16-vim'
+  colorscheme base16-default
 
   Bundle 'Lokaltog/vim-powerline'
   let g:Powerline_symbols = 'fancy'
