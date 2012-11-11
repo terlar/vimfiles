@@ -5,6 +5,10 @@
   nnoremap Q <Nop>
   inoremap <Del> <Nop>
 
+" Convenience mappings for Swedish keyboard
+  nnoremap ä '
+  nnoremap Ä `
+
 " Window
   nnoremap <C-h> <C-w>h
   nnoremap <C-j> <C-w>j
