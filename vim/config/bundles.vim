@@ -20,7 +20,7 @@ Bundle 'gmarik/vundle'
   colorscheme base16-default
 
   Bundle 'Lokaltog/vim-powerline'
-  let g:Powerline_symbols = 'unicode'
+  let g:Powerline_colorscheme = 'base16'
 
 " Buffer
   Bundle 'Soares/butane.vim'
