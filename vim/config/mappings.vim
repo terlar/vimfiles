@@ -29,7 +29,7 @@
   nnoremap <Leader>d :Bclose<CR>
   nnoremap <Leader>d! :Bclose!<CR>
   " Close all buffers
-  nnoremap <Leader>D :bufdo :Bclose<CR>
+  nnoremap <Leader>D :Breset<CR>
   " Switch between last two buffers
   nnoremap <Leader><Leader> <C-^>
 
