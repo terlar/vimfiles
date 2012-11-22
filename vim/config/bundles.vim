@@ -104,6 +104,7 @@ Bundle 'gmarik/vundle'
   Bundle 'kchmck/vim-coffee-script'
   Bundle 'tpope/vim-rails'
   Bundle 'Soares/fish.vim'
+  Bundle 'othree/html5.vim'
 
 runtime macros/matchit.vim
 
