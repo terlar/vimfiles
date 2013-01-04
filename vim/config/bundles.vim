@@ -15,12 +15,11 @@ Bundle 'gmarik/vundle'
   Bundle 'tpope/vim-eunuch'
 
 " Theme
-  Bundle 'tomasr/molokai'
   Bundle 'chriskempson/base16-vim'
   colorscheme base16-default
-  Bundle 'terlar/base16-vim-powerline'
 
   Bundle 'Lokaltog/vim-powerline'
+  Bundle 'terlar/base16-vim-powerline'
   let g:Powerline_colorscheme = 'base16'
 
 " Buffer
