@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
   Bundle 'file-line'
   Bundle 'lastpos.vim'
   Bundle 'tpope/vim-eunuch'
+  Bundle 'milkypostman/vim-togglelist'
 
 " Theme
   Bundle 'chriskempson/base16-vim'
@@ -28,8 +29,6 @@ Bundle 'gmarik/vundle'
   Bundle 'scratch.vim'
 
 " Navigation
-  Bundle 'milkypostman/vim-togglelist'
-
   Bundle 'Soares/ack.vim'
 
   Bundle 'kien/ctrlp.vim'
@@ -43,10 +42,8 @@ Bundle 'gmarik/vundle'
   let g:VimuxHeight = '40'
   let g:VimuxOrientation = 'h'
   let g:VimuxUseNearestPane = 1
-
   Bundle 'jgdavey/vim-turbux'
   let g:no_turbux_mappings = 1
-
 
 " Git
   Bundle 'tpope/vim-git'
@@ -59,6 +56,7 @@ Bundle 'gmarik/vundle'
   let g:neocomplcache_enable_at_startup = 1
   let g:neocomplcache_enable_smart_case = 1
 
+  Bundle 'tpope/vim-endwise'
   Bundle 'tpope/vim-repeat'
   Bundle 'tpope/vim-surround'
   let g:surround_35  = '#{\r}'
@@ -66,19 +64,13 @@ Bundle 'gmarik/vundle'
   let g:surround_91 = '[\r]'
   let g:surround_60 = '<\r>'
 
+  Bundle 'AndrewRadev/switch.vim'
   Bundle 'AndrewRadev/splitjoin.vim'
   let g:splitjoin_normalize_whitespace = 1
   let g:splitjoin_align = 1
 
-  Bundle 'AndrewRadev/switch.vim'
-  Bundle 'tpope/vim-endwise'
-
-" Tools
   Bundle 'sjl/gundo.vim'
-  let g:gundo_right = 1
-  let g:gundo_width = 30
   let g:gundo_preview_bottom = 1
-  let g:gundo_preview_height = 10
 
   Bundle 'Align'
   Bundle 'sjl/clam.vim'
