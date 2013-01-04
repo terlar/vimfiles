@@ -74,11 +74,10 @@
   nnoremap <Tab><Tab> :CtrlPBuffer<CR>
   nnoremap Q :CtrlPQuickfix<CR>
   nnoremap <Leader>p :CtrlPRegister<CR>
+  nnoremap <Leader>' :CtrlPChange<CR>
+  nnoremap <Leader>g :CtrlPLine<CR>
+  nnoremap <Leader>gf :CtrlPFunky<CR>
 
-  " Find
-  nnoremap <Leader>fl :CtrlPLine<CR>
-  nnoremap <Leader>fc :CtrlPChange<CR>
-  nnoremap <Leader>ff :CtrlPFunky<CR>
   " Jump
   nnoremap <Leader>j :CtrlP<CR>
   nnoremap <Leader>J :CtrlPCurFile<CR>
