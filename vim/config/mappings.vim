@@ -114,9 +114,6 @@
   inoremap <expr><C-y> neocomplcache#close_popup()
   inoremap <expr><C-e> neocomplcache#cancel_popup()
 
-" NERDTree
-  nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
-
 " Scratch
   nnoremap <silent> <Leader>s :Sscratch<CR>
 

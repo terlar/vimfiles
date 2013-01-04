@@ -29,9 +29,6 @@ Bundle 'gmarik/vundle'
   Bundle 'scratch.vim'
 
 " Navigation
-  Bundle 'scrooloose/nerdtree'
-  let g:NERDTreeMinimalUI = 1
-
   Bundle 'majutsushi/tagbar'
   Bundle 'milkypostman/vim-togglelist'
 
