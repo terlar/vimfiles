@@ -133,9 +133,6 @@
 " Switch
   nnoremap <silent> <Space> :Switch<CR>
 
-" Tagbar
-  nnoremap <silent> <Leader>t :TagbarToggle<CR>
-
 " Turbux
   if exists('$TMUX')
     au FileType ruby call s:MapSendTestToTmux()

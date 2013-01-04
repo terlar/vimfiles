@@ -29,10 +29,8 @@ Bundle 'gmarik/vundle'
   Bundle 'scratch.vim'
 
 " Navigation
-  Bundle 'majutsushi/tagbar'
   Bundle 'milkypostman/vim-togglelist'
 
-" Search
   Bundle 'Soares/ack.vim'
 
   Bundle 'kien/ctrlp.vim'
