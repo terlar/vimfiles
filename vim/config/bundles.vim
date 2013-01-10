@@ -73,6 +73,7 @@ Bundle 'gmarik/vundle'
   let g:gundo_preview_bottom = 1
 
   Bundle 'Align'
+  Bundle 'tpope/vim-abolish'
   Bundle 'sjl/clam.vim'
 
 " Filetypes
@@ -98,4 +99,4 @@ if exists("fresh_vundle")
   BundleInstall
   unlet fresh_vundle
   wincmd c
-end
+endif
