@@ -1,3 +1,6 @@
+" Make Y consistent with C and D
+  nnoremap Y y$
+
 " Toggle paste mode
   set pastetoggle=<Leader>P
 
@@ -37,8 +40,7 @@
   nnoremap <Leader># :set number!<CR>
 
 " Search
-  nnoremap <Leader>/ :noh<CR>
-  nnoremap <Leader>? :noh<CR>
+  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
   " Center screen when scrolling search results
   nnoremap n nzz
   nnoremap N Nzz
@@ -57,9 +59,12 @@
 " Clean trailing whitespace
   nnoremap <Leader>W :call CleanTrailingSpace()<CR>
 " Retab
-  nnoremap <Leader>R :ret!<CR>
+  nnoremap <Leader>R :retab!<CR>
 " Auto format
   nnoremap === mmgg=G`m^zz
+
+" Netrw
+  nnoremap <Leader>n :Explore<CR>
 
 
 " Ack

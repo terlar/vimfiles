@@ -92,7 +92,7 @@ Bundle 'gmarik/vundle'
   Bundle 'Soares/fish.vim'
   Bundle 'othree/html5.vim'
 
-runtime macros/matchit.vim
+runtime! macros/matchit.vim
 
 if exists("fresh_vundle")
   BundleInstall

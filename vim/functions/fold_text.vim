@@ -1,3 +1,3 @@
 function! FoldText()
-  return getline(v:foldstart) . ' ...'
+  return getline(v:foldstart)
 endfunction
