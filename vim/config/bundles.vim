@@ -86,7 +86,7 @@ Bundle 'gmarik/vundle'
   let g:syntastic_auto_jump = 1
 
   Bundle 'tpope/vim-haml'
-  Bundle 'pangloss/vim-javascript'
+  Bundle 'jelera/vim-javascript-syntax'
   Bundle 'jQuery'
   Bundle 'nono/vim-handlebars'
   Bundle 'kchmck/vim-coffee-script'
