@@ -40,7 +40,6 @@
   nnoremap <Leader># :set number!<CR>
 
 " Search
-  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
   " Center screen when scrolling search results
   nnoremap n nzz
   nnoremap N Nzz
