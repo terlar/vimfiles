@@ -106,6 +106,12 @@
     set guioptions=aemg
   endif
 
+" Autosave
+  set updatetime=1000
+  autocmd BufLeave * update
+  autocmd CursorHold * update
+  autocmd InsertLeave * update
+
 syntax on
 
 if !exists('g:netrw_list_hide')
