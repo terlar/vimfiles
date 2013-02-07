@@ -20,10 +20,10 @@
   nnoremap <C-x> <C-w>c
   nnoremap <Leader>% <C-w>v<C-w>l
   nnoremap <Leader>" <C-w>s<C-w>j
-  nnoremap <Up> <C-w>+
-  nnoremap <Down> <C-w>-
-  nnoremap <Left> <C-w><
-  nnoremap <Right> <C-w>>
+  nnoremap <Up> <C-w>5-
+  nnoremap <Down> <C-w>5+
+  nnoremap <Left> <C-w>5<
+  nnoremap <Right> <C-w>5>
   nnoremap <Leader><Down> :<C-u>exe ":resize ".line("$")<CR>
 
 " Buffers
@@ -64,6 +64,10 @@
 
 " Netrw
   nnoremap <Leader>n :Explore<CR>
+
+" Command
+  cnoremap %% <C-R>=expand('%:h').'/'<CR>
+  map <Leader>e :edit %%
 
 
 " Ack
