@@ -67,7 +67,6 @@
 
 " Command
   cnoremap %% <C-R>=expand('%:h').'/'<CR>
-  map <Leader>e :edit %%
 
 
 " Ack
@@ -88,7 +87,7 @@
 
   " Jump
   nnoremap <Leader>j :CtrlP<CR>
-  nnoremap <Leader>J :CtrlPCurFile<CR>
+  nnoremap <Leader>e :CtrlPCurFile<CR>
   nnoremap <Leader>jr :CtrlPRTS<CR>
   " Rails project
   nnoremap <Leader>jm :CtrlP app/models<CR>
