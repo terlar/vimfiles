@@ -36,6 +36,7 @@ Bundle 'gmarik/vundle'
   Bundle 'tacahiroy/ctrlp-funky'
   let g:ctrlp_extensions = ['register', 'funky']
   let g:ctrlp_prompt_mappings = { 'AcceptSelection("e")': ['<CR>', '<Tab>', '<2-LeftMouse>'] }
+  let g:ctrlp_open_multiple_files = '2v'
 
 " Tmux
   Bundle 'benmills/vimux'
