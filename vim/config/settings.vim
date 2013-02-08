@@ -118,5 +118,5 @@ if !exists('g:netrw_list_hide')
   let g:netrw_list_hide = '^\.,\~$,^tags$'
 endif
 
-let mapleader=','
-let maplocalleader=';'
+let mapleader = ','
+let maplocalleader = ';'

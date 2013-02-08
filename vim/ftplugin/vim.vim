@@ -1,1 +1,1 @@
-setlocal keywordprg = :help
+setlocal keywordprg=:help

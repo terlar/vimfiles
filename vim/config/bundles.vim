@@ -1,6 +1,6 @@
 if !isdirectory(expand("~/.vim/bundle/vundle"))
   !git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-  let fresh_vundle=1
+  let fresh_vundle = 1
 endif
 
 filetype off
@@ -61,7 +61,7 @@ Bundle 'gmarik/vundle'
   Bundle 'tpope/vim-endwise'
   Bundle 'tpope/vim-repeat'
   Bundle 'tpope/vim-surround'
-  let g:surround_35  = '#{\r}'
+  let g:surround_35 = '#{\r}'
   let g:surround_40 = '(\r)'
   let g:surround_91 = '[\r]'
   let g:surround_60 = '<\r>'
