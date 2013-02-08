@@ -19,10 +19,6 @@ Bundle 'gmarik/vundle'
   Bundle 'chriskempson/base16-vim'
   colorscheme base16-default
 
-  Bundle 'Lokaltog/vim-powerline'
-  Bundle 'terlar/base16-vim-powerline'
-  let g:Powerline_colorscheme = 'base16'
-
 " Buffer
   Bundle 'Soares/butane.vim'
   Bundle 'ZoomWin'
