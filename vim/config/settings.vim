@@ -107,10 +107,8 @@
   endif
 
 " Autosave
-  set updatetime=1000
-  autocmd BufLeave * update
-  autocmd CursorHold * update
-  autocmd InsertLeave * update
+  set updatetime=200
+  au BufLeave,CursorHold,InsertLeave * silent! wa
 
 syntax on
 
