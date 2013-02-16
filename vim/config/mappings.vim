@@ -83,7 +83,7 @@
   nnoremap <Leader>p :CtrlPRegister<CR>
   nnoremap <Leader>' :CtrlPChange<CR>
   nnoremap <Leader>g :CtrlPLine<CR>
-  nnoremap <Leader>gf :CtrlPFunky<CR>
+  nnoremap <Leader>f :CtrlPFunky<CR>
 
   " Jump
   nnoremap <Leader>j :CtrlP<CR>
