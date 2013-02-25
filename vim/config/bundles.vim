@@ -48,6 +48,7 @@ Bundle 'gmarik/vundle'
   Bundle 'gregsexton/gitv'
   Bundle 'mattn/webapi-vim'
   Bundle 'mattn/gist-vim'
+  Bundle 'airblade/vim-gitgutter'
 
 " Edit
   Bundle 'Shougo/neocomplcache'
