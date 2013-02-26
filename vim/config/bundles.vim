@@ -18,6 +18,7 @@ Bundle 'gmarik/vundle'
 " Theme
   Bundle 'chriskempson/base16-vim'
   colorscheme base16-default
+  highlight clear SignColumn
 
 " Buffer
   Bundle 'Soares/butane.vim'
