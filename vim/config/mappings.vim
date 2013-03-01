@@ -69,9 +69,9 @@
   cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
 
-" Ack
-  nnoremap <Leader>a :Ack<Space>
-  nnoremap <Leader>* :exe ':Ack '.expand('<cword>')<CR>
+" Ag
+  nnoremap <Leader>a :Ag<Space>
+  nnoremap <Leader>* :exe ':Ag '.expand('<cword>')<CR>
 
 " Align
   nnoremap <Leader>= :Align<Space>

@@ -26,7 +26,7 @@ Bundle 'gmarik/vundle'
   Bundle 'scratch.vim'
 
 " Navigation
-  Bundle 'Soares/ack.vim'
+  Bundle 'rking/ag.vim'
 
   Bundle 'kien/ctrlp.vim'
   Bundle 'mattn/ctrlp-register'
