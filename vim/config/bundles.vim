@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
   Bundle 'file-line'
   Bundle 'lastpos.vim'
   Bundle 'tpope/vim-eunuch'
+  Bundle 'tpope/vim-obsession'
   Bundle 'milkypostman/vim-togglelist'
 
 " Theme
