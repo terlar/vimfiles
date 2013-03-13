@@ -33,8 +33,6 @@
   nnoremap <Leader>d! :Bclose!<CR>
   " Close all buffers
   nnoremap <Leader>D :Breset<CR>
-  " Switch between last two buffers
-  nnoremap <Leader><Leader> <C-^>
 
 " Toggle numbers
   nnoremap <Leader># :set number!<CR>
@@ -81,7 +79,7 @@
   nnoremap <Tab><Tab> :CtrlPBuffer<CR>
   nnoremap Q :CtrlPQuickfix<CR>
   nnoremap <Leader>p :CtrlPRegister<CR>
-  nnoremap <Leader>' :CtrlPChange<CR>
+  nnoremap <Leader>, :CtrlPChange<CR>
   nnoremap <Leader>g :CtrlPLine<CR>
   nnoremap <Leader>f :CtrlPFunky<CR>
 
