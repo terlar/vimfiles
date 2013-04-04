@@ -14,6 +14,7 @@ Bundle 'gmarik/vundle'
   Bundle 'lastpos.vim'
   Bundle 'tpope/vim-eunuch'
   Bundle 'tpope/vim-obsession'
+  Bundle 'tpope/vim-dispatch'
   Bundle 'milkypostman/vim-togglelist'
 
 " Theme
@@ -41,8 +42,6 @@ Bundle 'gmarik/vundle'
   let g:VimuxHeight = '40'
   let g:VimuxOrientation = 'h'
   let g:VimuxUseNearestPane = 1
-  Bundle 'jgdavey/vim-turbux'
-  let g:no_turbux_mappings = 1
 
 " Git
   Bundle 'tpope/vim-git'
@@ -85,14 +84,15 @@ Bundle 'gmarik/vundle'
   let g:syntastic_auto_loc_list = 2
   let g:syntastic_auto_jump = 1
 
+  Bundle 'vim-ruby/vim-ruby'
+  Bundle 'tpope/vim-rails'
   Bundle 'tpope/vim-haml'
+  Bundle 'kchmck/vim-coffee-script'
   Bundle 'jelera/vim-javascript-syntax'
   Bundle 'jQuery'
-  Bundle 'nono/vim-handlebars'
-  Bundle 'kchmck/vim-coffee-script'
-  Bundle 'tpope/vim-rails'
-  Bundle 'Soares/fish.vim'
   Bundle 'othree/html5.vim'
+  Bundle 'nono/vim-handlebars'
+  Bundle 'Soares/fish.vim'
 
 runtime! macros/matchit.vim
 

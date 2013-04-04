@@ -29,10 +29,10 @@
 " Buffers
   noremap <Tab> :bn<CR>
   noremap <S-Tab> :bp<CR>
-  nnoremap <Leader>d :Bclose<CR>
-  nnoremap <Leader>d! :Bclose!<CR>
+  nnoremap <Leader>bd :Bclose<CR>
+  nnoremap <Leader>bd! :Bclose!<CR>
   " Close all buffers
-  nnoremap <Leader>D :Breset<CR>
+  nnoremap <Leader>bD :Breset<CR>
 
 " Toggle numbers
   nnoremap <Leader># :set number!<CR>
@@ -102,6 +102,21 @@
   nnoremap <Leader>jC :CtrlP config<CR>
   nnoremap <Leader>jV :CtrlP vendor<CR>
 
+" Dispatch
+  nnoremap <Leader>db :Dispatch bundle<CR>
+  nnoremap <Leader>dfg :Dispatch flog %:p:h<CR>
+  nnoremap <Leader>dfy :Dispatch flay %:p:h<CR>
+  nnoremap <Leader>dr :Dispatch rails_best_practices<CR>
+
+  autocmd BufEnter * call s:MapDispatch()
+  function! s:MapDispatch()
+    if &buftype == ''
+      map <buffer> <CR> :Dispatch<CR>
+    endif
+  endfunction
+
+  autocmd FileType ruby let b:dispatch = 'rspec %'
+
 " Gundo
   nnoremap <silent> <Leader>u :silent GundoToggle<CR>
 
@@ -121,7 +136,7 @@
 " Scratch
   nnoremap <silent> <Leader>s :Sscratch<CR>
 
-  au BufNewFile __Scratch__ call s:ScratchInit()
+  autocmd BufNewFile __Scratch__ call s:ScratchInit()
   function! s:ScratchInit()
     nmap <buffer> <CR> V<C-C><C-C>
     vmap <buffer> <CR> <C-C><C-C>
@@ -136,19 +151,6 @@
 
 " Switch
   nnoremap <silent> <Space> :Switch<CR>
-
-" Turbux
-  if exists('$TMUX')
-    au FileType ruby call s:MapSendTestToTmux()
-    function! s:MapSendTestToTmux()
-      if &buftype == 'nofile'
-        return
-      endif
-
-      map <buffer> <CR> <Plug>SendFocusedTestToTmux
-      map <buffer> <Leader><CR> <Plug>SendTestToTmux
-    endfunction
-  endif
 
 " Vimux
   nnoremap <Leader>> :VimuxPromptCommand<CR>
