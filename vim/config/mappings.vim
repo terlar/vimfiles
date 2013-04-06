@@ -110,12 +110,10 @@
 
   autocmd BufEnter * call s:MapDispatch()
   function! s:MapDispatch()
-    if &buftype == ''
-      map <buffer> <CR> :Dispatch<CR>
+    if &buftype == '' && mapcheck('<CR>', 'n') == ''
+      nmap <buffer> <CR> :Dispatch<CR>
     endif
   endfunction
-
-  autocmd FileType ruby let b:dispatch = 'rspec %'
 
 " Gundo
   nnoremap <silent> <Leader>u :silent GundoToggle<CR>
@@ -132,6 +130,10 @@
   inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
   inoremap <expr><C-y> neocomplcache#close_popup()
   inoremap <expr><C-e> neocomplcache#cancel_popup()
+
+" Rails
+  autocmd FileType ruby nmap <buffer> <CR> :.Rrunner<CR>
+  autocmd FileType ruby nmap <buffer> <Leader><CR> :Rrunner<CR>
 
 " Scratch
   nnoremap <silent> <Leader>s :Sscratch<CR>
