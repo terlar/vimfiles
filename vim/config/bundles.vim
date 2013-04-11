@@ -10,6 +10,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " General
+  Bundle 'editorconfig/editorconfig-vim'
   Bundle 'file-line'
   Bundle 'lastpos.vim'
   Bundle 'tpope/vim-eunuch'
