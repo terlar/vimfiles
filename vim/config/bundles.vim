@@ -1,4 +1,4 @@
-if !isdirectory(expand("~/.vim/bundle/vundle"))
+if !isdirectory(expand('~/.vim/bundle/vundle'))
   !git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
   let fresh_vundle = 1
 endif
@@ -20,8 +20,6 @@ Bundle 'gmarik/vundle'
 
 " Theme
   Bundle 'chriskempson/base16-vim'
-  colorscheme base16-default
-  highlight clear SignColumn
 
 " Buffer
   Bundle 'Soares/butane.vim'
@@ -98,8 +96,10 @@ Bundle 'gmarik/vundle'
 
 runtime! macros/matchit.vim
 
-if exists("fresh_vundle")
+if exists('fresh_vundle')
   BundleInstall
   unlet fresh_vundle
   wincmd c
 endif
+
+colorscheme base16-default

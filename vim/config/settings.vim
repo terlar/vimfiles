@@ -101,14 +101,14 @@
   set mouse=a
   set mousehide
   if has('gui_running')
-    au VimResized * wincmd =
+    autocmd VimResized * wincmd =
     set guifont=Menlo:h12
     set guioptions=aemg
   endif
 
 " Autosave
   set updatetime=200
-  au BufLeave,CursorHold,InsertLeave * silent! wa
+  autocmd BufLeave,CursorHold,InsertLeave * silent! wa
 
 syntax on
 

@@ -1,4 +1,4 @@
 filetype plugin indent on
 
-au BufRead,BufNewFile *.{md,text} setlocal ft=markdown
-au BufRead,BufNewFile *.scss setlocal ft=css
+autocmd BufRead,BufNewFile *.{md,text} setlocal ft=markdown
+autocmd BufRead,BufNewFile *.scss setlocal ft=css
