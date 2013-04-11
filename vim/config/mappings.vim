@@ -138,7 +138,7 @@
 " Scratch
   nnoremap <silent> <Leader>s :Sscratch<CR>
 
-  autocmd BufNewFile __Scratch__ call s:ScratchInit()
+  autocmd BufEnter __Scratch__ call s:ScratchInit()
   function! s:ScratchInit()
     nmap <buffer> <CR> V<C-C><C-C>
     vmap <buffer> <CR> <C-C><C-C>
