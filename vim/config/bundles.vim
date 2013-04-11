@@ -51,6 +51,7 @@ Bundle 'gmarik/vundle'
   Bundle 'mattn/webapi-vim'
   Bundle 'mattn/gist-vim'
   Bundle 'airblade/vim-gitgutter'
+  let g:gitgutter_enabled = 0
 
 " Edit
   Bundle 'Shougo/neocomplcache'
