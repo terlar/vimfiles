@@ -33,6 +33,8 @@
   nnoremap <Leader>bd! :Bclose!<CR>
   " Close all buffers
   nnoremap <Leader>bD :Breset<CR>
+  " Switch to previous buffer
+  nnoremap <Leader><Leader> <C-^>
 
 " Toggle numbers
   nnoremap <Leader># :set number!<CR>
@@ -46,13 +48,6 @@
   nnoremap <Leader>z :set foldlevel=10000<CR>
   nnoremap <Leader>Z :set foldlevel=-10000<CR>
 
-" Go to beginning / end of line
-  inoremap <C-h> <C-o>^
-  inoremap <C-l> <C-o>$
-
-" Select pasted text
-  nnoremap <Leader>v `[v`]
-
 " Clean trailing whitespace
   nnoremap <Leader>W :call CleanTrailingSpace()<CR>
 " Retab
@@ -60,10 +55,8 @@
 " Auto format
   nnoremap === mmgg=G`m^zz
 
-" Netrw
-  nnoremap <Leader>n :Explore<CR>
-
-" Command
+" File
+  nnoremap <Leader>n :Rename<Space>
   cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
 
@@ -79,8 +72,8 @@
   nnoremap <Tab><Tab> :CtrlPBuffer<CR>
   nnoremap Q :CtrlPQuickfix<CR>
   nnoremap <Leader>p :CtrlPRegister<CR>
-  nnoremap <Leader>, :CtrlPChange<CR>
-  nnoremap <Leader>g :CtrlPLine<CR>
+  nnoremap <Leader>c :CtrlPChange<CR>
+  nnoremap <Leader>/ :CtrlPLine<CR>
   nnoremap <Leader>f :CtrlPFunky<CR>
 
   " Jump
@@ -93,14 +86,8 @@
   nnoremap <Leader>jc :CtrlP app/controllers<CR>
   nnoremap <Leader>jh :CtrlP app/helpers<CR>
   nnoremap <Leader>ja :CtrlP app/assets<CR>
-  nnoremap <Leader>jaj :CtrlP app/assets/javascripts<CR>
-  nnoremap <Leader>jas :CtrlP app/assets/stylesheets<CR>
   nnoremap <Leader>jl :CtrlP lib<CR>
-  nnoremap <Leader>jp :CtrlP public<CR>
   nnoremap <Leader>js :CtrlP spec<CR>
-  nnoremap <Leader>jd :CtrlP db<CR>
-  nnoremap <Leader>jC :CtrlP config<CR>
-  nnoremap <Leader>jV :CtrlP vendor<CR>
 
 " Dispatch
   nnoremap <Leader>db :Dispatch bundle<CR>
@@ -108,12 +95,14 @@
   nnoremap <Leader>dfy :Dispatch flay %:p:h<CR>
   nnoremap <Leader>dr :Dispatch rails_best_practices<CR>
 
-  autocmd BufEnter * call s:MapDispatch()
-  function! s:MapDispatch()
-    if &buftype == '' && mapcheck('<CR>', 'n') == ''
+  autocmd! CmdwinEnter * unmap <buffer> <CR>
+  autocmd! CmdwinLeave * call s:MapCR()
+  function! s:MapCR()
+    if mapcheck('<CR>', 'n') == ''
       nmap <buffer> <CR> :Dispatch<CR>
     endif
   endfunction
+  call s:MapCR()
 
 " Gundo
   nnoremap <silent> <Leader>u :silent GundoToggle<CR>
@@ -132,6 +121,7 @@
   inoremap <expr><C-e> neocomplcache#cancel_popup()
 
 " Rails
+  nnoremap <Leader>. :A<CR>
   autocmd FileType ruby nmap <buffer> <CR> :.Rrunner<CR>
   autocmd FileType ruby nmap <buffer> <Leader><CR> :Rrunner<CR>
 
@@ -143,7 +133,6 @@
     nmap <buffer> <CR> V<C-C><C-C>
     vmap <buffer> <CR> <C-C><C-C>
     nmap <buffer> <Leader><CR> ggVG<C-C><C-C>
-
     map <buffer> <silent> <Leader>s :wincmd c<CR>
   endfunction
 
