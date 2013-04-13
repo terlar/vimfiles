@@ -116,6 +116,9 @@
 " Gundo
   nnoremap <silent> <Leader>u :silent GundoToggle<CR>
 
+" Hard Mode
+  nnoremap <Leader>h <Esc>:call ToggleHardMode()<CR>
+
 " neocomplcache
   inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
   function! s:my_cr_function()

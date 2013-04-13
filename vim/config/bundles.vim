@@ -17,6 +17,7 @@ Bundle 'gmarik/vundle'
   Bundle 'tpope/vim-obsession'
   Bundle 'tpope/vim-dispatch'
   Bundle 'milkypostman/vim-togglelist'
+  Bundle 'wikitopian/hardmode'
 
 " Theme
   Bundle 'chriskempson/base16-vim'
