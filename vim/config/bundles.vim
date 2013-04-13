@@ -38,10 +38,8 @@ Bundle 'gmarik/vundle'
   let g:ctrlp_open_multiple_files = '2v'
 
 " Tmux
-  Bundle 'benmills/vimux'
-  let g:VimuxHeight = '40'
-  let g:VimuxOrientation = 'h'
-  let g:VimuxUseNearestPane = 1
+  Bundle 'jpalardy/vim-slime'
+  let g:slime_target = 'tmux'
 
 " Git
   Bundle 'tpope/vim-git'

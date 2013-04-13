@@ -142,7 +142,7 @@
 
   autocmd BufEnter __Scratch__ call s:ScratchInit()
   function! s:ScratchInit()
-    nmap <buffer> <CR> V<C-C><C-C>
+    nmap <buffer> <CR> <C-C><C-C>
     vmap <buffer> <CR> <C-C><C-C>
     nmap <buffer> <Leader><CR> ggVG<C-C><C-C>
     map <buffer> <silent> <Leader>s :wincmd c<CR>
@@ -154,14 +154,6 @@
 
 " Switch
   nnoremap <silent> <Space> :Switch<CR>
-
-" Vimux
-  nnoremap <Leader>> :VimuxPromptCommand<CR>
-  nnoremap <Leader>>> :VimuxRunLastCommand<CR>
-  " Send selected text to tmux
-  vmap <silent> <C-C><C-C> "vy:call VimuxRunCommand(@v, 0)<CR>
-  " Send current paragraph to tmux
-  nmap <silent> <C-C><C-C> vip<C-C><C-C><CR>
 
 " ZoomWin
   nnoremap <C-_> :ZoomWin<CR>
