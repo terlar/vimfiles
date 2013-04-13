@@ -59,6 +59,15 @@
   nnoremap <Leader>n :Rename<Space>
   cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
+" Command
+  cnoremap <M-b>      <S-Left>
+  cnoremap <M-f>      <S-Right>
+  cnoremap <M-d>      <S-Right><C-w>
+  cnoremap <Esc>b     <S-Left>
+  cnoremap <Esc>f     <S-Right>
+  cnoremap <Esc>d     <S-Right><C-w>
+  cnoremap <Esc><BS>  <C-w>
+
 
 " Ag
   nnoremap <Leader>a :Ag<Space>
