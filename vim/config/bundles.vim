@@ -10,7 +10,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " General
-  Bundle 'editorconfig/editorconfig-vim'
   Bundle 'file-line'
   Bundle 'lastpos.vim'
   Bundle 'tpope/vim-eunuch'
@@ -56,14 +55,11 @@ Bundle 'gmarik/vundle'
   let g:neocomplcache_enable_smart_case = 1
 
   Bundle 'tpope/vim-endwise'
-  Bundle 'tpope/vim-repeat'
-  Bundle 'tpope/vim-surround'
-  let g:surround_35 = '#{\r}'
-  let g:surround_40 = '(\r)'
-  let g:surround_91 = '[\r]'
-  let g:surround_60 = '<\r>'
-
   Bundle 'AndrewRadev/switch.vim'
+  let g:switch_custom_definitions = [
+    \   {'''\(.\+\)''': '"\1"', '"\(.\+\)"': '''\1'''}
+    \ ]
+
   Bundle 'AndrewRadev/splitjoin.vim'
   let g:splitjoin_normalize_whitespace = 1
   let g:splitjoin_align = 1
