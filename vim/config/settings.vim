@@ -34,6 +34,8 @@
     endif
   endif
 
+  match ErrorMsg '\%>120v.\+'
+
 " Editing text
   set backspace=indent,eol,start
   set infercase
@@ -87,7 +89,7 @@
   set ttyfast
   set ttyscroll=3
   set lazyredraw
-  set synmaxcol=200
+  set synmaxcol=120
 
 " System
   set title
