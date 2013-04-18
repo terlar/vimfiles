@@ -55,6 +55,11 @@
 " Auto format
   nnoremap === mmgg=G`m^zz
 
+" Quickfix
+  nnoremap <LocalLeader><LocalLeader> :cc<CR>
+  nnoremap <LocalLeader>j :cp<CR>
+  nnoremap <LocalLeader>k :cn<CR>
+
 " File
   nnoremap <Leader>n :Rename<Space>
   cnoremap %% <C-R>=expand('%:h').'/'<CR>
