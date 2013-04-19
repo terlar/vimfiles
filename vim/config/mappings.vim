@@ -125,17 +125,15 @@
   nnoremap <Leader>h <Esc>:call ToggleHardMode()<CR>
 
 " neocomplcache
-  inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-  function! s:my_cr_function()
-    return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-  endfunction
+  inoremap <expr><CR>     neocomplcache#smart_close_popup() . "\<CR>"
 
-  inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-  inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-  inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-  inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-  inoremap <expr><C-y> neocomplcache#close_popup()
-  inoremap <expr><C-e> neocomplcache#cancel_popup()
+  inoremap <expr><Tab>    pumvisible() ? "\<C-n>" : "\<Tab>"
+  inoremap <expr><S-Tab>  pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+  inoremap <expr><C-h>    neocomplcache#smart_close_popup() . "\<C-h>"
+  inoremap <expr><BS>     neocomplcache#smart_close_popup() . "\<C-h>"
+  inoremap <expr><C-y>    neocomplcache#close_popup()
+  inoremap <expr><C-e>    neocomplcache#cancel_popup()
 
 " Rails
   nnoremap <Leader>. :A<CR>
