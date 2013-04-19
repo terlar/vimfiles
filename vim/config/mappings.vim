@@ -125,8 +125,11 @@
   nnoremap <Leader>h <Esc>:call ToggleHardMode()<CR>
 
 " neocomplcache
-  inoremap <expr><CR>     neocomplcache#smart_close_popup() . "\<CR>"
+  function! s:ClosePopupOrCR()
+    return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+  endfunction
 
+  inoremap <silent> <CR>  <C-r>=<SID>ClosePopupOrCR()<CR>
   inoremap <expr><Tab>    pumvisible() ? "\<C-n>" : "\<Tab>"
   inoremap <expr><S-Tab>  pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
