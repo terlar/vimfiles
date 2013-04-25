@@ -140,8 +140,8 @@
 
 " Rails
   nnoremap <Leader>. :A<CR>
-  autocmd FileType ruby nmap <buffer> <CR> :.Rrunner<CR>
-  autocmd FileType ruby nmap <buffer> <Leader><CR> :Rrunner<CR>
+  autocmd FileType ruby nmap <buffer> <CR> :Rrunner<CR>
+  autocmd FileType ruby nmap <buffer> <Leader><CR> :.Rrunner<CR>
 
 " Scratch
   nnoremap <silent> <Leader>s :Sscratch<CR>
