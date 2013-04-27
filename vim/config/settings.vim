@@ -9,6 +9,7 @@
   set noequalalways
   set hidden
   set switchbuf=useopen
+  set sidescroll=10
 
 " Searching and patterns
   set ignorecase smartcase
