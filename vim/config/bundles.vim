@@ -79,7 +79,6 @@ Bundle 'gmarik/vundle'
   let g:syntastic_auto_jump = 1
 
   Bundle 'vim-ruby/vim-ruby'
-  Bundle 'tpope/vim-rails'
   Bundle 'tpope/vim-haml'
   Bundle 'kchmck/vim-coffee-script'
   Bundle 'jelera/vim-javascript-syntax'
@@ -87,6 +86,10 @@ Bundle 'gmarik/vundle'
   Bundle 'othree/html5.vim'
   Bundle 'nono/vim-handlebars'
   Bundle 'Soares/fish.vim'
+
+" Tools
+  Bundle 'tpope/vim-rails'
+  Bundle 'ecomba/vim-ruby-refactoring'
 
 runtime! macros/matchit.vim
 
