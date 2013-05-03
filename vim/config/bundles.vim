@@ -21,6 +21,7 @@ Bundle 'gmarik/vundle'
 
 " Theme
   Bundle 'chriskempson/base16-vim'
+  Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 " Buffer
   Bundle 'Soares/butane.vim'
@@ -99,4 +100,4 @@ if exists('fresh_vundle')
   wincmd c
 endif
 
-colorscheme base16-default
+colorscheme Tomorrow
