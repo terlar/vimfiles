@@ -121,3 +121,5 @@ endif
 
 let mapleader = ','
 let maplocalleader = ';'
+
+colorscheme Tomorrow

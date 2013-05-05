@@ -19,10 +19,6 @@ Bundle 'gmarik/vundle'
   Bundle 'wikitopian/hardmode'
   Bundle 'jceb/vim-hier'
 
-" Theme
-  Bundle 'chriskempson/base16-vim'
-  Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-
 " Buffer
   Bundle 'Soares/butane.vim'
   Bundle 'ZoomWin'
@@ -99,5 +95,3 @@ if exists('fresh_vundle')
   unlet fresh_vundle
   wincmd c
 endif
-
-colorscheme Tomorrow
