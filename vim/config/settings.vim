@@ -10,6 +10,8 @@
   set hidden
   set switchbuf=useopen
   set sidescroll=10
+  set splitbelow
+  set splitright
 
 " Searching and patterns
   set ignorecase smartcase
