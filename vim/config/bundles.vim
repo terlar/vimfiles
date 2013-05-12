@@ -37,6 +37,10 @@ Bundle 'gmarik/vundle'
   Bundle 'ZoomWin'
   Bundle 'scratch.vim'
 
+" QuickFix
+  Bundle 'milkypostman/vim-togglelist'
+  Bundle 'jceb/vim-hier'
+
 " Git
   Bundle 'tpope/vim-git'
   Bundle 'tpope/vim-fugitive'
