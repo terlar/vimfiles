@@ -9,24 +9,22 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-" General
-  Bundle 'file-line'
-  Bundle 'lastpos.vim'
+" Features
+  Bundle 'wikitopian/hardmode'
   Bundle 'tpope/vim-eunuch'
   Bundle 'tpope/vim-obsession'
   Bundle 'tpope/vim-dispatch'
-  Bundle 'milkypostman/vim-togglelist'
-  Bundle 'wikitopian/hardmode'
-  Bundle 'jceb/vim-hier'
-
-" Buffer
-  Bundle 'Soares/butane.vim'
-  Bundle 'ZoomWin'
-  Bundle 'scratch.vim'
+  Bundle 'sjl/clam.vim'
+  Bundle 'jpalardy/vim-slime'
+  let g:slime_target = 'tmux'
+  Bundle 'sjl/gundo.vim'
+  let g:gundo_preview_bottom = 1
 
 " Navigation
-  Bundle 'rking/ag.vim'
+  Bundle 'lastpos.vim'
+  Bundle 'file-line'
 
+  Bundle 'rking/ag.vim'
   Bundle 'kien/ctrlp.vim'
   Bundle 'mattn/ctrlp-register'
   Bundle 'tacahiroy/ctrlp-funky'
@@ -34,9 +32,10 @@ Bundle 'gmarik/vundle'
   let g:ctrlp_prompt_mappings = { 'AcceptSelection("e")': ['<CR>', '<Tab>', '<2-LeftMouse>'] }
   let g:ctrlp_open_multiple_files = '2v'
 
-" Tmux
-  Bundle 'jpalardy/vim-slime'
-  let g:slime_target = 'tmux'
+" Buffer
+  Bundle 'Soares/butane.vim'
+  Bundle 'ZoomWin'
+  Bundle 'scratch.vim'
 
 " Git
   Bundle 'tpope/vim-git'
@@ -46,26 +45,21 @@ Bundle 'gmarik/vundle'
   Bundle 'mattn/gist-vim'
 
 " Edit
+  Bundle 'Align'
+  Bundle 'tpope/vim-endwise'
+  Bundle 'tpope/vim-abolish'
+  Bundle 'kana/vim-textobj-indent'
+  Bundle 'kana/vim-textobj-user'
   Bundle 'Shougo/neocomplcache'
   let g:neocomplcache_enable_at_startup = 1
   let g:neocomplcache_enable_smart_case = 1
-
-  Bundle 'tpope/vim-endwise'
   Bundle 'AndrewRadev/switch.vim'
   let g:switch_custom_definitions = [
     \   {'''\(.\+\)''': '"\1"', '"\(.\+\)"': '''\1'''}
     \ ]
-
   Bundle 'AndrewRadev/splitjoin.vim'
   let g:splitjoin_normalize_whitespace = 1
   let g:splitjoin_align = 1
-
-  Bundle 'sjl/gundo.vim'
-  let g:gundo_preview_bottom = 1
-
-  Bundle 'Align'
-  Bundle 'tpope/vim-abolish'
-  Bundle 'sjl/clam.vim'
 
 " Filetypes
   Bundle 'scrooloose/syntastic'
@@ -75,6 +69,7 @@ Bundle 'gmarik/vundle'
   let g:syntastic_auto_loc_list = 2
   let g:syntastic_auto_jump = 1
 
+  Bundle 'dag/vim-fish'
   Bundle 'vim-ruby/vim-ruby'
   Bundle 'tpope/vim-haml'
   Bundle 'kchmck/vim-coffee-script'
@@ -82,9 +77,7 @@ Bundle 'gmarik/vundle'
   Bundle 'jQuery'
   Bundle 'othree/html5.vim'
   Bundle 'nono/vim-handlebars'
-  Bundle 'dag/vim-fish'
 
-" Tools
   Bundle 'tpope/vim-rails'
   Bundle 'ecomba/vim-ruby-refactoring'
 
