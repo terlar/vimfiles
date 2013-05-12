@@ -96,6 +96,7 @@
 
 " System
   set title
+  set clipboard+=unnamed
 
 " Theme
   set t_Co=256
