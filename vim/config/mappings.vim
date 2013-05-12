@@ -48,6 +48,10 @@
   nnoremap <Leader>z :set foldlevel=10000<CR>
   nnoremap <Leader>Z :set foldlevel=-10000<CR>
 
+" Sort lines
+  nmap <Leader>S vii:sort i<CR>
+  vnoremap <Leader>S :sort i<CR>
+
 " Clean trailing whitespace
   nnoremap <Leader>W :call CleanTrailingSpace()<CR>
 " Retab
