@@ -82,7 +82,7 @@ Bundle 'gmarik/vundle'
   Bundle 'jQuery'
   Bundle 'othree/html5.vim'
   Bundle 'nono/vim-handlebars'
-  Bundle 'Soares/fish.vim'
+  Bundle 'dag/vim-fish'
 
 " Tools
   Bundle 'tpope/vim-rails'
