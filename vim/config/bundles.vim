@@ -19,6 +19,7 @@ Bundle 'gmarik/vundle'
   let g:slime_target = 'tmux'
   Bundle 'sjl/gundo.vim'
   let g:gundo_preview_bottom = 1
+  Bundle 'tpope/vim-rsi'
 
 " Navigation
   Bundle 'lastpos.vim'
