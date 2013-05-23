@@ -35,7 +35,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
   " Vim Highlighting
   call <SID>X("Normal", s:foreground, s:background, "")
-  highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+  call <SID>X("LineNr", s:comment, s:line, "")
   call <SID>X("NonText", s:selection, "", "")
   call <SID>X("SpecialKey", s:selection, "", "")
   call <SID>X("Search", s:foreground, s:yellow, "")
@@ -81,7 +81,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("Type", s:red, "", "none")
   call <SID>X("Define", s:purple, "", "none")
   call <SID>X("Include", s:blue, "", "")
-  "call <SID>X("Ignore", "666666", "", "")
+  call <SID>X("Ignore", s:line, "", "")
 
   " Vim Highlighting
   call <SID>X("vimCommand", s:red, "", "none")
