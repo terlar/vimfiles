@@ -6,7 +6,7 @@ endif
   runtime! functions/*.vim
 
 " Load Config
-  runtime config/settings.vim
-  runtime config/bundles.vim
-  runtime config/filetypes.vim
-  runtime config/mappings.vim
+  runtime rc/settings.vim
+  runtime rc/bundles.vim
+  runtime rc/filetypes.vim
+  runtime rc/mappings.vim
