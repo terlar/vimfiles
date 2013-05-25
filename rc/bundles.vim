@@ -85,6 +85,7 @@ Bundle 'gmarik/vundle'
 
   Bundle 'tpope/vim-rails'
   Bundle 'ecomba/vim-ruby-refactoring'
+  Bundle 'rainerborene/vim-reek'
 
 runtime! macros/matchit.vim
 
