@@ -87,8 +87,6 @@ Bundle 'gmarik/vundle'
 
   Bundle 'tpope/vim-rails'
   Bundle 'ecomba/vim-ruby-refactoring'
-  Bundle 'rainerborene/vim-reek'
-  let g:reek_always_show = 0
 
 runtime! macros/matchit.vim
 
