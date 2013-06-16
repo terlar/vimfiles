@@ -3,15 +3,16 @@ let s:foreground = '0'
 let s:background = '15'
 let s:selection = '7'
 let s:line = '7'
-let s:comment = '8'
+
 let s:red = '1'
-let s:orange = '11'
-let s:yellow = '3'
 let s:green = '2'
-let s:aqua = '6'
+let s:yellow = '3'
 let s:blue = '4'
 let s:purple = '5'
-let s:window = '15'
+let s:aqua = '6'
+let s:grey = '7'
+let s:darkgrey = '8'
+let s:orange = '11'
 
 set background=light
 hi clear
@@ -35,15 +36,15 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
   " Vim Highlighting
   call <SID>X("Normal", s:foreground, "", "")
-  call <SID>X("LineNr", s:comment, s:line, "")
-  call <SID>X("SignColumn", s:comment, s:line, "")
-  call <SID>X("NonText", s:selection, s:line, "")
+  call <SID>X("LineNr", s:darkgrey, s:line, "")
+  call <SID>X("SignColumn", s:darkgrey, s:line, "")
+  call <SID>X("NonText", s:line, s:line, "")
   call <SID>X("SpecialKey", s:selection, "", "")
   call <SID>X("Search", s:foreground, s:yellow, "")
   call <SID>X("TabLine", s:foreground, s:background, "reverse")
-  call <SID>X("StatusLine", s:window, s:yellow, "reverse")
-  call <SID>X("StatusLineNC", s:window, s:foreground, "reverse")
-  call <SID>X("VertSplit", s:window, s:window, "none")
+  call <SID>X("StatusLine", s:foreground, s:background, "reverse")
+  call <SID>X("StatusLineNC", s:darkgrey, s:line, "reverse")
+  call <SID>X("VertSplit", s:grey, s:grey, "none")
   call <SID>X("Visual", "", s:selection, "")
   call <SID>X("Directory", s:blue, "", "")
   call <SID>X("ModeMsg", s:green, "", "")
@@ -51,7 +52,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("Question", s:green, "", "")
   call <SID>X("WarningMsg", s:red, "", "")
   call <SID>X("MatchParen", "", s:selection, "")
-  call <SID>X("Folded", s:comment, s:background, "")
+  call <SID>X("Folded", s:darkgrey, s:background, "")
   call <SID>X("FoldColumn", "", s:background, "")
   if version >= 700
     call <SID>X("CursorLine", "", s:line, "none")
@@ -64,9 +65,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   end
 
   " Standard Highlighting
-  call <SID>X("Comment", s:comment, "", "")
-  call <SID>X("Todo", s:comment, s:background, "")
-  call <SID>X("Title", s:comment, "", "")
+  call <SID>X("Comment", s:darkgrey, "", "")
+  call <SID>X("Todo", s:darkgrey, s:background, "")
+  call <SID>X("Title", s:darkgrey, "", "")
   call <SID>X("Identifier", s:red, "", "none")
   call <SID>X("Statement", s:foreground, "", "")
   call <SID>X("Conditional", s:foreground, "", "")

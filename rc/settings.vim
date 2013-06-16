@@ -5,7 +5,7 @@
   set viminfo^=!
 
 " Windows
-  set laststatus=0 " Never show statusline
+  set laststatus=1 " Never show statusline
   set noequalalways
   set hidden
   set switchbuf=useopen
