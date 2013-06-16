@@ -34,10 +34,10 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   endfun
 
   " Vim Highlighting
-  call <SID>X("Normal", s:foreground, s:background, "")
+  call <SID>X("Normal", s:foreground, "", "")
   call <SID>X("LineNr", s:comment, s:line, "")
   call <SID>X("SignColumn", s:comment, s:line, "")
-  call <SID>X("NonText", s:selection, "", "")
+  call <SID>X("NonText", s:selection, s:line, "")
   call <SID>X("SpecialKey", s:selection, "", "")
   call <SID>X("Search", s:foreground, s:yellow, "")
   call <SID>X("TabLine", s:foreground, s:background, "reverse")
