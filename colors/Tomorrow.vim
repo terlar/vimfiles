@@ -1,18 +1,25 @@
-" Default GUI Colours
-let s:foreground = '0'
-let s:background = '15'
-let s:selection = '7'
-let s:line = '7'
+" Colors
+let s:foreground   = '0'
+let s:background   = '15'
+let s:selection    = '7'
+let s:line         = '7'
 
-let s:red = '1'
-let s:green = '2'
-let s:yellow = '3'
-let s:blue = '4'
-let s:purple = '5'
-let s:aqua = '6'
-let s:grey = '7'
-let s:darkgrey = '8'
-let s:orange = '11'
+let s:red          = '1'
+let s:green        = '2'
+let s:yellow       = '3'
+let s:blue         = '4'
+let s:purple       = '5'
+let s:aqua         = '6'
+let s:grey         = '7'
+let s:orange       = '11'
+let s:white        = '15'
+
+let s:brightblack  = '8'
+let s:brightred    = '9'
+let s:brightgreen  = '10'
+let s:brightblue   = '12'
+let s:brightpurple = '13'
+let s:brightaqua   = '14'
 
 set background=light
 hi clear
@@ -34,25 +41,25 @@ fun <SID>X(group, fg, bg, attr)
 endfun
 
 " Vim Highlighting
-call <SID>X('Normal'       , s:foreground , ''           , '')
-call <SID>X('LineNr'       , s:darkgrey   , s:line       , '')
-call <SID>X('SignColumn'   , s:darkgrey   , s:line       , '')
-call <SID>X('NonText'      , s:line       , s:line       , '')
-call <SID>X('SpecialKey'   , s:selection  , ''           , '')
-call <SID>X('Search'       , s:foreground , s:yellow     , '')
-call <SID>X('TabLine'      , s:foreground , s:background , 'reverse')
-call <SID>X('StatusLine'   , s:foreground , s:blue       , 'reverse')
-call <SID>X('StatusLineNC' , s:grey       , s:darkgrey   , '')
-call <SID>X('VertSplit'    , s:grey       , s:grey       , 'none')
-call <SID>X('Visual'       , ''           , s:selection  , '')
-call <SID>X('Directory'    , s:blue       , ''           , '')
-call <SID>X('ModeMsg'      , s:green      , ''           , '')
-call <SID>X('MoreMsg'      , s:green      , ''           , '')
-call <SID>X('Question'     , s:green      , ''           , '')
-call <SID>X('WarningMsg'   , s:red        , ''           , '')
-call <SID>X('MatchParen'   , ''           , s:selection  , '')
-call <SID>X('Folded'       , s:darkgrey   , s:background , '')
-call <SID>X('FoldColumn'   , ''           , s:background , '')
+call <SID>X('Normal'       , s:foreground  , ''            , '')
+call <SID>X('LineNr'       , s:brightblack , s:line        , '')
+call <SID>X('SignColumn'   , s:brightblack , s:line        , '')
+call <SID>X('NonText'      , s:line        , s:line        , '')
+call <SID>X('SpecialKey'   , s:selection   , ''            , '')
+call <SID>X('Search'       , s:foreground  , s:yellow      , '')
+call <SID>X('TabLine'      , s:foreground  , s:background  , 'reverse')
+call <SID>X('StatusLine'   , s:foreground  , s:brightblue  , 'reverse')
+call <SID>X('StatusLineNC' , s:grey        , s:brightblack , '')
+call <SID>X('VertSplit'    , s:grey        , s:grey        , 'none')
+call <SID>X('Visual'       , ''            , s:selection   , '')
+call <SID>X('Directory'    , s:blue        , ''            , '')
+call <SID>X('ModeMsg'      , s:green       , ''            , '')
+call <SID>X('MoreMsg'      , s:green       , ''            , '')
+call <SID>X('Question'     , s:green       , ''            , '')
+call <SID>X('WarningMsg'   , s:red         , ''            , '')
+call <SID>X('MatchParen'   , ''            , s:selection   , '')
+call <SID>X('Folded'       , s:brightblack , s:background  , '')
+call <SID>X('FoldColumn'   , ''            , s:background  , '')
 if version >= 700
   call <SID>X('CursorLine'   , ''           , s:line      , 'none')
   call <SID>X('CursorColumn' , ''           , s:line      , 'none')
@@ -64,25 +71,25 @@ if version >= 703
 end
 
 " Standard Highlighting
-call <SID>X('Comment'      , s:darkgrey   , ''           , '')
-call <SID>X('Todo'         , s:darkgrey   , s:background , '')
-call <SID>X('Title'        , s:darkgrey   , ''           , '')
-call <SID>X('Identifier'   , s:red        , ''           , 'none')
-call <SID>X('Statement'    , s:foreground , ''           , '')
-call <SID>X('Conditional'  , s:foreground , ''           , '')
-call <SID>X('Repeat'       , s:foreground , ''           , '')
-call <SID>X('Structure'    , s:purple     , ''           , '')
-call <SID>X('Function'     , s:blue       , ''           , '')
-call <SID>X('Constant'     , s:orange     , ''           , '')
-call <SID>X('StorageClass' , s:yellow     , ''           , '')
-call <SID>X('String'       , s:green      , ''           , '')
-call <SID>X('Special'      , s:foreground , ''           , '')
-call <SID>X('PreProc'      , s:purple     , ''           , '')
-call <SID>X('Operator'     , s:aqua       , ''           , 'none')
-call <SID>X('Type'         , s:red        , ''           , 'none')
-call <SID>X('Define'       , s:purple     , ''           , 'none')
-call <SID>X('Include'      , s:blue       , ''           , '')
-call <SID>X('Ignore'       , s:line       , ''           , '')
+call <SID>X('Comment'      , s:brightblack , ''           , '')
+call <SID>X('Todo'         , s:brightblack , s:background , '')
+call <SID>X('Title'        , s:brightblack , ''           , '')
+call <SID>X('Identifier'   , s:red         , ''           , 'none')
+call <SID>X('Statement'    , s:foreground  , ''           , '')
+call <SID>X('Conditional'  , s:foreground  , ''           , '')
+call <SID>X('Repeat'       , s:foreground  , ''           , '')
+call <SID>X('Structure'    , s:purple      , ''           , '')
+call <SID>X('Function'     , s:blue        , ''           , '')
+call <SID>X('Constant'     , s:orange      , ''           , '')
+call <SID>X('StorageClass' , s:yellow      , ''           , '')
+call <SID>X('String'       , s:green       , ''           , '')
+call <SID>X('Special'      , s:foreground  , ''           , '')
+call <SID>X('PreProc'      , s:purple      , ''           , '')
+call <SID>X('Operator'     , s:aqua        , ''           , 'none')
+call <SID>X('Type'         , s:red         , ''           , 'none')
+call <SID>X('Define'       , s:purple      , ''           , 'none')
+call <SID>X('Include'      , s:blue        , ''           , '')
+call <SID>X('Ignore'       , s:line        , ''           , '')
 
 " Vim Highlighting
 call <SID>X('vimCommand' , s:red , '' , 'none')
