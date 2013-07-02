@@ -85,6 +85,7 @@ Bundle 'gmarik/vundle'
   Bundle 'jelera/vim-javascript-syntax'
   Bundle 'jQuery'
   Bundle 'nono/vim-handlebars'
+  Bundle 'elixir-lang/vim-elixir'
 
   Bundle 'tpope/vim-rails'
   Bundle 'ecomba/vim-ruby-refactoring'
