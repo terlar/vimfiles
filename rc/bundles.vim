@@ -11,37 +11,26 @@ Bundle 'gmarik/vundle'
 
 " Features
   Bundle 'wikitopian/hardmode'
+  Bundle 'tpope/vim-rsi'
   Bundle 'tpope/vim-eunuch'
   Bundle 'tpope/vim-obsession'
   Bundle 'tpope/vim-dispatch'
+  Bundle 'tpope/vim-surround'
+  Bundle 'tpope/vim-abolish'
+  Bundle 'tpope/vim-repeat'
   Bundle 'sjl/clam.vim'
+  Bundle 'sjl/gundo.vim'
+  let g:gundo_preview_bottom = 1
+  Bundle 'skalnik/vim-vroom'
+  Bundle 'ecomba/vim-ruby-refactoring'
+  Bundle 'godlygeek/tabular'
+  Bundle 'file-line'
+  Bundle 'lastpos.vim'
+
+" Tmux
   Bundle 'christoomey/vim-tmux-navigator'
   Bundle 'jpalardy/vim-slime'
   let g:slime_target = 'tmux'
-  Bundle 'sjl/gundo.vim'
-  let g:gundo_preview_bottom = 1
-  Bundle 'tpope/vim-rsi'
-
-" Navigation
-  Bundle 'lastpos.vim'
-  Bundle 'file-line'
-
-  Bundle 'rking/ag.vim'
-  Bundle 'kien/ctrlp.vim'
-  Bundle 'mattn/ctrlp-register'
-  Bundle 'tacahiroy/ctrlp-funky'
-  let g:ctrlp_extensions = ['register', 'funky']
-  let g:ctrlp_prompt_mappings = { 'AcceptSelection("e")': ['<CR>', '<Tab>', '<2-LeftMouse>'] }
-  let g:ctrlp_open_multiple_files = '2v'
-
-" Buffer
-  Bundle 'Soares/butane.vim'
-  Bundle 'ZoomWin'
-  Bundle 'scratch.vim'
-
-" QuickFix
-  Bundle 'milkypostman/vim-togglelist'
-  Bundle 'jceb/vim-hier'
 
 " Git
   Bundle 'tpope/vim-git'
@@ -50,47 +39,60 @@ Bundle 'gmarik/vundle'
   Bundle 'mattn/webapi-vim'
   Bundle 'mattn/gist-vim'
 
-" Edit
-  Bundle 'Align'
-  Bundle 'tpope/vim-endwise'
-  Bundle 'tpope/vim-abolish'
-  Bundle 'kana/vim-textobj-indent'
-  Bundle 'kana/vim-textobj-user'
-  Bundle 'Shougo/neocomplcache'
-  let g:neocomplcache_enable_at_startup = 1
-  let g:neocomplcache_enable_smart_case = 1
-  Bundle 'AndrewRadev/switch.vim'
-  let g:switch_custom_definitions = [
-    \   {'''\(.\+\)''': '"\1"', '"\(.\+\)"': '''\1'''}
-    \ ]
-  Bundle 'AndrewRadev/splitjoin.vim'
-  let g:splitjoin_normalize_whitespace = 1
-  let g:splitjoin_align = 1
+" QuickFix
+  Bundle 'milkypostman/vim-togglelist'
+  Bundle 'jceb/vim-hier'
+
+" Buffer
+  Bundle 'Soares/butane.vim'
+  Bundle 'ZoomWin'
+  Bundle 'scratch.vim'
+
+" Navigation
+  Bundle 'rking/ag.vim'
+  Bundle 'kien/ctrlp.vim'
+  Bundle 'mattn/ctrlp-register'
+  Bundle 'tacahiroy/ctrlp-funky'
+  let g:ctrlp_extensions = ['register', 'funky']
+  let g:ctrlp_prompt_mappings = { 'AcceptSelection("e")': ['<CR>', '<Tab>', '<2-LeftMouse>'] }
+  let g:ctrlp_open_multiple_files = '2v'
 
 " Filetypes
+  Bundle 'dag/vim-fish'
+  Bundle 'vim-ruby/vim-ruby'
+  Bundle 'pangloss/vim-javascript'
+  Bundle 'elixir-lang/vim-elixir'
+  Bundle 'jimenezrick/vimerl'
+  Bundle 'jnwhiteh/vim-golang'
+  Bundle 'guns/vim-clojure-static'
+  Bundle 'tpope/vim-markdown'
+  Bundle 'othree/html5.vim'
+  Bundle 'tpope/vim-rails'
+  Bundle 'slim-template/vim-slim'
+  Bundle 'tpope/vim-haml'
+  Bundle 'kchmck/vim-coffee-script'
+  Bundle 'jQuery'
+  Bundle 'nono/vim-handlebars'
+  Bundle 'wavded/vim-stylus'
+
+" Syntax
   Bundle 'scrooloose/syntastic'
   let g:syntastic_check_on_open = 1
   let g:syntastic_error_symbol = '✗'
   let g:syntastic_warning_symbol = '!'
   let g:syntastic_auto_loc_list = 2
   let g:syntastic_auto_jump = 1
-
-  Bundle 'dag/vim-fish'
-  Bundle 'vim-ruby/vim-ruby'
-  Bundle 'slim-template/vim-slim'
-  Bundle 'tpope/vim-haml'
-  Bundle 'othree/html5.vim'
-  Bundle 'wavded/vim-stylus'
-  Bundle 'kchmck/vim-coffee-script'
-  Bundle 'jelera/vim-javascript-syntax'
-  Bundle 'jQuery'
-  Bundle 'nono/vim-handlebars'
-  Bundle 'elixir-lang/vim-elixir'
-
-  Bundle 'tpope/vim-rails'
-  Bundle 'ecomba/vim-ruby-refactoring'
-
-runtime! macros/matchit.vim
+  Bundle 'Shougo/neocomplcache'
+  let g:neocomplcache_enable_at_startup = 1
+  let g:neocomplcache_enable_smart_case = 1
+  Bundle 'AndrewRadev/switch.vim'
+  Bundle 'AndrewRadev/splitjoin.vim'
+  let g:splitjoin_normalize_whitespace = 1
+  let g:splitjoin_align = 1
+  Bundle 'kana/vim-textobj-indent'
+  Bundle 'kana/vim-textobj-user'
+  Bundle 'nelstrom/vim-textobj-rubyblock'
+  Bundle 'tpope/vim-endwise'
 
 if exists('fresh_vundle')
   BundleInstall
