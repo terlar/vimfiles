@@ -22,6 +22,10 @@ Bundle 'gmarik/vundle'
   Bundle 'sjl/gundo.vim'
   let g:gundo_preview_bottom = 1
   Bundle 'skalnik/vim-vroom'
+  let g:vroom_map_keys = 0
+  let g:vroom_use_bundle_exec = 0
+  let g:vroom_write_all = 1
+  let g:vroom_use_dispatch = 1
   Bundle 'ecomba/vim-ruby-refactoring'
   Bundle 'godlygeek/tabular'
   Bundle 'file-line'

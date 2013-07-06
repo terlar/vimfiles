@@ -68,10 +68,6 @@
   nnoremap <Leader>a :Ag<Space>
   nnoremap <Leader>* :exe ':Ag '.expand('<cword>')<CR>
 
-" Align
-  nnoremap <Leader>= :Align<Space>
-  vnoremap <Leader>= :Align<Space>
-
 " CtrlP
   nnoremap <Tab><Tab> :CtrlPBuffer<CR>
   nnoremap Q :CtrlPQuickfix<CR>
@@ -108,6 +104,9 @@
   endfunction
   call s:MapCR()
 
+" Fugitive
+  nnoremap <Leader>g :Gstatus<CR>
+
 " Gundo
   nnoremap <silent> <Leader>u :silent GundoToggle<CR>
 
@@ -130,8 +129,6 @@
 
 " Rails
   nnoremap <Leader>. :A<CR>
-  autocmd FileType ruby nmap <buffer> <CR> :Rrunner<CR>
-  autocmd FileType ruby nmap <buffer> <Leader><CR> :.Rrunner<CR>
 
 " Scratch
   nnoremap <silent> <Leader>s :Sscratch<CR>
@@ -150,6 +147,26 @@
 
 " Switch
   nnoremap <silent> <Space> :Switch<CR>
+
+" Tabularize
+  nnoremap <Leader>= :Tabularize /
+  vnoremap <Leader>= :Tabularize /
+  nnoremap <Leader>== :Tabularize /=<CR>
+  vnoremap <Leader>== :Tabularize /=<CR>
+  nnoremap <Leader>={ :Tabularize /{<CR>
+  vnoremap <Leader>={ :Tabularize /{<CR>
+  nnoremap <Leader>=: :Tabularize /:\zs<CR>
+  vnoremap <Leader>=: :Tabularize /:\zs<CR>
+  nnoremap <Leader>=, :Tabularize /,\zs<CR>
+  vnoremap <Leader>=, :Tabularize /,\zs<CR>
+  nnoremap <Leader>=> :Tabularize /=><CR>
+  vnoremap <Leader>=> :Tabularize /=><CR>
+  nnoremap <Leader>=\| :Tabularize /\|<CR>
+  vnoremap <Leader>=\| :Tabularize /\|<CR>
+
+" Vroom
+  autocmd FileType ruby nmap <buffer> <CR> :call vroom#RunTestFile()<CR>
+  autocmd FileType ruby nmap <buffer> <Leader><CR> :call vroom#RunNearestTest()<CR>
 
 " ZoomWin
   nnoremap <C-_> :ZoomWin<CR>
