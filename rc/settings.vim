@@ -5,7 +5,8 @@
   set viminfo^=!
 
 " Windows
-  set laststatus=1 " Never show statusline
+  set laststatus=1
+  set ruler
   set noequalalways
   set hidden
   set switchbuf=useopen
@@ -72,7 +73,7 @@
 " Command-line
   set history=1000
   set wildmenu wildmode=longest,list:longest
-  set wildignore+=*/.git/*,*/.svn/*
+  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
   set wildignore+=.DS_Store
   set wildignore+=*/vendor/bundle/*,*/tmp/*,*/.*-cache/*
 
@@ -87,8 +88,9 @@
 
 " Speed-up
   set timeout
-  set timeoutlen=250
-  set ttimeoutlen=50
+  set ttimeoutlen=10
+  au InsertEnter * set timeoutlen=0
+  au InsertLeave * set timeoutlen=500
   set ttyfast
   set ttyscroll=3
   set lazyredraw
@@ -102,18 +104,9 @@
   set t_Co=256
   set background=dark
 
-" GUI
-  set mouse=a
-  set mousehide
-  if has('gui_running')
-    autocmd VimResized * wincmd =
-    set guifont=Menlo:h12
-    set guioptions=aemg
-  endif
-
 " Autosave
   set updatetime=200
-  autocmd BufLeave,CursorHold,InsertLeave * silent! wa
+  au BufLeave,CursorHold,InsertLeave * silent! wa
 
 syntax on
 
