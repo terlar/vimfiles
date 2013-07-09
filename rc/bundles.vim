@@ -79,6 +79,7 @@ Bundle 'gmarik/vundle'
   Bundle 'jQuery'
   Bundle 'nono/vim-handlebars'
   Bundle 'wavded/vim-stylus'
+  Bundle 'sunaku/vim-ruby-minitest'
 
 " Syntax
   Bundle 'scrooloose/syntastic'
