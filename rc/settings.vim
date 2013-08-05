@@ -98,11 +98,7 @@
 
 " System
   set title
-  set clipboard+=unnamed
-
-" Theme
-  set t_Co=256
-  set background=dark
+  set clipboard=unnamed
 
 " Autosave
   set updatetime=200
@@ -116,5 +112,3 @@ endif
 
 let mapleader = ','
 let maplocalleader = ';'
-
-colorscheme Tomorrow
