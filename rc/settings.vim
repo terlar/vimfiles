@@ -112,3 +112,6 @@ endif
 
 let mapleader = ','
 let maplocalleader = ';'
+
+let base16colorspace=256
+colorscheme base16-taiji
