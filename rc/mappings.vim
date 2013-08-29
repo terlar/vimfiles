@@ -77,17 +77,9 @@
   nnoremap <Leader>f :CtrlPFunky<CR>
 
   " Jump
-  nnoremap <Leader>j :CtrlP<CR>
-  nnoremap <Leader>e :CtrlPCurFile<CR>
-  nnoremap <Leader>jr :CtrlPRTS<CR>
-  " Rails project
-  nnoremap <Leader>jm :CtrlP app/models<CR>
-  nnoremap <Leader>jv :CtrlP app/views<CR>
-  nnoremap <Leader>jc :CtrlP app/controllers<CR>
-  nnoremap <Leader>jh :CtrlP app/helpers<CR>
-  nnoremap <Leader>ja :CtrlP app/assets<CR>
-  nnoremap <Leader>jl :CtrlP lib<CR>
-  nnoremap <Leader>js :CtrlP spec<CR>
+  nnoremap <Space> :CtrlP<CR>
+  nnoremap <Space><Space> :CtrlPCurFile<CR>
+  nnoremap <Space>r :CtrlPRTS<CR>
 
 " Dispatch
   nnoremap <Leader>db :Dispatch bundle<CR>
@@ -146,7 +138,7 @@
   nnoremap <silent> <Del> :SplitjoinSplit<CR>
 
 " Switch
-  nnoremap <silent> <Space> :Switch<CR>
+  nnoremap - :Switch<CR>
 
 " Tabularize
   nnoremap <Leader>= :Tabularize /
