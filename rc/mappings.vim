@@ -157,8 +157,8 @@
   vnoremap <Leader>=\| :Tabularize /\|<CR>
 
 " Vroom
-  autocmd FileType ruby nmap <buffer> <CR> :call vroom#RunTestFile()<CR>
-  autocmd FileType ruby nmap <buffer> <Leader><CR> :call vroom#RunNearestTest()<CR>
+  autocmd FileType ruby nmap <buffer> <CR> :Rrunner<CR>
+  autocmd FileType ruby nmap <buffer> <Leader><CR> :.Rrunner<CR>
 
 " ZoomWin
   nnoremap <C-_> :ZoomWin<CR>
