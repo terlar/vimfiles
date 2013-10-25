@@ -80,14 +80,10 @@ Bundle 'gmarik/vundle'
 
 " Syntax
   Bundle 'scrooloose/syntastic'
-  let g:syntastic_check_on_open = 1
   let g:syntastic_error_symbol = '✗'
   let g:syntastic_warning_symbol = '!'
   let g:syntastic_auto_loc_list = 2
   let g:syntastic_auto_jump = 1
-  Bundle 'Shougo/neocomplcache'
-  let g:neocomplcache_enable_at_startup = 1
-  let g:neocomplcache_enable_smart_case = 1
   Bundle 'AndrewRadev/switch.vim'
   Bundle 'AndrewRadev/splitjoin.vim'
   let g:splitjoin_normalize_whitespace = 1

@@ -105,20 +105,6 @@
 " Hard Mode
   nnoremap <Leader>h <Esc>:call ToggleHardMode()<CR>
 
-" neocomplcache
-  function! s:ClosePopupOrCR()
-    return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-  endfunction
-
-  inoremap <silent> <CR>  <C-r>=<SID>ClosePopupOrCR()<CR>
-  inoremap <expr><Tab>    pumvisible() ? "\<C-n>" : "\<Tab>"
-  inoremap <expr><S-Tab>  pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-  inoremap <expr><C-h>    neocomplcache#smart_close_popup() . "\<C-h>"
-  inoremap <expr><BS>     neocomplcache#smart_close_popup() . "\<C-h>"
-  inoremap <expr><C-y>    neocomplcache#close_popup()
-  inoremap <expr><C-e>    neocomplcache#cancel_popup()
-
 " Rails
   nnoremap <Leader>. :A<CR>
 
