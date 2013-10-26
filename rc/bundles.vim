@@ -10,6 +10,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Features
+  Bundle 'Valloric/YouCompleteMe'
   Bundle 'wikitopian/hardmode'
   Bundle 'tpope/vim-rsi'
   Bundle 'tpope/vim-eunuch'
