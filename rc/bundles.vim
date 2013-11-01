@@ -85,6 +85,7 @@ Bundle 'gmarik/vundle'
   let g:syntastic_warning_symbol = '!'
   let g:syntastic_auto_loc_list = 2
   let g:syntastic_auto_jump = 1
+  let g:syntastic_ruby_checkers = ['mri', 'rubocop']
   Bundle 'AndrewRadev/switch.vim'
   Bundle 'AndrewRadev/splitjoin.vim'
   let g:splitjoin_normalize_whitespace = 1
