@@ -17,11 +17,9 @@ Bundle 'gmarik/vundle'
   Bundle 'tpope/vim-obsession'
   Bundle 'tpope/vim-dispatch'
   Bundle 'tpope/vim-surround'
-  Bundle 'tpope/vim-abolish'
   Bundle 'tpope/vim-repeat'
   Bundle 'tpope/vim-rails'
   Bundle 'tpope/vim-rake'
-  Bundle 'sjl/clam.vim'
   Bundle 'sjl/gundo.vim'
   let g:gundo_preview_bottom = 1
   Bundle 'ecomba/vim-ruby-refactoring'
@@ -36,7 +34,6 @@ Bundle 'gmarik/vundle'
   let g:slime_target = 'tmux'
 
 " Git
-  Bundle 'tpope/vim-git'
   Bundle 'tpope/vim-fugitive'
   Bundle 'gregsexton/gitv'
   Bundle 'mattn/webapi-vim'
@@ -61,6 +58,7 @@ Bundle 'gmarik/vundle'
   let g:ctrlp_open_multiple_files = '2v'
 
 " Filetypes
+  Bundle 'tpope/vim-git'
   Bundle 'dag/vim-fish'
   Bundle 'vim-ruby/vim-ruby'
   Bundle 'pangloss/vim-javascript'
