@@ -6,11 +6,6 @@
 
 " Disabled mappings
   nnoremap Q <Nop>
-  inoremap <Del> <Nop>
-
-" Convenience mappings for Swedish keyboard
-  nnoremap ä '
-  nnoremap Ä `
 
 " Window
   nnoremap <C-x> <C-w>c
