@@ -7,6 +7,9 @@
 " Disabled mappings
   nnoremap Q <Nop>
 
+" Make . usable in visual mode
+  xnoremap . :norm.<CR>
+
 " Window
   nnoremap <C-x> <C-w>c
   nnoremap <Leader>% <C-w>v<C-w>l
