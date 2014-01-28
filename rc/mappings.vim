@@ -7,8 +7,16 @@
 " Disabled mappings
   nnoremap Q <Nop>
 
-" Make . usable in visual mode
-  xnoremap . :norm.<CR>
+" Make . work in visual mode
+  xnoremap . :normal .<CR>
+
+" Make @ more usable in visual mode
+  function! ExecuteMacroOverVisualRange()
+    echo "@".getcmdline()
+    execute ":'<,'>normal @".nr2char(getchar())
+  endfunction
+
+  xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
 " Window
   nnoremap <C-x> <C-w>c
