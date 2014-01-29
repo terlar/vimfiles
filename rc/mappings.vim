@@ -50,8 +50,15 @@ nnoremap n nzz
 nnoremap N Nzz
 
 " Fold/Unfold all
-nnoremap <Leader>z :set foldlevel=10000<CR>
-nnoremap <Leader>Z :set foldlevel=-10000<CR>
+function! ToggleFold()
+  if &l:foldlevel == &l:foldnestmax
+    set foldlevel=1
+  else
+    let &l:foldlevel=&l:foldnestmax
+  endif
+endfunction
+
+nnoremap <Leader>z :call ToggleFold()<CR>
 
 " Sort lines
 nmap <Leader>S vii:sort i<CR>
