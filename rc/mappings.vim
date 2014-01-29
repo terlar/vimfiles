@@ -1,14 +1,10 @@
 let mapleader = ','
-let maplocalleader = ';'
 
 " Make Y consistent with C and D
 nnoremap Y y$
 
 " Toggle paste mode
 set pastetoggle=<Leader>P
-
-" Disabled mappings
-nnoremap Q <Nop>
 
 " Make . work in visual mode
 xnoremap . :normal .<CR>
@@ -25,11 +21,6 @@ xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 nnoremap <C-x> <C-w>c
 nnoremap <Leader>% <C-w>v<C-w>l
 nnoremap <Leader>" <C-w>s<C-w>j
-nnoremap <Up> <C-w>5-
-nnoremap <Down> <C-w>5+
-nnoremap <Left> <C-w>5<
-nnoremap <Right> <C-w>5>
-nnoremap <Leader><Down> :<C-u>exe ":resize ".line("$")<CR>
 
 " Buffers
 noremap <Tab> :bn<CR>
@@ -72,9 +63,8 @@ nnoremap <Leader>R :retab!<CR>
 nnoremap === mmgg=G`m^zz
 
 " Quickfix
-nnoremap <LocalLeader><LocalLeader> :cc<CR>
-nnoremap <LocalLeader>j :cp<CR>
-nnoremap <LocalLeader>k :cn<CR>
+nnoremap <Right> :cp<CR>zo
+nnoremap <Left> :cn<CR>zo
 
 " File
 nnoremap <Leader>n :Rename<Space>
