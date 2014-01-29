@@ -147,10 +147,6 @@ vnoremap <Leader>=> :Tabularize /=><CR>
 nnoremap <Leader>=\| :Tabularize /\|<CR>
 vnoremap <Leader>=\| :Tabularize /\|<CR>
 
-" Vroom
-autocmd FileType ruby nmap <buffer> <CR> :Rrunner<CR>
-autocmd FileType ruby nmap <buffer> <Leader><CR> :.Rrunner<CR>
-
 " ZoomWin
 nnoremap <C-_> :ZoomWin<CR>
 vnoremap <C-_> <C-C>:ZoomWin<CR>gv
