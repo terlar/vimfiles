@@ -1,3 +1,6 @@
+let mapleader = ','
+let maplocalleader = ';'
+
 " Make Y consistent with C and D
 nnoremap Y y$
 

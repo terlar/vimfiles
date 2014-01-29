@@ -79,7 +79,8 @@ set wildignore+=*/vendor/bundle/*,*/tmp/*,*/.*-cache/*
 
 " Folding
 set foldmethod=indent
-set foldlevel=10000
+set foldlevel=1
+set foldnestmax=4
 set foldtext=FoldText()
 
 " Tags
@@ -109,9 +110,6 @@ syntax on
 if !exists('g:netrw_list_hide')
   let g:netrw_list_hide = '^\.,\~$,^tags$'
 endif
-
-let mapleader = ','
-let maplocalleader = ';'
 
 let base16colorspace=256
 colorscheme base16-taiji
