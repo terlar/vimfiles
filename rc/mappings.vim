@@ -63,8 +63,8 @@ nnoremap <Leader>R :retab!<CR>
 nnoremap === mmgg=G`m^zz
 
 " Quickfix
-nnoremap <Right> :cp<CR>zo
-nnoremap <Left> :cn<CR>zo
+nnoremap <Up> :cp<CR>zo
+nnoremap <Down> :cn<CR>zo
 
 " File
 nnoremap <Leader>n :Rename<Space>
@@ -76,7 +76,6 @@ nnoremap <Leader>* :exe ':Ag '.expand('<cword>')<CR>
 
 " CtrlP
 nnoremap <Tab><Tab> :CtrlPBuffer<CR>
-nnoremap Q :CtrlPQuickfix<CR>
 nnoremap <Leader>p :CtrlPRegister<CR>
 nnoremap <Leader>c :CtrlPChange<CR>
 nnoremap <Leader>/ :CtrlPLine<CR>
