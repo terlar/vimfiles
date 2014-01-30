@@ -11,7 +11,6 @@ Bundle 'gmarik/vundle'
 
 " Features
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'wikitopian/hardmode'
 Bundle 'tpope/vim-rsi'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-obsession'
@@ -26,7 +25,6 @@ Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'godlygeek/tabular'
 Bundle 'file-line'
 Bundle 'lastpos.vim'
-Bundle 'kana/vim-vspec'
 
 " Tmux
 Bundle 'christoomey/vim-tmux-navigator'
@@ -61,12 +59,11 @@ let g:ctrlp_open_multiple_files = '2v'
 Bundle 'tpope/vim-git'
 Bundle 'dag/vim-fish'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'pangloss/vim-javascript'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'jimenezrick/vimerl'
 Bundle 'dag/vim2hs'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-markdown'
 Bundle 'othree/html5.vim'
 Bundle 'slim-template/vim-slim'
@@ -75,7 +72,6 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'jQuery'
 Bundle 'nono/vim-handlebars'
 Bundle 'wavded/vim-stylus'
-Bundle 'sunaku/vim-ruby-minitest'
 
 " Syntax
 Bundle 'scrooloose/syntastic'
@@ -88,8 +84,8 @@ Bundle 'AndrewRadev/switch.vim'
 Bundle 'AndrewRadev/splitjoin.vim'
 let g:splitjoin_normalize_whitespace = 1
 let g:splitjoin_align = 1
-Bundle 'kana/vim-textobj-indent'
 Bundle 'kana/vim-textobj-user'
+Bundle 'kana/vim-textobj-indent'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-endwise'
 
