@@ -72,7 +72,7 @@ cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
 " Ag
 nnoremap <Leader>a :Ag<Space>
-nnoremap <Leader>* :exe ':Ag '.expand('<cword>')<CR>
+nnoremap <Leader>A :exe ':Ag '.expand('<cword>')<CR>
 
 " CtrlP
 nnoremap <Tab><Tab> :CtrlPBuffer<CR>
@@ -106,9 +106,6 @@ nnoremap <Leader>g :Gstatus<CR>
 
 " Gundo
 nnoremap <silent> <Leader>u :silent GundoToggle<CR>
-
-" Hard Mode
-nnoremap <Leader>h <Esc>:call ToggleHardMode()<CR>
 
 " Rails
 nnoremap <Leader>. :A<CR>
