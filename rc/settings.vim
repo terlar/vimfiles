@@ -88,10 +88,10 @@ set tags=./tags;$HOME
 set showfulltag
 
 " Speed-up
-set timeout
+set timeoutlen=300
 set ttimeoutlen=10
 au InsertEnter * set timeoutlen=0
-au InsertLeave * set timeoutlen=500
+au InsertLeave * set timeoutlen=300
 set ttyfast
 set ttyscroll=3
 set lazyredraw
