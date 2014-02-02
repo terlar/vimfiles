@@ -83,8 +83,6 @@ nnoremap <Leader>f :CtrlPFunky<CR>
 
 " Jump
 nnoremap <Space> :CtrlP<CR>
-nnoremap <Space><Space> :CtrlPCurFile<CR>
-nnoremap <Space>r :CtrlPRTS<CR>
 
 " Dispatch
 nnoremap <Leader>db :Dispatch bundle<CR>
