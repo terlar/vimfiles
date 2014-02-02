@@ -35,11 +35,6 @@ nnoremap <Leader><Leader> <C-^>
 " Toggle numbers
 nnoremap <Leader># :set number!<CR>
 
-" Search
-" Center screen when scrolling search results
-nnoremap n nzz
-nnoremap N Nzz
-
 " Fold/Unfold all
 function! ToggleFold()
   if &l:foldlevel == &l:foldnestmax
