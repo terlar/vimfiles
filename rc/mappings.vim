@@ -71,13 +71,12 @@ nnoremap <Leader>A :exe ':Ag '.expand('<cword>')<CR>
 
 " CtrlP
 nnoremap <Tab><Tab> :CtrlPBuffer<CR>
+nnoremap <Space> :CtrlP<CR>
+nnoremap <Leader><Space> :CtrlPFunky<CR>
+
 nnoremap <Leader>p :CtrlPRegister<CR>
 nnoremap <Leader>c :CtrlPChange<CR>
 nnoremap <Leader>/ :CtrlPLine<CR>
-nnoremap <Leader>f :CtrlPFunky<CR>
-
-" Jump
-nnoremap <Space> :CtrlP<CR>
 
 " Dispatch
 nnoremap <Leader>db :Dispatch bundle<CR>
