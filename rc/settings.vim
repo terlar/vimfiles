@@ -79,8 +79,7 @@ set wildignore+=*/vendor/bundle/*,*/tmp/*,*/.*-cache/*
 
 " Folding
 set foldmethod=indent
-set foldlevel=1
-set foldnestmax=5
+set foldlevel=5 foldnestmax=5
 set foldtext=FoldText()
 
 " Tags
