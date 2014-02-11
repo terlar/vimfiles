@@ -73,8 +73,13 @@ function! runt#find_test_file(filename)
   let name = path[strlen(b:runt_root)+1 : -1]
 
   if name =~# '^\%(test\|spec\)/'
+    let g:runt_previous_test_file = name
     return name
   else
+    if !empty(g:runt_previous_test_file)
+      return g:runt_previous_test_file
+    end
+
     let bare = substitute(name[4:-1], '\.rb$', '', 'g')
     return runt#find_first_file(
       \'test/'.bare.'_test.rb',
