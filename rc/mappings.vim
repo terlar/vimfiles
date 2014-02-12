@@ -113,10 +113,6 @@ function! s:ScratchInit()
   map <buffer> <silent> <Leader>s :wincmd c<CR>
 endfunction
 
-" Splitjoin
-nnoremap <silent> <BS> :SplitjoinJoin<CR>
-nnoremap <silent> <Del> :SplitjoinSplit<CR>
-
 " Switch
 nnoremap - :Switch<CR>
 
