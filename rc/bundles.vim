@@ -86,6 +86,7 @@ let g:blockle_mapping = '<Leader>j'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-indent'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+let g:textobj_rubyblock_no_default_key_mappings = 1
 Bundle 'tpope/vim-endwise'
 
 if exists('fresh_vundle')
