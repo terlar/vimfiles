@@ -76,7 +76,7 @@ function! runt#find_test_file(filename)
     let g:runt_previous_test_file = name
     return name
   else
-    if !empty(g:runt_previous_test_file)
+    if exists('g:runt_previous_test_file')
       return g:runt_previous_test_file
     end
 
