@@ -11,10 +11,6 @@ let b:switch_custom_definitions = [
   \   }
   \ ]
 
-
-nmap <buffer> <CR> :Rrunner<CR>
-nmap <buffer> <Leader><CR> :.Rrunner<CR>
-
 xmap <buffer> ab  <Plug>(textobj-rubyblock-a)
 omap <buffer> ab  <Plug>(textobj-rubyblock-a)
 xmap <buffer> ib  <Plug>(textobj-rubyblock-i)
