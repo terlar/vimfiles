@@ -80,7 +80,7 @@ Bundle 'scrooloose/syntastic'
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 let g:syntastic_auto_loc_list = 2
-let g:syntastic_auto_jump = 1
+let g:syntastic_auto_jump = 2
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 Bundle 'AndrewRadev/switch.vim'
 Bundle 'jgdavey/vim-blockle'
