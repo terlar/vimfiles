@@ -10,7 +10,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Features
-Bundle 'Valloric/YouCompleteMe'
+Bundle 'Shougo/neocomplete.vim'
+let g:neocomplete#enable_at_startup = 1
 Bundle 'tpope/vim-rsi'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-obsession'
