@@ -94,13 +94,13 @@ nnoremap <silent> <Leader>u :silent GundoToggle<CR>
 " neocomplete
 inoremap <silent> <CR> <C-r>=<SID>CompleteOrCR()<CR>
 function! s:CompleteOrCR()
-  return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+  return neocomplete#close_popup() . "\<CR>"
 endfunction
 
 inoremap <expr><Tab>  pumvisible() ? "\<C-n>" : "\<Tab>"
 
-inoremap <expr><C-h>  neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS>   neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-h>  neocomplete#smart_close_popup() . "\<C-h>"
+inoremap <expr><BS>   neocomplete#smart_close_popup() . "\<C-h>"
 inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 
