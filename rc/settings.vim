@@ -99,7 +99,7 @@ set showfulltag
 
 " Speed-up {{{
 set timeoutlen=300
-set ttimeoutlen=10
+set ttimeout ttimeoutlen=50
 au InsertEnter * set timeoutlen=0
 au InsertLeave * set timeoutlen=300
 set ttyfast
