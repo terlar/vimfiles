@@ -74,6 +74,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'jQuery'
 Bundle 'nono/vim-handlebars'
 Bundle 'wavded/vim-stylus'
+Bundle 'solarnz/thrift.vim'
 
 " Syntax
 Bundle 'scrooloose/syntastic'
