@@ -15,7 +15,7 @@ let g:neocomplete#enable_at_startup = 1
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-projectile'
+Bundle 'tpope/vim-projectionist'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-rails'
