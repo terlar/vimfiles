@@ -11,9 +11,15 @@ let b:switch_custom_definitions = [
   \   }
   \ ]
 
+" Block text objects
 xmap <buffer> ab  <Plug>(textobj-rubyblock-a)
 omap <buffer> ab  <Plug>(textobj-rubyblock-a)
 xmap <buffer> ib  <Plug>(textobj-rubyblock-i)
 omap <buffer> ib  <Plug>(textobj-rubyblock-i)
+
+" Evaluator
+nmap <buffer> <F5> <Plug>(seeing_is_believing-run)
+xmap <buffer> <F5> <Plug>(seeing_is_believing-run)
+imap <buffer> <F5> <Plug>(seeing_is_believing-run)
 
 autocmd BufWritePre <buffer> :call CleanTrailingSpace()

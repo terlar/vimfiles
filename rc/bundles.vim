@@ -77,6 +77,8 @@ Bundle 'wavded/vim-stylus'
 Bundle 'solarnz/thrift.vim'
 
 " Syntax
+Bundle 't9md/vim-ruby-xmpfilter'
+let g:xmpfilter_cmd = 'seeing_is_believing'
 Bundle 'scrooloose/syntastic'
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
