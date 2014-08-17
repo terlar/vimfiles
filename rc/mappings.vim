@@ -62,6 +62,7 @@ nnoremap <Up> :cp<CR>zo
 nnoremap <Down> :cn<CR>zo
 
 " File
+nnoremap <Leader>w :w<CR>
 nnoremap <Leader>n :Rename<Space>
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
