@@ -1,4 +1,4 @@
-let mapleader = ','
+let mapleader = "\<Space>"
 
 " Make Y consistent with C and D
 nnoremap Y y$
@@ -71,8 +71,8 @@ nnoremap <Leader>A :exe ':Ag '.expand('<cword>')<CR>
 
 " CtrlP
 nnoremap <Tab><Tab> :CtrlPBuffer<CR>
-nnoremap <Space> :CtrlP<CR>
-nnoremap <Leader><Space> :CtrlPFunky<CR>
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>f :CtrlPFunky<CR>
 
 nnoremap <Leader>p :CtrlPRegister<CR>
 nnoremap <Leader>c :CtrlPChange<CR>
