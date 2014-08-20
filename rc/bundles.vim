@@ -76,6 +76,7 @@ Bundle 'jQuery'
 Bundle 'nono/vim-handlebars'
 Bundle 'wavded/vim-stylus'
 Bundle 'rodjek/vim-puppet'
+Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'solarnz/thrift.vim'
 
 " Syntax
