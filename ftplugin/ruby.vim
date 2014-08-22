@@ -1,5 +1,7 @@
 setlocal keywordprg=ri
 setlocal foldmethod=indent
+setlocal expandtab
+setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 let g:ruby_operators = 1
 let g:rubycomplete_rails = 1

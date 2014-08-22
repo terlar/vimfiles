@@ -55,11 +55,9 @@ set nojoinspaces
 " }}}
 
 " Tabs and indenting {{{
-set tabstop=2 softtabstop=2 shiftwidth=2
-set shiftround
-set expandtab
-set autoindent
-set smarttab
+set noexpandtab
+set tabstop=4 shiftwidth=4
+set shiftround softtabstop=4
 " }}}
 
 " Files {{{
