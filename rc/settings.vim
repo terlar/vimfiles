@@ -1,8 +1,8 @@
 " General {{{
-  set nocompatible
-  set vb t_vb=
-  set shortmess=atI " Less interruptive prompts
-  set viminfo^=!
+set nocompatible
+set vb t_vb=
+set shortmess=atI " Less interruptive prompts
+set viminfo^=!
 " }}}
 
 " Windows {{{
@@ -31,14 +31,13 @@ set number
 set display+=lastline
 set scrolloff=1
 set sidescrolloff=5
-set list
+set nolist
 
-if &listchars ==# 'eol:$'
+if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
+  let &listchars = "tab:\u21e5 ,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
+  let &fillchars = "vert:\u259a,fold:\u00b7"
+else
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
-  if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
-    let &listchars = "tab:\u21e5 ,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
-    let &fillchars = "vert:\u259a,fold:\u00b7"
-  endif
 endif
 
 match ColorColumn /\%121v.*/
