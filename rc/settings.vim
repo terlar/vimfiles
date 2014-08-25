@@ -41,7 +41,7 @@ if &listchars ==# 'eol:$'
   endif
 endif
 
-match ErrorMsg '\%>120v.\+'
+match ColorColumn /\%121v.*/
 " }}}
 
 " Editing text {{{
