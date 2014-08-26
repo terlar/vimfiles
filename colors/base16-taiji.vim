@@ -88,8 +88,6 @@ fun s:gui(color)
     return s:gui03
   elseif a:color == s:gui05
     return s:gui02
-  elseif a:color == s:gui05
-    return s:gui02
   elseif a:color == s:gui06
     return s:gui01
   elseif a:color == s:gui07
@@ -115,8 +113,6 @@ fun s:cterm(color)
     return s:cterm04
   elseif a:color == s:cterm04
     return s:cterm03
-  elseif a:color == s:cterm05
-    return s:cterm02
   elseif a:color == s:cterm05
     return s:cterm02
   elseif a:color == s:cterm06
