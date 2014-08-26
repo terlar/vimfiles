@@ -47,8 +47,15 @@ else
 endif
 
 " Theme setup
-hi clear
-syntax reset
+highlight clear Normal
+set background&
+
+highlight clear
+
+if exists("syntax_on")
+  syntax reset
+endif
+
 let g:colors_name = "base16-taiji"
 
 " Highlighting function
@@ -150,9 +157,9 @@ call <sid>hi("WildMenu",      s:gui08, "", s:cterm08, "", "")
 call <sid>hi("Title",         s:gui0D, "", s:cterm0D, "", "none")
 call <sid>hi("Conceal",       s:gui0D, s:gui00, s:cterm0D, s:cterm00, "")
 call <sid>hi("Cursor",        s:gui00, s:gui05, s:cterm00, s:cterm05, "")
-call <sid>hi("NonText",       s:gui01, s:gui01, s:cterm01, s:cterm01, "")
-call <sid>hi("Normal",        s:gui05, s:gui00, s:cterm05, s:cterm00, "")
-call <sid>hi("LineNr",        s:gui03, s:gui01, s:cterm03, s:cterm01, "")
+call <sid>hi("NonText",       s:gui05, s:gui05, s:cterm01, s:cterm01, "")
+call <sid>hi("Normal",        s:gui05, "", s:cterm05, "", "")
+call <sid>hi("LineNr",        s:gui03, s:gui01, s:cterm07, "", "bold")
 call <sid>hi("SignColumn",    s:gui03, s:gui01, s:cterm03, s:cterm01, "")
 call <sid>hi("SpecialKey",    s:gui03, "", s:cterm03, "", "")
 call <sid>hi("StatusLine",    s:gui04, s:gui02, s:cterm04, s:cterm02, "none")
