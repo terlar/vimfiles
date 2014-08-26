@@ -39,8 +39,6 @@ if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
 else
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 endif
-
-match ColorColumn /\%121v.*/
 " }}}
 
 " Editing text {{{
@@ -124,4 +122,6 @@ endif
 " Theme {{{
 let base16colorspace=256
 colorscheme base16-taiji
+
+match Error /\%81v.*/
 " }}}
