@@ -100,7 +100,7 @@ au InsertLeave * set timeoutlen=300
 set ttyfast
 set ttyscroll=3
 set lazyredraw
-set synmaxcol=120
+set synmaxcol=200
 " }}}
 
 " System {{{
