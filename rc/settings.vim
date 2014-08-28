@@ -82,7 +82,7 @@ set wildignore+=*/vendor/bundle/*,*/tmp/*,*/.*-cache/*
 " }}}
 
 " Folding {{{
-set foldmethod=marker
+set foldmethod=indent
 set foldlevel=5 foldnestmax=5
 set foldtext=FoldText()
 " }}}
@@ -120,8 +120,7 @@ if !exists('g:netrw_list_hide')
 endif
 
 " Theme {{{
-let base16colorspace=256
-colorscheme base16-taiji
+colorscheme taiji
 
 match Error /\%81v.*/
 " }}}
