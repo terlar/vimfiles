@@ -20,8 +20,8 @@ xmap <buffer> ib  <Plug>(textobj-rubyblock-i)
 omap <buffer> ib  <Plug>(textobj-rubyblock-i)
 
 " Evaluator
-nmap <buffer> <F5> <Plug>(seeing_is_believing-run)
-xmap <buffer> <F5> <Plug>(seeing_is_believing-run)
-imap <buffer> <F5> <Plug>(seeing_is_believing-run)
+nmap <buffer> <Leader><CR> <Plug>(seeing_is_believing-run)
+xmap <buffer> <Leader><CR> <Plug>(seeing_is_believing-run)
+imap <buffer> <Leader><CR> <Plug>(seeing_is_believing-run)
 
 autocmd BufWritePre <buffer> :call CleanTrailingSpace()
