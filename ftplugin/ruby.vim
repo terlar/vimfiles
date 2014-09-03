@@ -25,3 +25,7 @@ xmap <buffer> <Leader><CR> <Plug>(seeing_is_believing-run)
 imap <buffer> <Leader><CR> <Plug>(seeing_is_believing-run)
 
 autocmd BufWritePre <buffer> :call CleanTrailingSpace()
+
+" Highlight custom assertions
+syntax match rubyTestMethod "assert_[A-Za-z_]*\s"
+syntax match rubyTestMethod "refute_[A-Za-z_]*\s"
