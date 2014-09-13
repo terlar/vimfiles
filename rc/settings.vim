@@ -29,7 +29,7 @@ set nowrap
 set fillchars= " No separator chars
 set number
 set display+=lastline
-set scrolloff=1
+set scrolloff=10
 set sidescrolloff=5
 set nolist
 
