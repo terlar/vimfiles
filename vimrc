@@ -7,6 +7,6 @@ endif
 
 " Load Config
   runtime rc/settings.vim
-  runtime rc/bundles.vim
+  runtime rc/plugins.vim
   runtime rc/filetypes.vim
   runtime rc/mappings.vim
