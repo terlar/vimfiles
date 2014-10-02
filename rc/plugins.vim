@@ -1,4 +1,4 @@
-if !isdirectory(expand('~/.vim/bundle/vundle'))
+if !isdirectory(expand('~/.vim/bundle/Vundle.vim'))
   !git clone git://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   let fresh_vundle = 1
 endif
@@ -7,8 +7,7 @@ filetype off
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/vundle'
-
+Plugin 'gmarik/Vundle.vim'
 " Features
 Plugin 'Shougo/neocomplete.vim'
 let g:neocomplete#enable_at_startup = 1
