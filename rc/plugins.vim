@@ -57,7 +57,7 @@ let g:ctrlp_open_multiple_files = '2v'
 
 " Filetypes
 Plugin 'tpope/vim-git'
-Plugin 'dag/vim-fish'
+Plugin 'kballard/vim-fish'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'sunaku/vim-ruby-minitest'
 Plugin 'pangloss/vim-javascript'
