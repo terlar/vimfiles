@@ -93,7 +93,7 @@ nnoremap <Leader>g :Gstatus<CR>
 nnoremap <silent> <Leader>u :silent GundoToggle<CR>
 
 " neocomplete
-if exists('g:loaded_neocomplete')
+if exists('g:neocomplete#enable_at_startup')
   inoremap <silent> <CR> <C-r>=<SID>CompleteOrCR()<CR>
   function! s:CompleteOrCR()
     return neocomplete#close_popup() . "\<CR>"
