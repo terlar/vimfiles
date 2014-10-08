@@ -9,8 +9,10 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 " Features
-Plugin 'Shougo/neocomplete.vim'
-let g:neocomplete#enable_at_startup = 1
+if has('lua')
+  Plugin 'Shougo/neocomplete.vim'
+  let g:neocomplete#enable_at_startup = 1
+end
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-dispatch'
