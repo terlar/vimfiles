@@ -93,17 +93,19 @@ nnoremap <Leader>g :Gstatus<CR>
 nnoremap <silent> <Leader>u :silent GundoToggle<CR>
 
 " neocomplete
-inoremap <silent> <CR> <C-r>=<SID>CompleteOrCR()<CR>
-function! s:CompleteOrCR()
-  return neocomplete#close_popup() . "\<CR>"
-endfunction
+if exists('g:loaded_neocomplete')
+  inoremap <silent> <CR> <C-r>=<SID>CompleteOrCR()<CR>
+  function! s:CompleteOrCR()
+    return neocomplete#close_popup() . "\<CR>"
+  endfunction
 
-inoremap <expr><Tab>  pumvisible() ? "\<C-n>" : "\<Tab>"
+  inoremap <expr><Tab>  pumvisible() ? "\<C-n>" : "\<Tab>"
 
-inoremap <expr><C-h>  neocomplete#smart_close_popup() . "\<C-h>"
-inoremap <expr><BS>   neocomplete#smart_close_popup() . "\<C-h>"
-inoremap <expr><C-y>  neocomplete#close_popup()
-inoremap <expr><C-e>  neocomplete#cancel_popup()
+  inoremap <expr><C-h>  neocomplete#smart_close_popup() . "\<C-h>"
+  inoremap <expr><BS>   neocomplete#smart_close_popup() . "\<C-h>"
+  inoremap <expr><C-y>  neocomplete#close_popup()
+  inoremap <expr><C-e>  neocomplete#cancel_popup()
+end
 
 " Rails
 nnoremap <Leader>. :A<CR>
