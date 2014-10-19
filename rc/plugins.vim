@@ -1,107 +1,98 @@
-if !isdirectory(expand('~/.vim/bundle/Vundle.vim'))
-  !git clone git://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  let fresh_vundle = 1
-endif
+call plug#begin('~/.vim/plugged')
 
-filetype off
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
 " Features
 if has('lua')
-  Plugin 'Shougo/neocomplete.vim'
+  Plug 'Shougo/neocomplete.vim'
   let g:neocomplete#enable_at_startup = 1
 end
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-obsession'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-projectionist'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
-Plugin 'sjl/gundo.vim'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'sjl/gundo.vim'
 let g:gundo_preview_bottom = 1
-Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'godlygeek/tabular'
-Plugin 'file-line'
-Plugin 'lastpos.vim'
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'godlygeek/tabular'
+Plug 'file-line'
+Plug 'lastpos.vim'
 
 " Tmux
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'jpalardy/vim-slime'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'jpalardy/vim-slime'
 let g:slime_target = 'tmux'
 
 " Git
-Plugin 'tpope/vim-fugitive'
-Plugin 'gregsexton/gitv'
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'gregsexton/gitv'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
 
 " QuickFix
-Plugin 'milkypostman/vim-togglelist'
-Plugin 'jceb/vim-hier'
+Plug 'milkypostman/vim-togglelist'
+Plug 'jceb/vim-hier'
 
 " Buffer
-Plugin 'Soares/butane.vim'
-Plugin 'ZoomWin'
-Plugin 'scratch.vim'
+Plug 'Soares/butane.vim'
+Plug 'ZoomWin'
+Plug 'scratch.vim'
 
 " Navigation
-Plugin 'rking/ag.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'mattn/ctrlp-register'
-Plugin 'tacahiroy/ctrlp-funky'
+Plug 'rking/ag.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'mattn/ctrlp-register'
+Plug 'tacahiroy/ctrlp-funky'
 let g:ctrlp_extensions = ['register', 'funky']
 let g:ctrlp_prompt_mappings = { 'AcceptSelection("e")': ['<CR>', '<Tab>', '<2-LeftMouse>'] }
 let g:ctrlp_open_multiple_files = '2v'
 
 " Filetypes
-Plugin 'tpope/vim-git'
-Plugin 'kballard/vim-fish'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'sunaku/vim-ruby-minitest'
-Plugin 'pangloss/vim-javascript'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'jimenezrick/vimerl'
-Plugin 'dag/vim2hs'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'tpope/vim-jdaddy'
-Plugin 'othree/html5.vim'
-Plugin 'slim-template/vim-slim'
-Plugin 'tpope/vim-haml'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'jQuery'
-Plugin 'nono/vim-handlebars'
-Plugin 'wavded/vim-stylus'
-Plugin 'rodjek/vim-puppet'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'solarnz/thrift.vim'
+Plug 'tpope/vim-git'
+Plug 'kballard/vim-fish'
+Plug 'vim-ruby/vim-ruby'
+Plug 'sunaku/vim-ruby-minitest'
+Plug 'pangloss/vim-javascript'
+Plug 'elixir-lang/vim-elixir'
+Plug 'jimenezrick/vimerl'
+Plug 'dag/vim2hs'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'tpope/vim-jdaddy'
+Plug 'othree/html5.vim'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-haml'
+Plug 'kchmck/vim-coffee-script'
+Plug 'jQuery'
+Plug 'nono/vim-handlebars'
+Plug 'wavded/vim-stylus'
+Plug 'rodjek/vim-puppet'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'solarnz/thrift.vim'
 
 " Syntax
-Plugin 't9md/vim-ruby-xmpfilter'
+Plug 't9md/vim-ruby-xmpfilter'
 let g:xmpfilter_cmd = 'seeing_is_believing'
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 let g:syntastic_auto_loc_list = 2
 let g:syntastic_auto_jump = 2
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
-Plugin 'AndrewRadev/switch.vim'
-Plugin 'jgdavey/vim-blockle'
+Plug 'AndrewRadev/switch.vim'
+Plug 'jgdavey/vim-blockle'
 let g:blockle_mapping = '<Leader>j'
-Plugin 'kana/vim-textobj-user'
-Plugin 'kana/vim-textobj-indent'
-Plugin 'nelstrom/vim-textobj-rubyblock'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-indent'
+Plug 'nelstrom/vim-textobj-rubyblock'
 let g:textobj_rubyblock_no_default_key_mappings = 1
-Plugin 'tpope/vim-endwise'
+Plug 'tpope/vim-endwise'
 
-call vundle#end()
+call plug#end()
 
-if exists('fresh_vundle')
-  PluginInstall
-  unlet fresh_vundle
+if !isdirectory(expand('~/.vim/plugged'))
+  PlugInstall
   wincmd c
 endif
