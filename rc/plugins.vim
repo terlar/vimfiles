@@ -13,7 +13,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
-Plug 'sjl/gundo.vim', { 'on': ['Gundo', 'GundoToggle'] }
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 let g:gundo_preview_bottom = 1
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'file-line'

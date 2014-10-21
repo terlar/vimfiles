@@ -86,11 +86,12 @@ nnoremap <Leader>dfg :Dispatch flog %:p:h<CR>
 nnoremap <Leader>dfy :Dispatch flay %:p:h<CR>
 nnoremap <Leader>dr :Dispatch rails_best_practices<CR>
 
+" EasyAlign
+vmap <Leader>= <Plug>(EasyAlign)
+nmap <Leader>= <Plug>(EasyAlign)
+
 " Fugitive
 nnoremap <Leader>g :Gstatus<CR>
-
-" Gundo
-nnoremap <silent> <Leader>u :silent GundoToggle<CR>
 
 " neocomplete
 if exists('g:neocomplete#enable_at_startup')
@@ -124,9 +125,8 @@ endfunction
 " Switch
 nnoremap - :Switch<CR>
 
-" EasyAlign
-vmap <Leader>= <Plug>(EasyAlign)
-nmap <Leader>= <Plug>(EasyAlign)
+" Undotree
+nnoremap <silent> <Leader>u :silent UndotreeToggle<CR>
 
 " ZoomWin
 nnoremap <C-_> :ZoomWin<CR>
