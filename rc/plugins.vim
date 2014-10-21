@@ -50,31 +50,33 @@ let g:ctrlp_open_multiple_files = '2v'
 
 " Filetypes
 Plug 'tpope/vim-git'
-Plug 'kballard/vim-fish', { 'for': 'fish' }
-Plug 'vim-ruby/vim-ruby'
-Plug 'sunaku/vim-ruby-minitest'
-Plug 'pangloss/vim-javascript'
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
-Plug 'dag/vim2hs', { 'for': 'haskell' }
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'tpope/vim-jdaddy'
-Plug 'othree/html5.vim'
-Plug 'slim-template/vim-slim'
-Plug 'tpope/vim-haml', { 'for': 'haml' }
-Plug 'kchmck/vim-coffee-script'
-Plug 'jQuery', { 'for': 'javascript' }
-Plug 'nono/vim-handlebars'
-Plug 'wavded/vim-stylus'
-Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'solarnz/thrift.vim'
+Plug 'vim-pandoc/vim-pandoc',          { 'for': 'pandoc' }
+Plug 'vim-pandoc/vim-pandoc-syntax',   { 'for': 'pandoc' }
+Plug 'vim-ruby/vim-ruby',              { 'for': ['ruby', 'eruby'] }
+Plug 'sunaku/vim-ruby-minitest',       { 'for': 'ruby' }
+Plug 't9md/vim-ruby-xmpfilter',        { 'for': 'ruby' }
+let g:xmpfilter_cmd = 'seeing_is_believing'
+Plug 'ecomba/vim-ruby-refactoring',    { 'for': 'ruby' }
+Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
+Plug 'kballard/vim-fish',              { 'for': ['fish', 'fishprofile'] }
+Plug 'elzr/vim-json',                  { 'for': ['json', 'javascript'] }
+Plug 'tpope/vim-jdaddy',               { 'for': ['json', 'javascript'] }
+Plug 'pangloss/vim-javascript',        { 'for': 'javascript' }
+Plug 'kchmck/vim-coffee-script',       { 'for': 'coffee' }
+Plug 'jQuery',                         { 'for': ['javascript', 'coffee'] }
+Plug 'elixir-lang/vim-elixir',         { 'for': ['elixir', 'eelixir'] }
+Plug 'jimenezrick/vimerl',             { 'for': 'erlang' }
+Plug 'dag/vim2hs',                     { 'for': ['haskell', 'cabal'] }
+Plug 'othree/html5.vim',               { 'for': 'html' }
+Plug 'slim-template/vim-slim',         { 'for': 'slim' }
+Plug 'tpope/vim-haml',                 { 'for': ['haml', 'sass', 'scss'] }
+Plug 'nono/vim-handlebars',            { 'for': 'handlebars' }
+Plug 'wavded/vim-stylus',              { 'for': 'stylus' }
+Plug 'rodjek/vim-puppet',              { 'for': 'puppet' }
+Plug 'ekalinin/Dockerfile.vim',        { 'for': 'Dockerfile' }
+Plug 'solarnz/thrift.vim',             { 'for': 'thrift' }
 
 " Syntax
-Plug 't9md/vim-ruby-xmpfilter', { 'for': 'ruby' }
-Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
-let g:xmpfilter_cmd = 'seeing_is_believing'
 Plug 'scrooloose/syntastic'
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
@@ -86,7 +88,6 @@ Plug 'jgdavey/vim-blockle'
 let g:blockle_mapping = '<Leader>j'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
-Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 let g:textobj_rubyblock_no_default_key_mappings = 1
 Plug 'tpope/vim-endwise'
 
