@@ -124,21 +124,9 @@ endfunction
 " Switch
 nnoremap - :Switch<CR>
 
-" Tabularize
-nnoremap <Leader>= :Tabularize /
-vnoremap <Leader>= :Tabularize /
-nnoremap <Leader>== :Tabularize /=<CR>
-vnoremap <Leader>== :Tabularize /=<CR>
-nnoremap <Leader>={ :Tabularize /{<CR>
-vnoremap <Leader>={ :Tabularize /{<CR>
-nnoremap <Leader>=: :Tabularize /:\zs<CR>
-vnoremap <Leader>=: :Tabularize /:\zs<CR>
-nnoremap <Leader>=, :Tabularize /,\zs<CR>
-vnoremap <Leader>=, :Tabularize /,\zs<CR>
-nnoremap <Leader>=> :Tabularize /=><CR>
-vnoremap <Leader>=> :Tabularize /=><CR>
-nnoremap <Leader>=\| :Tabularize /\|<CR>
-vnoremap <Leader>=\| :Tabularize /\|<CR>
+" EasyAlign
+vmap <Leader>= <Plug>(EasyAlign)
+nmap <Leader>= <Plug>(EasyAlign)
 
 " ZoomWin
 nnoremap <C-_> :ZoomWin<CR>

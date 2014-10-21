@@ -16,7 +16,7 @@ Plug 'tpope/vim-rake'
 Plug 'sjl/gundo.vim'
 let g:gundo_preview_bottom = 1
 Plug 'ecomba/vim-ruby-refactoring'
-Plug 'godlygeek/tabular'
+Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'file-line'
 Plug 'lastpos.vim'
 
