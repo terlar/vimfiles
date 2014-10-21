@@ -13,9 +13,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
-Plug 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim', { 'on': ['Gundo', 'GundoToggle'] }
 let g:gundo_preview_bottom = 1
-Plug 'ecomba/vim-ruby-refactoring'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'file-line'
 Plug 'lastpos.vim'
@@ -27,7 +26,7 @@ let g:slime_target = 'tmux'
 
 " Git
 Plug 'tpope/vim-fugitive'
-Plug 'gregsexton/gitv'
+Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
 
@@ -51,29 +50,30 @@ let g:ctrlp_open_multiple_files = '2v'
 
 " Filetypes
 Plug 'tpope/vim-git'
-Plug 'kballard/vim-fish'
+Plug 'kballard/vim-fish', { 'for': 'fish' }
 Plug 'vim-ruby/vim-ruby'
 Plug 'sunaku/vim-ruby-minitest'
 Plug 'pangloss/vim-javascript'
-Plug 'elixir-lang/vim-elixir'
-Plug 'jimenezrick/vimerl'
-Plug 'dag/vim2hs'
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
+Plug 'dag/vim2hs', { 'for': 'haskell' }
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'tpope/vim-jdaddy'
 Plug 'othree/html5.vim'
 Plug 'slim-template/vim-slim'
-Plug 'tpope/vim-haml'
+Plug 'tpope/vim-haml', { 'for': 'haml' }
 Plug 'kchmck/vim-coffee-script'
-Plug 'jQuery'
+Plug 'jQuery', { 'for': 'javascript' }
 Plug 'nono/vim-handlebars'
 Plug 'wavded/vim-stylus'
-Plug 'rodjek/vim-puppet'
+Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'solarnz/thrift.vim'
 
 " Syntax
-Plug 't9md/vim-ruby-xmpfilter'
+Plug 't9md/vim-ruby-xmpfilter', { 'for': 'ruby' }
+Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
 let g:xmpfilter_cmd = 'seeing_is_believing'
 Plug 'scrooloose/syntastic'
 let g:syntastic_error_symbol = '✗'
@@ -86,7 +86,7 @@ Plug 'jgdavey/vim-blockle'
 let g:blockle_mapping = '<Leader>j'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
-Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 let g:textobj_rubyblock_no_default_key_mappings = 1
 Plug 'tpope/vim-endwise'
 
