@@ -50,7 +50,7 @@ let g:ctrlp_open_multiple_files = '2v'
 
 " Filetypes
 Plug 'tpope/vim-git'
-Plug 'vim-pandoc/vim-pandoc',          { 'for': 'pandoc' }
+Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax',   { 'for': 'pandoc' }
 Plug 'vim-ruby/vim-ruby',              { 'for': ['ruby', 'eruby'] }
 Plug 'sunaku/vim-ruby-minitest',       { 'for': 'ruby' }
