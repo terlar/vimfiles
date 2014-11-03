@@ -8,5 +8,6 @@ endif
 " Load Config
   runtime rc/settings.vim
   runtime rc/plugins.vim
-  runtime rc/filetypes.vim
   runtime rc/mappings.vim
+
+  runtime! macros/matchit.vim

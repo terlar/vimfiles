@@ -113,6 +113,7 @@ set updatetime=200
 au BufLeave,CursorHold,InsertLeave * silent! wa
 " }}}
 
+filetype plugin indent on
 syntax on
 
 if !exists('g:netrw_list_hide')
