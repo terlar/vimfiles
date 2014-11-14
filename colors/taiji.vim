@@ -1,6 +1,6 @@
 " Vim color file
 " Maintainer: Terje Larsen <terlar@gmail.com>
-" Last Change: Wed Aug 27 08:27:32 CEST 2014
+" Last Change: Fri Nov 14 10:25:23 CET 2014
 
 highlight clear Normal
 set background&
@@ -16,7 +16,7 @@ let colors_name = "taiji"
 
 " Vim colors
 highlight SpecialKey    ctermfg=DarkGray    ctermbg=NONE      cterm=NONE
-highlight NonText       ctermfg=DarkGray    ctermbg=DarkGray  cterm=NONE
+highlight NonText       ctermfg=Black       ctermbg=Black     cterm=NONE
 highlight Directory     ctermfg=DarkBlue    ctermbg=NONE      cterm=Bold
 highlight ErrorMsg      ctermfg=White       ctermbg=Red       cterm=NONE
 highlight IncSearch     ctermfg=NONE        ctermbg=NONE      cterm=Reverse
@@ -24,8 +24,8 @@ highlight Search        ctermfg=NONE        ctermbg=NONE      cterm=Standout,Und
 highlight MoreMsg       ctermfg=Gray        ctermbg=NONE      cterm=NONE
 highlight ModeMsg       ctermfg=Gray        ctermbg=NONE      cterm=NONE
 highlight Question      ctermfg=Gray        ctermbg=NONE      cterm=NONE
-highlight LineNr        ctermfg=Gray        ctermbg=DarkGray  cterm=NONE
-highlight CursorLineNr  ctermfg=DarkGray    ctermbg=Gray      cterm=NONE
+highlight LineNr        ctermfg=NONE        ctermbg=NONE      cterm=Reverse
+highlight CursorLineNr  ctermfg=Gray        ctermbg=NONE      cterm=NONE
 highlight StatusLine    ctermfg=NONE        ctermbg=NONE      cterm=Bold,Reverse
 highlight StatusLineNC  ctermfg=Gray        ctermbg=NONE      cterm=Reverse
 highlight VertSplit     ctermfg=Gray        ctermbg=DarkGray  cterm=Reverse
