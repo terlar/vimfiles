@@ -81,10 +81,6 @@ nnoremap <Leader>/ :CtrlPLine<CR>
 
 " Dispatch
 nnoremap <CR> :Dispatch<CR>
-nnoremap <Leader>db :Dispatch bundle<CR>
-nnoremap <Leader>dfg :Dispatch flog %:p:h<CR>
-nnoremap <Leader>dfy :Dispatch flay %:p:h<CR>
-nnoremap <Leader>dr :Dispatch rails_best_practices<CR>
 
 " EasyAlign
 vmap <Leader>= <Plug>(EasyAlign)
