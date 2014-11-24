@@ -1,10 +1,17 @@
-let mapleader = "\<Space>"
+let mapleader = ' '
+let maplocalleader = ' '
 
 " Make Y consistent with C and D
 nnoremap Y y$
 
+" Quit
+nnoremap <Leader>Q :qa!<CR>
+
+" qq to record, Q to replay
+nnoremap Q @q
+
 " Toggle paste mode
-set pastetoggle=<Leader>P
+set pastetoggle=<F9>
 
 " Make . work in visual mode
 xnoremap . :normal .<CR>
@@ -60,6 +67,10 @@ nnoremap === mmgg=G`m^zz
 " Quickfix
 nnoremap <Up> :cp<CR>zo
 nnoremap <Down> :cn<CR>zo
+
+" Tag stack
+nnoremap <Left> :pop<CR>
+nnoremap <Right> :tag<CR>
 
 " File
 nnoremap <Leader>w :w<CR>

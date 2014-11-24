@@ -1,12 +1,13 @@
 " General {{{
 set nocompatible
 set vb t_vb=
-set shortmess=atI " Less interruptive prompts
+set shortmess=aIT " Less interruptive prompts
 set viminfo^=!
 " }}}
 
 " Windows {{{
-set laststatus=1
+set statusline=%<[%n]\ %F\ %m%r%y\ %{exists('g:loaded_fugitive')?fugitive#statusline():''}\ %=%-14.(%l,%c%V%)\ %P"
+set laststatus=2
 set ruler
 set noequalalways
 set hidden
@@ -31,7 +32,8 @@ set number
 set display+=lastline
 set scrolloff=10
 set sidescrolloff=5
-set nolist
+set list
+set textwidth=0
 
 if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
   let &listchars = "tab:\u21e5 ,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
@@ -49,12 +51,19 @@ set pumheight=10
 set showmatch
 set matchpairs+=<:>
 set nojoinspaces
+set virtualedit=block
+set formatoptions+=j " Join comments
+set nostartofline
 " }}}
 
 " Tabs and indenting {{{
-set noexpandtab
-set tabstop=4 shiftwidth=4
-set shiftround softtabstop=4
+set noexpandtab smarttab
+set copyindent
+set preserveindent
+set tabstop=4 softtabstop=0
+set shiftwidth=4
+set autoindent
+set smartindent
 " }}}
 
 " Files {{{
@@ -83,7 +92,7 @@ set wildignore+=*/vendor/bundle/*,*/tmp/*,*/.*-cache/*
 
 " Folding {{{
 set foldmethod=indent
-set foldlevel=5 foldnestmax=5
+set foldlevelstart=99
 set foldtext=FoldText()
 " }}}
 
@@ -109,7 +118,7 @@ set clipboard=unnamed
 " }}}
 
 " Autosave {{{
-set updatetime=200
+set updatetime=1000
 au BufLeave,CursorHold,InsertLeave * silent! wa
 " }}}
 
