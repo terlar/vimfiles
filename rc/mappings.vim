@@ -100,6 +100,9 @@ nmap <Leader>= <Plug>(EasyAlign)
 " Fugitive
 nnoremap <Leader>g :Gstatus<CR>
 
+" Goyo
+nnoremap <Leader>G :Goyo<CR>
+
 " neocomplete
 if exists('g:neocomplete#enable_at_startup')
   inoremap <silent> <CR> <C-r>=<SID>CompleteOrCR()<CR>

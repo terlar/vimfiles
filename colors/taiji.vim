@@ -4,7 +4,12 @@
 
 highlight clear Normal
 set background&
-set t_Co=16
+
+if !empty($DISPLAY)
+  set t_Co=256
+else
+  set t_Co=16
+endif
 
 highlight clear
 
@@ -13,6 +18,7 @@ if exists("syntax_on")
 endif
 
 let colors_name = "taiji"
+let g:limelight_conceal_ctermfg=250
 
 " Vim colors
 highlight SpecialKey    ctermfg=DarkGray    ctermbg=NONE      cterm=NONE

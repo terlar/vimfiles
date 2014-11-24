@@ -13,11 +13,15 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
-Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
+Plug 'mbbill/undotree',         { 'on': 'UndotreeToggle' }
 let g:gundo_preview_bottom = 1
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'file-line'
 Plug 'lastpos.vim'
+Plug 'junegunn/goyo.vim',       { 'on': 'Goyo' }
+Plug 'junegunn/limelight.vim',  { 'on': 'Limelight' }
+autocmd User GoyoEnter Limelight
+autocmd User GoyoLeave Limelight!
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -26,9 +30,10 @@ let g:slime_target = 'tmux'
 
 " Git
 Plug 'tpope/vim-fugitive'
-Plug 'gregsexton/gitv', { 'on': 'Gitv' }
+Plug 'gregsexton/gitv',               { 'on': 'Gitv' }
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
+Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
 
 " QuickFix
 Plug 'milkypostman/vim-togglelist'
