@@ -8,11 +8,11 @@ end
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-dispatch'
+Plug 'janko-m/vim-test'
+let g:test#strategy = 'dispatch'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
 Plug 'mbbill/undotree',         { 'on': 'UndotreeToggle' }
 let g:gundo_preview_bottom = 1
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
@@ -80,6 +80,8 @@ Plug 'wavded/vim-stylus',              { 'for': 'stylus' }
 Plug 'rodjek/vim-puppet',              { 'for': 'puppet' }
 Plug 'ekalinin/Dockerfile.vim',        { 'for': 'Dockerfile' }
 Plug 'solarnz/thrift.vim',             { 'for': 'thrift' }
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
 
 " Syntax
 Plug 'scrooloose/syntastic'
