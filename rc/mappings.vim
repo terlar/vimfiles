@@ -91,7 +91,7 @@ nnoremap <Leader>c :CtrlPChange<CR>
 nnoremap <Leader>/ :CtrlPLine<CR>
 
 " Dispatch
-nnoremap <CR> :Dispatch<CR>
+nnoremap <CR> :silent Dispatch<CR>
 
 " EasyAlign
 vmap <Leader>= <Plug>(EasyAlign)
