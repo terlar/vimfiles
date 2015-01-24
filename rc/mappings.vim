@@ -103,19 +103,19 @@ nnoremap <Leader>g :Gstatus<CR>
 " Goyo
 nnoremap <Leader>G :Goyo<CR>
 
-" neocomplete
-if exists('g:neocomplete#enable_at_startup')
+" neocomplcache
+if exists('g:neocomplcache_enable_at_startup')
   inoremap <silent> <CR> <C-r>=<SID>CompleteOrCR()<CR>
   function! s:CompleteOrCR()
-    return neocomplete#close_popup() . "\<CR>"
+    return neocomplcache#smart_close_popup() . "\<CR>"
   endfunction
 
   inoremap <expr><Tab>  pumvisible() ? "\<C-n>" : "\<Tab>"
 
-  inoremap <expr><C-h>  neocomplete#smart_close_popup() . "\<C-h>"
-  inoremap <expr><BS>   neocomplete#smart_close_popup() . "\<C-h>"
-  inoremap <expr><C-y>  neocomplete#close_popup()
-  inoremap <expr><C-e>  neocomplete#cancel_popup()
+  inoremap <expr><C-h>  neocomplcache#smart_close_popup() . "\<C-h>"
+  inoremap <expr><BS>   neocomplcache#smart_close_popup() . "\<C-h>"
+  inoremap <expr><C-y>  neocomplcache#close_popup()
+  inoremap <expr><C-e>  neocomplcache#cancel_popup()
 end
 
 " Rails

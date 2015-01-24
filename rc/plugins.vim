@@ -1,10 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
 " Features
-if has('lua')
-  Plug 'Shougo/neocomplete.vim'
-  let g:neocomplete#enable_at_startup = 1
-end
+Plug 'Shougo/neocomplcache.vim'
+let g:neocomplcache_enable_at_startup = 1
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-dispatch'
