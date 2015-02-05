@@ -78,7 +78,6 @@ Plug 'wavded/vim-stylus',              { 'for': 'stylus' }
 Plug 'rodjek/vim-puppet',              { 'for': 'puppet' }
 Plug 'ekalinin/Dockerfile.vim',        { 'for': 'Dockerfile' }
 Plug 'solarnz/thrift.vim',             { 'for': 'thrift' }
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 
 " Syntax
