@@ -107,7 +107,6 @@ set ttimeout ttimeoutlen=50
 au InsertEnter * set timeoutlen=0
 au InsertLeave * set timeoutlen=300
 set ttyfast
-set ttyscroll=3
 set lazyredraw
 set synmaxcol=200
 " }}}
