@@ -78,6 +78,13 @@ Plug 'wavded/vim-stylus',              { 'for': 'stylus' }
 Plug 'rodjek/vim-puppet',              { 'for': 'puppet' }
 Plug 'ekalinin/Dockerfile.vim',        { 'for': 'Dockerfile' }
 Plug 'solarnz/thrift.vim',             { 'for': 'thrift' }
+Plug 'fatih/vim-go',                   { 'for': 'go' }
+let g:go_fmt_command = "goimports"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 Plug 'tpope/vim-rake'
 
 " Syntax
