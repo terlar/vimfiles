@@ -113,7 +113,6 @@ set synmaxcol=200
 
 " System {{{
 set title
-set clipboard=unnamed
 " }}}
 
 " Autosave {{{
