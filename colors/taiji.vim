@@ -25,8 +25,8 @@ highlight SpecialKey    ctermfg=DarkGray    ctermbg=NONE      cterm=NONE
 highlight NonText       ctermfg=Black       ctermbg=Black     cterm=NONE
 highlight Directory     ctermfg=DarkBlue    ctermbg=NONE      cterm=Bold
 highlight ErrorMsg      ctermfg=White       ctermbg=Red       cterm=NONE
-highlight IncSearch     ctermfg=NONE        ctermbg=NONE      cterm=Reverse
-highlight Search        ctermfg=NONE        ctermbg=NONE      cterm=Standout,Underline
+highlight IncSearch     ctermfg=NONE        ctermbg=NONE      cterm=Standout,Bold
+highlight Search        ctermfg=NONE        ctermbg=NONE      cterm=Underline
 highlight MoreMsg       ctermfg=Gray        ctermbg=NONE      cterm=NONE
 highlight ModeMsg       ctermfg=Gray        ctermbg=NONE      cterm=NONE
 highlight Question      ctermfg=Gray        ctermbg=NONE      cterm=NONE
@@ -75,6 +75,8 @@ highlight Error         ctermfg=Red         ctermbg=NONE      cterm=Standout
 highlight Todo          ctermfg=DarkCyan    ctermbg=NONE      cterm=Inverse
 highlight String        ctermfg=Green       ctermbg=NONE      cterm=NONE
 highlight Number        ctermfg=Red         ctermbg=NONE      cterm=NONE
+
+highlight def link ObliqueLine String
 
 " Vim monochrome
 highlight Search     term=Underline

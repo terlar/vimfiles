@@ -20,6 +20,8 @@ Plug 'junegunn/goyo.vim',       { 'on': 'Goyo' }
 Plug 'junegunn/limelight.vim',  { 'on': 'Limelight' }
 autocmd User GoyoEnter Limelight
 autocmd User GoyoLeave Limelight!
+Plug 'junegunn/vim-pseudocl'
+Plug 'junegunn/vim-oblique'
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
