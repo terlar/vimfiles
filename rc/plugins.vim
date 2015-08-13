@@ -102,6 +102,8 @@ let g:blockle_mapping = '<Leader>j'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
 let g:textobj_rubyblock_no_default_key_mappings = 1
+Plug 'junegunn/vim-after-object'
+autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
 Plug 'tpope/vim-endwise'
 
 call plug#end()
