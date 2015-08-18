@@ -54,6 +54,7 @@ set nojoinspaces
 set virtualedit=block
 set formatoptions+=j " Join comments
 set nostartofline
+set spelllang=en,sv
 " }}}
 
 " Tabs and indenting {{{
