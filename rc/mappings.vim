@@ -83,7 +83,7 @@ nnoremap <Leader>A :exe ':Ag '.expand('<cword>')<CR>
 
 " CtrlP
 nnoremap <Tab><Tab> :CtrlPBuffer<CR>
-nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>o :FZF<CR>
 nnoremap <Leader>f :CtrlPFunky<CR>
 
 nnoremap <Leader>p :CtrlPRegister<CR>
