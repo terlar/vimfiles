@@ -1,5 +1,5 @@
 if $SHELL =~ 'fish'
-  set shell=/usr/bin/sh
+  let &shell = exepath('sh')
 endif
 
 " Load Functions
