@@ -33,6 +33,7 @@ set display+=lastline
 set scrolloff=10
 set sidescrolloff=5
 set list
+set linebreak
 set textwidth=0
 
 if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
@@ -53,6 +54,7 @@ set matchpairs+=<:>
 set nojoinspaces
 set virtualedit=block
 set formatoptions+=j " Join comments
+set formatoptions+=t " Automatically wrap text
 set nostartofline
 set spelllang=en,sv
 " }}}
