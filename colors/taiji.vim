@@ -76,6 +76,8 @@ highlight Todo          ctermfg=DarkCyan    ctermbg=NONE      cterm=Inverse
 highlight String        ctermfg=Green       ctermbg=NONE      cterm=NONE
 highlight Number        ctermfg=Red         ctermbg=NONE      cterm=NONE
 
+highlight IndentGuidesEven ctermfg=NONE     ctermbg=254       cterm=NONE
+
 highlight def link ObliqueLine String
 
 " Vim monochrome

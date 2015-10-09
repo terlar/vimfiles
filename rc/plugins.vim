@@ -22,6 +22,8 @@ autocmd User GoyoEnter Limelight
 autocmd User GoyoLeave Limelight!
 Plug 'junegunn/vim-pseudocl'
 Plug 'junegunn/vim-oblique'
+let g:indentLine_char = '▏'
+Plug 'Yggdroot/indentLine'
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
