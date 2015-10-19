@@ -11,6 +11,7 @@ let g:test#strategy = 'dispatch'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-unimpaired'
 Plug 'mbbill/undotree',         { 'on': 'UndotreeToggle' }
 let g:gundo_preview_bottom = 1
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
