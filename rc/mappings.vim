@@ -1,6 +1,9 @@
 let mapleader = ' '
 let maplocalleader = ' '
 
+" Handle swedish keyboard mistakes
+nnoremap Ö :
+
 " Make Y consistent with C and D
 nnoremap Y y$
 
