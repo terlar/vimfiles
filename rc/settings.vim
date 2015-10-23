@@ -63,8 +63,8 @@ set spelllang=en,sv
 set noexpandtab smarttab
 set copyindent
 set preserveindent
-set tabstop=4 softtabstop=0
-set shiftwidth=4
+set tabstop=8 softtabstop=0
+set shiftwidth=8
 set autoindent
 set smartindent
 " }}}
