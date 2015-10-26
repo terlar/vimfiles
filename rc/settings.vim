@@ -76,13 +76,10 @@ set nomodeline
 set nowritebackup noswapfile
 set autowriteall autoread
 
-if has('persistent_undo')
-  set undofile
-  if !isdirectory(expand('~/.vimundo'))
-    silent !mkdir ~/.vimundo > /dev/null 2>&1
-  endif
-  set undodir=~/.vimundo
+if !isdirectory(&undodir)
+  silent execute '!mkdir -p ' . &undodir
 endif
+set undofile
 " }}}
 
 " Command-line {{{
