@@ -84,7 +84,7 @@ set undofile
 
 " Command-line {{{
 set history=1000
-set wildmenu wildmode=longest,list:longest
+set wildmenu
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=.DS_Store
 set wildignore+=*/vendor/bundle/*,*/tmp/*,*/.*-cache/*
