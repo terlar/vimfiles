@@ -80,6 +80,9 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>n :Rename<Space>
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
+" Edit
+inoremap <S-Tab> <C-d>
+
 " Ag
 nnoremap <Leader>a :Ag<Space>
 nnoremap <Leader>A :exe ':Ag '.expand('<cword>')<CR>
