@@ -92,9 +92,18 @@ set wildignore+=*/vendor/bundle/*,*/tmp/*,*/.*-cache/*
 " }}}
 
 " Folding {{{
-set foldmethod=indent
-set foldlevelstart=99
-set foldtext=FoldText()
+set foldmethod=syntax
+let g:vimsyn_folding='af'
+let g:tex_fold_enabled=1
+let g:xml_syntax_folding = 1
+let g:clojure_fold = 1
+let ruby_fold = 1
+let perl_fold = 1
+let perl_fold_blocks = 1
+set foldenable
+set foldlevel=1
+set foldlevelstart=1
+set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
 " }}}
 
 " Tags {{{
