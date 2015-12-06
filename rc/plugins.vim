@@ -26,7 +26,6 @@ let g:indentLine_char = '▏'
 Plug 'Yggdroot/indentLine'
 
 " Folding
-Plug 'Konfekt/FoldText'
 Plug 'Konfekt/FastFold'
 
 " Tmux

@@ -38,7 +38,7 @@ set textwidth=0
 
 if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
   let &listchars = "tab:\u21e5 ,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
-  let &fillchars = "vert:\u259a,fold:\u00b7"
+  let &fillchars = "vert:\u259a"
 else
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 endif
@@ -104,6 +104,7 @@ set foldenable
 set foldlevel=1
 set foldlevelstart=1
 set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
+set foldtext=FoldText()
 " }}}
 
 " Tags {{{
