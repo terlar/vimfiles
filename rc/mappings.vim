@@ -80,8 +80,9 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>n :Rename<Space>
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
-" Edit
-inoremap <S-Tab> <C-d>
+" Completions
+inoremap <expr><Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<C-d>"
 
 " Ag
 nnoremap <Leader>a :Ag<Space>
@@ -108,21 +109,6 @@ nnoremap <Leader>g :Gstatus<CR>
 
 " Goyo
 nnoremap <Leader>G :Goyo<CR>
-
-" neocomplcache
-if exists('g:neocomplcache_enable_at_startup')
-  inoremap <silent> <CR> <C-r>=<SID>CompleteOrCR()<CR>
-  function! s:CompleteOrCR()
-    return neocomplcache#smart_close_popup() . "\<CR>"
-  endfunction
-
-  inoremap <expr><Tab>  pumvisible() ? "\<C-n>" : "\<Tab>"
-
-  inoremap <expr><C-h>  neocomplcache#smart_close_popup() . "\<C-h>"
-  inoremap <expr><BS>   neocomplcache#smart_close_popup() . "\<C-h>"
-  inoremap <expr><C-y>  neocomplcache#close_popup()
-  inoremap <expr><C-e>  neocomplcache#cancel_popup()
-end
 
 " Rails
 nnoremap <Leader>. :A<CR>
