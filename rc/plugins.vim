@@ -1,8 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
 " Features
-Plug 'Shougo/neocomplcache.vim'
-let g:neocomplcache_enable_at_startup = 1
+Plug 'Shougo/deoplete.nvim'
+let g:deoplete#enable_at_startup = 1
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-dispatch'
