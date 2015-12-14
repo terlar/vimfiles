@@ -1,6 +1,4 @@
 " General {{{
-set nocompatible
-set vb t_vb=
 set shortmess=aIT " Less interruptive prompts
 set viminfo^=!
 " }}}
@@ -35,6 +33,7 @@ set sidescrolloff=5
 set list
 set linebreak
 set textwidth=0
+set colorcolumn=80
 
 if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
   let &listchars = "tab:\u21e5 ,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
@@ -117,7 +116,6 @@ set timeoutlen=300
 set ttimeout ttimeoutlen=50
 au InsertEnter * set timeoutlen=0
 au InsertLeave * set timeoutlen=300
-set ttyfast
 set lazyredraw
 set synmaxcol=200
 " }}}
@@ -140,6 +138,4 @@ endif
 
 " Theme {{{
 colorscheme taiji
-
-match Error /\%81v.*/
 " }}}

@@ -60,7 +60,7 @@ highlight TabLineFill   ctermfg=NONE        ctermbg=NONE      cterm=Reverse
 highlight TabLineSel    ctermfg=NONE        ctermbg=NONE      cterm=Bold
 highlight CursorColumn  ctermfg=NONE        ctermbg=DarkGray  cterm=NONE
 highlight CursorLine    ctermfg=NONE        ctermbg=NONE      cterm=Underline
-highlight ColorColumn   ctermfg=NONE        ctermbg=DarkGray  cterm=NONE
+highlight ColorColumn   ctermfg=NONE        ctermbg=Gray      cterm=NONE
 highlight MatchParen    ctermfg=NONE        ctermbg=NONE      cterm=Inverse
 
 highlight Normal        ctermfg=NONE        ctermbg=NONE      cterm=NONE
