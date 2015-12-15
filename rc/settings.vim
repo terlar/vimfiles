@@ -54,6 +54,7 @@ set nojoinspaces
 set virtualedit=block
 set formatoptions+=j " Join comments
 set formatoptions+=t " Automatically wrap text
+set formatoptions+=Mm " Fix-wordwrap for asian languages and joining of lines.
 set nostartofline
 set spelllang=en,sv
 " }}}
