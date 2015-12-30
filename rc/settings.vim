@@ -138,5 +138,6 @@ if !exists('g:netrw_list_hide')
 endif
 
 " Theme {{{
-colorscheme taiji
+set background=light
+colorscheme PaperColor
 " }}}

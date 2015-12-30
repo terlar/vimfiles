@@ -1,5 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
+" Schemes
+Plug 'NLKNguyen/papercolor-theme'
+
 " Features
 Plug 'Shougo/deoplete.nvim'
 let g:deoplete#enable_at_startup = 1
@@ -70,11 +73,10 @@ let g:xmpfilter_cmd = 'seeing_is_believing'
 Plug 'ecomba/vim-ruby-refactoring',    { 'for': 'ruby' }
 Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 Plug 'kballard/vim-fish',              { 'for': ['fish', 'fishprofile'] }
-Plug 'elzr/vim-json',                  { 'for': ['json', 'javascript'] }
-Plug 'tpope/vim-jdaddy',               { 'for': ['json', 'javascript'] }
+Plug 'elzr/vim-json',                  { 'for': ['json'] }
+Plug 'tpope/vim-jdaddy',               { 'for': ['json'] }
 Plug 'pangloss/vim-javascript',        { 'for': 'javascript' }
 Plug 'kchmck/vim-coffee-script',       { 'for': 'coffee' }
-Plug 'jQuery',                         { 'for': ['javascript', 'coffee'] }
 Plug 'elixir-lang/vim-elixir',         { 'for': ['elixir', 'eelixir'] }
 Plug 'jimenezrick/vimerl',             { 'for': 'erlang' }
 Plug 'dag/vim2hs',                     { 'for': ['haskell', 'cabal'] }
@@ -84,8 +86,11 @@ Plug 'tpope/vim-haml',                 { 'for': ['haml', 'sass', 'scss'] }
 Plug 'nono/vim-handlebars',            { 'for': 'handlebars' }
 Plug 'wavded/vim-stylus',              { 'for': 'stylus' }
 Plug 'rodjek/vim-puppet',              { 'for': 'puppet' }
-Plug 'ekalinin/Dockerfile.vim',        { 'for': 'Dockerfile' }
+Plug 'docker/docker',                  { 'for': 'Dockerfile', 'rtp': 'contrib/syntax/vim' }
 Plug 'solarnz/thrift.vim',             { 'for': 'thrift' }
+Plug 'plasticboy/vim-markdown',        { 'for': 'markdown' }
+Plug 'aklt/plantuml-syntax',           { 'for': 'plantuml' }
+Plug 'hdima/python-syntax',            { 'for': 'python' }
 Plug 'fatih/vim-go',                   { 'for': 'go' }
 let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
