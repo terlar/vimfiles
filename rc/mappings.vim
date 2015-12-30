@@ -7,11 +7,10 @@ nnoremap Ö :
 " Make Y consistent with C and D
 nnoremap Y y$
 
-" Quit
-nnoremap <Leader>Q :qa!<CR>
-
 " qq to record, Q to replay
 nnoremap Q @q
+
+nnoremap , "*
 
 " Toggle paste mode
 set pastetoggle=<F9>
