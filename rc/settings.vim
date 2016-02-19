@@ -24,7 +24,7 @@ let g:is_posix=1 " Use POSIX
 " }}}
 
 " Displaying text {{{
-set nowrap
+set wrap
 set fillchars= " No separator chars
 set number
 set display+=lastline
@@ -38,8 +38,10 @@ set colorcolumn=80
 if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
   let &listchars = "tab:\u21e5 ,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
   let &fillchars = "vert:\u259a"
+  set showbreak=\ ↪\ 
 else
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+  set showbreak=\ \\\ 
 endif
 " }}}
 
