@@ -6,8 +6,9 @@ endif
   runtime! functions/*.vim
 
 " Load Config
-  runtime rc/plugins.vim
-  runtime rc/settings.vim
-  runtime rc/mappings.vim
+  runtime! rc/plugins.vim
+  runtime! rc/settings.vim
+  runtime! rc/mappings.vim
+  runtime! rc/autocmds.vim
 
   runtime! macros/matchit.vim
