@@ -27,6 +27,7 @@ Plug 'junegunn/vim-pseudocl'
 Plug 'junegunn/vim-oblique'
 let g:indentLine_char = '▏'
 Plug 'Yggdroot/indentLine'
+Plug 'LargeFile'
 
 " Folding
 Plug 'Konfekt/FastFold'
