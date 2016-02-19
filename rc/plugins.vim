@@ -42,6 +42,7 @@ Plug 'gregsexton/gitv',               { 'on': 'Gitv' }
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
 Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
+Plug 'rhysd/committia.vim'
 
 " QuickFix
 Plug 'milkypostman/vim-togglelist'
