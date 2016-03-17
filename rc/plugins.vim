@@ -28,6 +28,8 @@ Plug 'junegunn/vim-oblique'
 let g:indentLine_char = '▏'
 Plug 'Yggdroot/indentLine'
 Plug 'LargeFile'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 " Folding
 Plug 'Konfekt/FastFold'
