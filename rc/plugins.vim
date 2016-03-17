@@ -106,9 +106,7 @@ Plug 'tpope/vim-rake'
 Plug 'etnadji/vim-epub'
 
 " Syntax
-Plug 'scrooloose/syntastic'
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+Plug 'benekastah/neomake'
 Plug 'AndrewRadev/switch.vim'
 Plug 'jgdavey/vim-blockle'
 let g:blockle_mapping = '<Leader>j'
