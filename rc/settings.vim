@@ -127,11 +127,6 @@ set synmaxcol=200
 set title
 " }}}
 
-" Autosave {{{
-set updatetime=1000
-au BufLeave,CursorHold,InsertLeave * silent! wa
-" }}}
-
 filetype plugin indent on
 syntax on
 
