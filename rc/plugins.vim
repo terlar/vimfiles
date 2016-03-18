@@ -66,6 +66,10 @@ let g:ctrlp_prompt_mappings = { 'AcceptSelection("e")': ['<CR>', '<Tab>', '<2-Le
 let g:ctrlp_open_multiple_files = '2v'
 Plug 'junegunn/fzf'
 
+" References
+Plug 'thinca/vim-ref'
+let g:ref_noenter = 1
+Plug 'yuku-t/vim-ref-ri', { 'for': ['ruby', 'eruby'] }
 " Filetypes
 Plug 'tpope/vim-git'
 Plug 'vim-pandoc/vim-pandoc'
