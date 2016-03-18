@@ -4,8 +4,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'NLKNguyen/papercolor-theme'
 
 " Features
-Plug 'Shougo/deoplete.nvim'
-let g:deoplete#enable_at_startup = 1
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-dispatch'
@@ -30,6 +28,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'LargeFile'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'Shougo/vimproc.vim',      { 'do': 'make' }
 
 " Folding
 Plug 'Konfekt/FastFold'
@@ -70,6 +69,27 @@ Plug 'junegunn/fzf'
 Plug 'thinca/vim-ref'
 let g:ref_noenter = 1
 Plug 'yuku-t/vim-ref-ri', { 'for': ['ruby', 'eruby'] }
+
+" Completion
+let g:EclimCompletionMethod = 'omnifunc'
+
+Plug 'Shougo/deoplete.nvim'
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+"let g:deoplete#enable_refresh_always = 1
+let g:deoplete#omni_patterns = {}
+let g:deoplete#omni_patterns.erlang = [
+      \ '[^. *\t]:\w*',
+      \ '^\s*-\w*'
+      \ ]
+Plug 'Shougo/neco-vim',                     { 'for': 'vim' }
+" Plug 'osyo-manga/vim-monster'
+" let g:monster#completion#rcodetools#backend = 'async_rct_complete'
+Plug 'zchee/deoplete-jedi',                 { 'for': 'python' }
+Plug 'vim-erlang/vim-erlang-omnicomplete',  { 'for': 'erlang' }
+Plug 'eagletmt/neco-ghc',                   { 'for': 'haskell' }
+Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
+
 " Filetypes
 Plug 'tpope/vim-git'
 Plug 'vim-pandoc/vim-pandoc'
@@ -87,9 +107,9 @@ Plug 'pangloss/vim-javascript',             { 'for': 'javascript' }
 Plug 'kchmck/vim-coffee-script',            { 'for': 'coffee' }
 Plug 'elixir-lang/vim-elixir',              { 'for': ['elixir', 'eelixir'] }
 Plug 'vim-erlang/vim-erlang-compiler',      { 'for': 'erlang' }
-Plug 'vim-erlang/vim-erlang-omnicomplete',  { 'for': 'erlang' }
 Plug 'vim-erlang/vim-erlang-runtime',       { 'for': 'erlang' }
-Plug 'dag/vim2hs',                          { 'for': ['haskell', 'cabal'] }
+Plug 'neovimhaskell/haskell-vim',           { 'for': ['haskell', 'cabal'] }
+let g:haskellmode_completion_ghc = 0
 Plug 'othree/html5.vim',                    { 'for': 'html' }
 Plug 'slim-template/vim-slim',              { 'for': 'slim' }
 Plug 'tpope/vim-haml',                      { 'for': ['haml', 'sass', 'scss'] }
