@@ -131,6 +131,8 @@ Plug 'tpope/vim-rake'
 Plug 'etnadji/vim-epub'
 
 " Syntax
+let g:EclimFileTypeValidate = 0
+
 Plug 'benekastah/neomake'
 Plug 'AndrewRadev/switch.vim'
 Plug 'jgdavey/vim-blockle'
