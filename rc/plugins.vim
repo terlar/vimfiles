@@ -96,8 +96,7 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax',        { 'for': 'pandoc' }
 Plug 'vim-ruby/vim-ruby',                   { 'for': ['ruby', 'eruby'] }
 Plug 'sunaku/vim-ruby-minitest',            { 'for': 'ruby' }
-Plug 't9md/vim-ruby-xmpfilter',             { 'for': 'ruby' }
-let g:xmpfilter_cmd = 'seeing_is_believing'
+Plug 'hwartig/vim-seeing-is-believing',     { 'for': 'ruby' }
 Plug 'ecomba/vim-ruby-refactoring',         { 'for': 'ruby' }
 Plug 'nelstrom/vim-textobj-rubyblock',      { 'for': 'ruby' }
 Plug 'kballard/vim-fish',                   { 'for': ['fish', 'fishprofile'] }
