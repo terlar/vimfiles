@@ -76,16 +76,18 @@ let g:EclimCompletionMethod = 'omnifunc'
 
 Plug 'Shougo/deoplete.nvim'
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
-"let g:deoplete#enable_refresh_always = 1
-let g:deoplete#omni_patterns = {}
+let g:deoplete#enable_refresh_always = 1
+"let g:deoplete#disable_auto_complete = 1
+
+if !exists('g:deoplete#omni_patterns')
+  let g:deoplete#omni_patterns = {}
+end
 let g:deoplete#omni_patterns.erlang = [
       \ '[^. *\t]:\w*',
       \ '^\s*-\w*'
       \ ]
+
 Plug 'Shougo/neco-vim',                     { 'for': 'vim' }
-" Plug 'osyo-manga/vim-monster'
-" let g:monster#completion#rcodetools#backend = 'async_rct_complete'
 Plug 'zchee/deoplete-jedi',                 { 'for': 'python' }
 Plug 'vim-erlang/vim-erlang-omnicomplete',  { 'for': 'erlang' }
 Plug 'eagletmt/neco-ghc',                   { 'for': 'haskell' }
