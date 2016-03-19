@@ -80,11 +80,9 @@ nnoremap <Leader>n :Rename<Space>
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
 " Completions
-inoremap <expr> <C-F>  pumvisible() \|\| &omnifunc == '' ?
-  \ "\<lt>C-n>" :
-  \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-  \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-  \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+inoremap <expr> <C-F>  &omnifunc == ''
+      \ ? ''
+      \ : '<C-x><C-o><C-n>'
 inoremap <expr><Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<C-d>"
 
