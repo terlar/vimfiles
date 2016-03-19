@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 " Schemes
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'robertmeta/nofrils'
 
 " Features
 Plug 'tpope/vim-eunuch'
