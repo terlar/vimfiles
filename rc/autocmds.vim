@@ -7,3 +7,6 @@ autocmd! QuickFixCmdPost    l* nested lwindow
 
 " Run lint checker on file write
 autocmd! BufWritePost * Neomake
+
+" Prevent undofile for certain locations
+autocmd! BufNewFile,BufRead /dev/shm/* setlocal noundofile
