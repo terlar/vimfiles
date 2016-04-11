@@ -30,6 +30,7 @@ Plug 'LargeFile'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'Shougo/vimproc.vim',      { 'do': 'make' }
+Plug 'airblade/vim-gitgutter'
 
 " Folding
 Plug 'Konfekt/FastFold'
