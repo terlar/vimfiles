@@ -120,6 +120,7 @@ nnoremap <Leader>A :exe ':Ag '.expand('<cword>')<CR>
 " CtrlP
 nnoremap <Tab><Tab> :CtrlPBuffer<CR>
 nnoremap <Leader>o :FZF<CR>
+nnoremap <Leader>O :FZF %:p:h<CR>
 nnoremap <Leader>f :CtrlPFunky<CR>
 
 nnoremap <Leader>p :CtrlPRegister<CR>
