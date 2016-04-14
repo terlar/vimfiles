@@ -13,6 +13,7 @@ set switchbuf=useopen
 set sidescroll=10
 set splitbelow
 set splitright
+set cursorline
 " }}}
 
 " Searching and patterns {{{
