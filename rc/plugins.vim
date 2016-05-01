@@ -88,11 +88,18 @@ let g:deoplete#omni_patterns.erlang = [
       \ '^\s*-\w*'
       \ ]
 
+if !exists('g:deoplete#sources#omni#input_patterns')
+  let g:deoplete#sources#omni#input_patterns = {}
+end
+let g:deoplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+
 Plug 'Shougo/neco-vim',                     { 'for': 'vim' }
 Plug 'zchee/deoplete-jedi',                 { 'for': 'python' }
 Plug 'vim-erlang/vim-erlang-omnicomplete',  { 'for': 'erlang' }
 Plug 'eagletmt/neco-ghc',                   { 'for': 'haskell' }
-Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
+Plug 'osyo-manga/vim-monster',              { 'for': 'ruby' }
+let g:monster#completion#rcodetools#backend = 'async_rct_complete'
+Plug 'awetzel/elixir.nvim',                 { 'do': 'yes \| ./install.sh' }
 
 " Filetypes
 Plug 'tpope/vim-git'
