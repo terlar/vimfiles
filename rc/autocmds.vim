@@ -10,3 +10,6 @@ autocmd! BufWritePost * Neomake
 
 " Prevent undofile for certain locations
 autocmd! BufNewFile,BufRead /dev/shm/* setlocal noundofile
+
+" Automatically leave insert mode after 'updatetime' milliseconds of inaction
+autocmd! CursorHoldI * stopinsert
