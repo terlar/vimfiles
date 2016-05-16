@@ -70,7 +70,8 @@ Plug 'junegunn/fzf'
 " References
 Plug 'thinca/vim-ref'
 let g:ref_noenter = 1
-Plug 'yuku-t/vim-ref-ri', { 'for': ['ruby', 'eruby'] }
+Plug 'yuku-t/vim-ref-ri',   { 'for': ['ruby', 'eruby'] }
+Plug 'terlar/vim-ref-fish', { 'for': 'fish' }
 
 " Completion
 let g:EclimCompletionMethod = 'omnifunc'
