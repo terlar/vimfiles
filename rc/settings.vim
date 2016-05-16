@@ -10,7 +10,7 @@ set ruler
 set noequalalways
 set hidden
 set switchbuf=useopen
-set sidescroll=10
+set sidescroll=1
 set splitbelow
 set splitright
 set cursorline
@@ -29,7 +29,7 @@ set wrap
 set fillchars= " No separator chars
 set number
 set display+=lastline
-set scrolloff=10
+set scrolloff=5
 set sidescrolloff=5
 set list
 set linebreak
