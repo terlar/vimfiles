@@ -6,10 +6,14 @@ let &l:makeprg = 'fish'
 let b:dispatch = 'fish %'
 
 function! s:Format()
+  if !executable('fish_indent')
+    return
+  endif
+
   let l:tmpname = tempname()
   call writefile(getline(1, '$'), l:tmpname)
 
-  let out = system(['fish', '-c', 'cat ' . l:tmpname . ' | fish_indent'])
+  let out = system('cat ' . l:tmpname . ' | fish_indent')
 
   if v:shell_error == 0
     let splitted = split(out, '\n')
