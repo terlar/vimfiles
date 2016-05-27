@@ -105,7 +105,6 @@ let perl_fold = 1
 let perl_fold_blocks = 1
 set foldenable
 set foldlevel=1
-set foldlevelstart=1
 set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
 set foldtext=FoldText()
 " }}}
