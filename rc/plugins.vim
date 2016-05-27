@@ -74,12 +74,9 @@ Plug 'yuku-t/vim-ref-ri',   { 'for': ['ruby', 'eruby'] }
 Plug 'terlar/vim-ref-fish', { 'for': 'fish' }
 
 " Completion
-let g:EclimCompletionMethod = 'omnifunc'
-
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do' : 'vim +UpdateRemotePlugins +qall' }
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_refresh_always = 1
-"let g:deoplete#disable_auto_complete = 1
 
 if !exists('g:deoplete#omni_patterns')
   let g:deoplete#omni_patterns = {}
@@ -101,6 +98,7 @@ Plug 'eagletmt/neco-ghc',                   { 'for': 'haskell' }
 Plug 'osyo-manga/vim-monster',              { 'for': 'ruby' }
 let g:monster#completion#rcodetools#backend = 'async_rct_complete'
 Plug 'awetzel/elixir.nvim',                 { 'do': 'yes \| ./install.sh' }
+Plug 'zchee/deoplete-go',                   { 'do': 'make' }
 
 " Filetypes
 Plug 'tpope/vim-git'
@@ -132,19 +130,20 @@ Plug 'solarnz/thrift.vim',                  { 'for': 'thrift' }
 Plug 'plasticboy/vim-markdown',             { 'for': 'markdown' }
 Plug 'aklt/plantuml-syntax',                { 'for': 'plantuml' }
 Plug 'hdima/python-syntax',                 { 'for': 'python' }
-Plug 'fatih/vim-go',                        { 'for': 'go' }
+Plug 'artur-shaik/vim-javacomplete2',       { 'for': 'java' }
+Plug 'fatih/vim-go',                        { 'do': function('startup#GoBinsInstall') }
+let g:go_term_enabled = 1
 let g:go_fmt_command = 'goimports'
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 Plug 'tpope/vim-rake'
 Plug 'etnadji/vim-epub'
 
 " Syntax
-let g:EclimFileTypeValidate = 0
-
 Plug 'benekastah/neomake'
 Plug 'AndrewRadev/switch.vim'
 Plug 'jgdavey/vim-blockle'
