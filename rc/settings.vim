@@ -33,6 +33,7 @@ set scrolloff=5
 set sidescrolloff=5
 set list
 set linebreak
+set breakindent
 set textwidth=0
 set colorcolumn=80
 
