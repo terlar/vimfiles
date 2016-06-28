@@ -31,6 +31,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'Shougo/vimproc.vim',      { 'do': 'make' }
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-sleuth'
 
 " Folding
 Plug 'Konfekt/FastFold'
